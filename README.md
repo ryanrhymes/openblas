@@ -1,3 +1,3 @@
 # openblas
 
-Owl's OpenBLAS Backend
+[Owl](https://github.com/ryanrhymes/owl)'s OpenBLAS Backend
