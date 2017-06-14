@@ -4,7 +4,7 @@
  *)
 
 let _ =
-  let prefix = "owl_stub" in
+  let prefix = "openblas_stub" in
   let generate_ml, generate_c = ref false, ref false in
   Arg.(parse [ ("-ml", Set generate_ml, "Generate ML");
                ("-c", Set generate_c, "Generate C") ])
@@ -17,6 +17,6 @@ let _ =
   | true, false ->
     Cstubs.write_ml Format.std_formatter ~prefix (module Openblas_cblas_bindings.Bindings)
   | false, true ->
-    print_endline "#include \"owl_cblas.h\"";
+    print_endline "#include \"cblas.h\"";
 
     Cstubs.write_c Format.std_formatter ~prefix (module Openblas_cblas_bindings.Bindings)

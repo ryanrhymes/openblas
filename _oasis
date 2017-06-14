@@ -37,10 +37,12 @@ Library openblas
   BuildTools:       ocamlbuild, ocamldoc
   Modules:          Openblas,
                     Openblas_lapacke
-  CSources:         lapacke.h,
+  CSources:         cblas.h,
+                    lapacke.h,
                     lapacke_config.h,
                     lapacke_mangling.h,
                     lapacke_utils.h,
+                    openblas_cblas_generated_stub.c,
                     openblas_lapacke_generated_stub.c
   CCOpt:            -O3 -I$pkg_ctypes
   CCLib:            -L${libdir} -lopenblas

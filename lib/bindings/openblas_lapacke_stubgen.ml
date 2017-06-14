@@ -4,7 +4,7 @@
  *)
 
 let _ =
-  let prefix = "owl_stub" in
+  let prefix = "openblas_stub" in
   let generate_ml, generate_c = ref false, ref false in
   Arg.(parse [ ("-ml", Set generate_ml, "Generate ML");
                ("-c", Set generate_c, "Generate C") ])

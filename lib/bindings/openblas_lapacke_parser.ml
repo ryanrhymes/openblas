@@ -118,7 +118,7 @@ let parse_lapacke_header fname =
     done with exn -> ()
   );
   (* FIXME : DEBUG *)
-  funs := Array.sub !funs 0 1;
+  (* funs := Array.sub !funs 0 1; *)
   !funs
 
 
@@ -222,8 +222,8 @@ let convert_to_extern_fun funs =
     let args_s = convert_argrec_to_extern args in
 
     (* NOTE: naming needs to be consistent with Ctypes *)
-    let fun_native_s = Printf.sprintf "owl_stub_%i_LAPACKE_%s" (i + 1) _fun_name in
-    let fun_byte_s = Printf.sprintf "owl_stub_%i_LAPACKE_%s_byte%i" (i + 1) _fun_name (Array.length args) in
+    let fun_native_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s" (i + 1) _fun_name in
+    let fun_byte_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s_byte%i" (i + 1) _fun_name (Array.length args) in
     let fun_extern_s =
       match Array.length args < 6 with
       | true  -> Printf.sprintf "\"%s\"" fun_native_s
