@@ -24,4 +24,5 @@ test:
 	ocamlfind ocamlc -c -linkpkg -package ctypes.stubs openblas_cblas_generated.ml
 clean:
 	rm -rf _build *.cmo *.cmi *.byte *.so
-	rm -rf openblas_cblas_generated* openblas_lapacke_generated*
+	rm -rf openblas_*_generated* openblas_lapacke_bindings.ml
+	rm -rf openblas_cblas.ml* openblas_lapacke.ml*
