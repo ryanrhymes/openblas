@@ -84,6 +84,18 @@ let _get_content h =
   !s
 
 
+let _get_funlist fname =
+  let h = open_in fname in
+  let t = Hashtbl.create 1024 in
+  (
+    try while true do
+      let s = input_line h |> String.trim in
+      Hashtbl.add t s None;
+    done with End_of_file -> ()
+  );
+  t
+
+
 (* check is it ???_work function *)
 let is_work_fun s =
   let regex = Str.regexp "_work(" in
@@ -93,35 +105,44 @@ let is_work_fun s =
   with Not_found -> false
 
 
+let is_in_funlist t s =
+  let regex = Str.regexp "^lapack_int LAPACKE_\\([^(]+\\)(\\([^;]+\\));" in
+  let s = String.trim s in
+  let _ = Str.search_forward regex s 0 in
+  let _fun_name = Str.matched_group 1 s in
+  Hashtbl.mem t _fun_name
+
+
 (* parse through the lapacke header file, filter out the functions we want
   to interface to.
  *)
-let parse_lapacke_header fname =
-  let h = open_in fname in
-  let s = _get_content h in
+ let parse_lapacke_header fname =
+   let h = open_in fname in
+   let s = _get_content h in
+   let t = _get_funlist "lapacke_funlist.txt" in
 
-  let regex = Str.regexp "^lapack_int [^;]+;" in
-  let ofs = ref 0 in
-  let funs = ref [||] in
-  (
-    try while true do
-      let _ofs = Str.search_forward regex s !ofs in
-      let _s = Str.matched_group 0 s in
-      ofs := _ofs + (String.length _s);
+   let regex = Str.regexp "^lapack_int [^;]+;" in
+   let ofs = ref 0 in
+   let funs = ref [||] in
+   (
+     try while true do
+       let _ofs = Str.search_forward regex s !ofs in
+       let _s = Str.matched_group 0 s in
 
-      (* only accept high-level function *)
-      match is_work_fun _s with
-      | true -> ()
-      | false -> (
-          let regex = Str.regexp "[ \n]+" in
-          let _s = Str.global_replace regex " " _s in
+       (* only accept high-level function *)
+       if is_work_fun _s = false then (
+         let regex = Str.regexp "[ \n]+" in
+         let _s = Str.global_replace regex " " _s in
+         if is_in_funlist t _s = true then
           funs := Array.append !funs [|_s|]
-        )
-    done with exn -> ()
-  );
-  (* FIXME : DEBUG *)
-  (* funs := Array.sub !funs 0 1; *)
-  !funs
+        );
+
+        ofs := _ofs + (String.length _s);
+     done with exn -> ()
+   );
+   (* FIXME : DEBUG *)
+   (* funs := Array.sub !funs 0 1; *)
+   !funs
 
 
 (* convert function arguments into a list of arg record *)

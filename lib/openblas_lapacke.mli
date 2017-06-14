@@ -1,4 +1,4 @@
-(* auto-generated lapacke interface file, timestamp:1497452158 *)
+(* auto-generated lapacke interface file, timestamp:1497458733 *)
 
 open Ctypes
 
@@ -62,14 +62,6 @@ val cgbrfs : int -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> 
 
 val zgbrfs : int -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
 
-val sgbrfsx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dgbrfsx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val cgbrfsx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zgbrfsx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
 val sgbsv : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
 
 val dgbsv : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
@@ -85,14 +77,6 @@ val dgbsvx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int
 val cgbsvx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
 
 val zgbsvx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
-
-val sgbsvxx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dgbsvxx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val cgbsvxx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zgbsvxx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
 
 val sgbtrf : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
 
@@ -310,14 +294,6 @@ val cgerfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr 
 
 val zgerfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
 
-val sgerfsx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dgerfsx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val cgerfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zgerfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
 val sgerqf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
 
 val dgerqf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
@@ -377,14 +353,6 @@ val dgesvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr 
 val cgesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
 
 val zgesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
-
-val sgesvxx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dgesvxx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val cgesvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zgesvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
 
 val sgetf2 : int -> int -> int -> float ptr -> int -> int ptr -> unit 
 
@@ -694,10 +662,6 @@ val cherfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr 
 
 val zherfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
 
-val cherfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zherfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
 val chesv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
 
 val zhesv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
@@ -705,10 +669,6 @@ val zhesv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Comp
 val chesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
 
 val zhesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
-
-val chesvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zhesvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
 
 val chetrd : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> unit 
 
@@ -1126,14 +1086,6 @@ val cporfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr 
 
 val zporfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
 
-val sporfsx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dporfsx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val cporfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zporfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
 val sposv : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
 
 val dposv : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
@@ -1153,14 +1105,6 @@ val dposvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr 
 val cposvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
 
 val zposvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
-
-val sposvxx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dposvxx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val cposvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zposvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
 
 val spotrf2 : int -> char -> int -> float ptr -> int -> unit 
 
@@ -1566,14 +1510,6 @@ val csyrfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr 
 
 val zsyrfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
 
-val ssyrfsx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dsyrfsx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val csyrfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zsyrfsx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
 val ssysv : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
 
 val dsysv : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
@@ -1589,14 +1525,6 @@ val dsysvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr 
 val csysvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
 
 val zsysvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
-
-val ssysvxx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val dsysvxx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val csysvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
-
-val zsysvxx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
 
 val ssytrd : int -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
 
@@ -2165,204 +2093,4 @@ val zhetrs_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -
 val csyr : int -> char -> int -> Complex.t -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
 
 val zsyr : int -> char -> int -> Complex.t -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val ssysv_aa : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
-
-val dsysv_aa : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
-
-val csysv_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val zsysv_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val chesv_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val zhesv_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val ssytrf_aa : int -> char -> int -> float ptr -> int -> int ptr -> unit 
-
-val dsytrf_aa : int -> char -> int -> float ptr -> int -> int ptr -> unit 
-
-val csytrf_aa : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
-
-val zsytrf_aa : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
-
-val chetrf_aa : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
-
-val zhetrf_aa : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
-
-val csytrs_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val chetrs_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val dsytrs_aa : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
-
-val ssytrs_aa : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
-
-val zsytrs_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val zhetrs_aa : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
-
-val ssysv_rk : int -> char -> int -> int -> float ptr -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
-
-val dsysv_rk : int -> char -> int -> int -> float ptr -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
-
-val csysv_rk : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val zsysv_rk : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val chesv_rk : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val zhesv_rk : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val ssytrf_rk : int -> char -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
-
-val dsytrf_rk : int -> char -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
-
-val csytrf_rk : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val zsytrf_rk : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val chetrf_rk : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val zhetrf_rk : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val csytrs_3 : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val chetrs_3 : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val dsytrs_3 : int -> char -> int -> int -> float ptr -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
-
-val ssytrs_3 : int -> char -> int -> int -> float ptr -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
-
-val zsytrs_3 : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val zhetrs_3 : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
-
-val ssytri_3 : int -> char -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
-
-val dsytri_3 : int -> char -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
-
-val csytri_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val zsytri_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val chetri_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val zhetri_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> unit 
-
-val ssycon_3 : int -> char -> int -> float ptr -> int -> float ptr -> int ptr -> float -> float ptr -> unit 
-
-val dsycon_3 : int -> char -> int -> float ptr -> int -> float ptr -> int ptr -> float -> float ptr -> unit 
-
-val csycon_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
-
-val zsycon_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
-
-val checon_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
-
-val zhecon_3 : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
-
-val sgelq : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val dgelq : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val cgelq : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val zgelq : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val sgemlq : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val dgemlq : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val cgemlq : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val zgemlq : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val sgeqr : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val dgeqr : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val cgeqr : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val zgeqr : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val sgemqr : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val dgemqr : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val cgemqr : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val zgemqr : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val sgetsls : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val dgetsls : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
-
-val cgetsls : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val zgetsls : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
-
-val ssyev_2stage : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
-
-val dsyev_2stage : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
-
-val ssyevd_2stage : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
-
-val dsyevd_2stage : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
-
-val ssyevr_2stage : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
-
-val dsyevr_2stage : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
-
-val ssyevx_2stage : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
-
-val dsyevx_2stage : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
-
-val cheev_2stage : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
-
-val zheev_2stage : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
-
-val cheevd_2stage : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
-
-val zheevd_2stage : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
-
-val cheevr_2stage : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
-
-val zheevr_2stage : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
-
-val cheevx_2stage : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
-
-val zheevx_2stage : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
-
-val ssbev_2stage : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
-
-val dsbev_2stage : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
-
-val ssbevd_2stage : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
-
-val dsbevd_2stage : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
-
-val ssbevx_2stage : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
-
-val dsbevx_2stage : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
-
-val chbev_2stage : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
-
-val zhbev_2stage : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
-
-val chbevd_2stage : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
-
-val zhbevd_2stage : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
-
-val chbevx_2stage : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
-
-val zhbevx_2stage : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
-
-val ssygv_2stage : int -> int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
-
-val dsygv_2stage : int -> int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
-
-val chegv_2stage : int -> int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
-
-val zhegv_2stage : int -> int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
 
