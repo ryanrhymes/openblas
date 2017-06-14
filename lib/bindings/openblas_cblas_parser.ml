@@ -49,7 +49,7 @@ let parse_cblas_binding fname =
   let h = open_in fname in
   let s = _get_content h in
 
-  let regex = Str.regexp "^let[ ]+\\([^ ]+\\)[^(]+(\\([^)]+\\)" in
+  let regex = Str.regexp "^let[ ]+cblas_\\([^ ]+\\) = foreign \"\\([^ ]+\\)\"[^(]+(\\([^)]+\\)" in
   let ofs = ref 0 in
   let funs = ref [||] in
   (
@@ -58,11 +58,12 @@ let parse_cblas_binding fname =
       let _s = Str.matched_group 0 s in
       ofs := _ofs + (String.length _s);
 
-      let _fun_name = Str.matched_group 1 s in
-      let _typ_name = Str.matched_group 2 s in
+      let _fun_caml = Str.matched_group 1 s in
+      let _fun_blas = Str.matched_group 2 s in
+      let _typ_name = Str.matched_group 3 s in
 
       (* only accept high-level function *)
-      funs := Array.append !funs [|_fun_name, _typ_name|]
+      funs := Array.append !funs [|_fun_caml, _fun_blas, _typ_name|]
     done with exn -> ()
   );
   (* FIXME : DEBUG *)
@@ -92,7 +93,7 @@ let convert_argrec_to_extern args =
 
 
 let convert_to_extern_fun funs =
-  Array.mapi (fun i (_fun_name, _typ_s) ->
+  Array.mapi (fun i (_fun_caml, _fun_blas, _typ_s) ->
 
     let args = process_args_to_argrec _typ_s in
     let args_s = convert_argrec_to_extern args in
@@ -100,20 +101,18 @@ let convert_to_extern_fun funs =
     let args_l = Array.length args - 1 in
 
     (* NOTE: naming needs to be consistent with Ctypes *)
-    let fun_native_s = Printf.sprintf "openblas_stub_%i_%s" (i + 1) _fun_name in
-    let fun_byte_s = Printf.sprintf "openblas_stub_%i_%s_byte%i" (i + 1) _fun_name args_l in
-    let fun_extern_s =
-
-      match args_l < 6 with
+    let fun_native_s = Printf.sprintf "openblas_stub_%i_%s" (i + 1) _fun_blas in
+    let fun_byte_s = Printf.sprintf "openblas_stub_%i_%s_byte%i" (i + 1) _fun_blas args_l in
+    let fun_extern_s = match args_l < 6 with
       | true  -> Printf.sprintf "\"%s\"" fun_native_s
       | false -> Printf.sprintf "\"%s\" \"%s\"" fun_byte_s fun_native_s
     in
     (* assemble the function string *)
     let fun_s = Printf.sprintf
-      "external %s\n  : %s\n = %s\n" _fun_name args_s fun_extern_s
+      "external %s\n  : %s\n = %s\n" _fun_caml args_s fun_extern_s
     in
     let val_s = Printf.sprintf
-      "val %s : %s\n" _fun_name args_s
+      "val %s : %s\n" _fun_caml args_s
     in
     fun_s, val_s
   ) funs

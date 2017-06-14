@@ -1,284 +1,284 @@
-(* auto-generated cblas interface file, timestamp:1497467031 *)
+(* auto-generated cblas interface file, timestamp:1497474103 *)
 
 open Ctypes
 
-val cblas_srotg : float ptr -> float ptr -> float ptr -> float ptr -> unit
+val srotg : float ptr -> float ptr -> float ptr -> float ptr -> unit
 
-val cblas_drotg : float ptr -> float ptr -> float ptr -> float ptr -> unit
+val drotg : float ptr -> float ptr -> float ptr -> float ptr -> unit
 
-val cblas_srotmg : float ptr -> float ptr -> float ptr -> float -> float ptr -> unit
+val srotmg : float ptr -> float ptr -> float ptr -> float -> float ptr -> unit
 
-val cblas_drotmg : float ptr -> float ptr -> float ptr -> float -> float ptr -> unit
+val drotmg : float ptr -> float ptr -> float ptr -> float -> float ptr -> unit
 
-val cblas_srot : int -> float ptr -> int -> float ptr -> int -> float -> float -> unit
+val srot : int -> float ptr -> int -> float ptr -> int -> float -> float -> unit
 
-val cblas_drot : int -> float ptr -> int -> float ptr -> int -> float -> float -> unit
+val drot : int -> float ptr -> int -> float ptr -> int -> float -> float -> unit
 
-val cblas_sswap : int -> float ptr -> int -> float ptr -> int -> unit
+val sswap : int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dswap : int -> float ptr -> int -> float ptr -> int -> unit
+val dswap : int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_cswap : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val cswap : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zswap : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zswap : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_sscal : int -> float -> float ptr -> int -> unit
+val sscal : int -> float -> float ptr -> int -> unit
 
-val cblas_dscal : int -> float -> float ptr -> int -> unit
+val dscal : int -> float -> float ptr -> int -> unit
 
-val cblas_cscal : int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val cscal : int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zscal : int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zscal : int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_csscal : int -> float -> Complex.t ptr -> int -> unit
+val csscal : int -> float -> Complex.t ptr -> int -> unit
 
-val cblas_zdscal : int -> float -> Complex.t ptr -> int -> unit
+val zdscal : int -> float -> Complex.t ptr -> int -> unit
 
-val cblas_scopy : int -> float ptr -> int -> float ptr -> int -> unit
+val scopy : int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dcopy : int -> float ptr -> int -> float ptr -> int -> unit
+val dcopy : int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ccopy : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ccopy : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zcopy : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zcopy : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_saxpy : int -> float -> float ptr -> int -> float ptr -> int -> unit
+val saxpy : int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_daxpy : int -> float -> float ptr -> int -> float ptr -> int -> unit
+val daxpy : int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_caxpy : int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val caxpy : int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zaxpy : int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zaxpy : int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_sdot : int -> float ptr -> int -> float ptr -> int -> float
+val sdot : int -> float ptr -> int -> float ptr -> int -> float
 
-val cblas_ddot : int -> float ptr -> int -> float ptr -> int -> float
+val ddot : int -> float ptr -> int -> float ptr -> int -> float
 
-val cblas_sdsdot : int -> float -> float ptr -> int -> float ptr -> int -> float
+val sdsdot : int -> float -> float ptr -> int -> float ptr -> int -> float
 
-val cblas_dsdot : int -> float ptr -> int -> float ptr -> int -> float
+val dsdot : int -> float ptr -> int -> float ptr -> int -> float
 
-val cblas_cdotu : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val cdotu : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_cdotc : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val cdotc : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_zdotu : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val zdotu : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_zdotc : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val zdotc : int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_snrm2 : int -> float ptr -> int -> float
+val snrm2 : int -> float ptr -> int -> float
 
-val cblas_dnrm2 : int -> float ptr -> int -> float
+val dnrm2 : int -> float ptr -> int -> float
 
-val cblas_scnrm2 : int -> Complex.t ptr -> int -> float
+val scnrm2 : int -> Complex.t ptr -> int -> float
 
-val cblas_dznrm2 : int -> Complex.t ptr -> int -> float
+val dznrm2 : int -> Complex.t ptr -> int -> float
 
-val cblas_sasum : int -> float ptr -> int -> float
+val sasum : int -> float ptr -> int -> float
 
-val cblas_dasum : int -> float ptr -> int -> float
+val dasum : int -> float ptr -> int -> float
 
-val cblas_scasum : int -> Complex.t ptr -> int -> float
+val scasum : int -> Complex.t ptr -> int -> float
 
-val cblas_dzasum : int -> Complex.t ptr -> int -> float
+val dzasum : int -> Complex.t ptr -> int -> float
 
-val cblas_isamax : int -> float ptr -> int -> Unsigned.size_t
+val isamax : int -> float ptr -> int -> Unsigned.size_t
 
-val cblas_idamax : int -> float ptr -> int -> Unsigned.size_t
+val idamax : int -> float ptr -> int -> Unsigned.size_t
 
-val cblas_icamax : int -> Complex.t ptr -> int -> Unsigned.size_t
+val icamax : int -> Complex.t ptr -> int -> Unsigned.size_t
 
-val cblas_izamax : int -> Complex.t ptr -> int -> Unsigned.size_t
+val izamax : int -> Complex.t ptr -> int -> Unsigned.size_t
 
-val cblas_sgemv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val sgemv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dgemv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dgemv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_cgemv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val cgemv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zgemv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zgemv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_sgbmv : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val sgbmv : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dgbmv : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dgbmv : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_cgbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val cgbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zgbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zgbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_strmv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val strmv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dtrmv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val dtrmv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ctrmv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ctrmv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_ztrmv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ztrmv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_stbmv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val stbmv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dtbmv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val dtbmv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ctbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ctbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_ztbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ztbmv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_stpmv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
+val stpmv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
 
-val cblas_dtpmv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
+val dtpmv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
 
-val cblas_ctpmv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val ctpmv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_ztpmv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val ztpmv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_strsv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val strsv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dtrsv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val dtrsv : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ctrsv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ctrsv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_ztrsv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ztrsv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_stbsv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val stbsv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dtbsv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
+val dtbsv : int -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ctbsv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ctbsv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_ztbsv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ztbsv : int -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_stpsv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
+val stpsv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
 
-val cblas_dtpsv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
+val dtpsv : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> unit
 
-val cblas_ctpsv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val ctpsv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_ztpsv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val ztpsv : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_ssymv : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val ssymv : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dsymv : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dsymv : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_ssbmv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val ssbmv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dsbmv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dsbmv : int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_sspmv : int -> int -> int -> float -> float ptr -> float ptr -> int -> float -> float ptr -> int -> unit
+val sspmv : int -> int -> int -> float -> float ptr -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dspmv : int -> int -> int -> float -> float ptr -> float ptr -> int -> float -> float ptr -> int -> unit
+val dspmv : int -> int -> int -> float -> float ptr -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_sger : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
+val sger : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dger : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
+val dger : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ssyr : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
+val ssyr : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dsyr : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
+val dsyr : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_sspr : int -> int -> int -> float -> float ptr -> int -> float ptr -> unit
+val sspr : int -> int -> int -> float -> float ptr -> int -> float ptr -> unit
 
-val cblas_dspr : int -> int -> int -> float -> float ptr -> int -> float ptr -> unit
+val dspr : int -> int -> int -> float -> float ptr -> int -> float ptr -> unit
 
-val cblas_ssyr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
+val ssyr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dsyr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
+val dsyr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_sspr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> unit
+val sspr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> unit
 
-val cblas_dspr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> unit
+val dspr2 : int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float ptr -> unit
 
-val cblas_chemv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val chemv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zhemv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zhemv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_chbmv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val chbmv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zhbmv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zhbmv : int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_chpmv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val chpmv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zhpmv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zhpmv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_cgeru : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val cgeru : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zgeru : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zgeru : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_cgerc : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val cgerc : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zgerc : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zgerc : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_cher : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val cher : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zher : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zher : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_chpr : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val chpr : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_zhpr : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val zhpr : int -> int -> int -> float -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_cher2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val cher2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_zher2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val zher2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_chpr2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val chpr2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_zhpr2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
+val zhpr2 : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit
 
-val cblas_sgemm : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val sgemm : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dgemm : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dgemm : int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_cgemm : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val cgemm : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zgemm : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zgemm : int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_ssymm : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val ssymm : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dsymm : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dsymm : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_csymm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val csymm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zsymm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zsymm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_ssyrk : int -> int -> int -> int -> int -> float -> float ptr -> int -> float -> float ptr -> int -> unit
+val ssyrk : int -> int -> int -> int -> int -> float -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dsyrk : int -> int -> int -> int -> int -> float -> float ptr -> int -> float -> float ptr -> int -> unit
+val dsyrk : int -> int -> int -> int -> int -> float -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_csyrk : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val csyrk : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zsyrk : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zsyrk : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_ssyr2k : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val ssyr2k : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_dsyr2k : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
+val dsyr2k : int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> float -> float ptr -> int -> unit
 
-val cblas_csyr2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val csyr2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zsyr2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zsyr2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_strmm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
+val strmm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dtrmm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
+val dtrmm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ctrmm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ctrmm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_ztrmm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ztrmm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_strsm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
+val strsm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_dtrsm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
+val dtrsm : int -> int -> int -> int -> int -> int -> int -> float -> float ptr -> int -> float ptr -> int -> unit
 
-val cblas_ctrsm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ctrsm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_ztrsm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
+val ztrsm : int -> int -> int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit
 
-val cblas_chemm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val chemm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_zhemm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
+val zhemm : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit
 
-val cblas_cherk : int -> int -> int -> int -> int -> float -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
+val cherk : int -> int -> int -> int -> int -> float -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
 
-val cblas_zherk : int -> int -> int -> int -> int -> float -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
+val zherk : int -> int -> int -> int -> int -> float -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
 
-val cblas_cher2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
+val cher2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
 
-val cblas_zher2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
+val zher2k : int -> int -> int -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> Complex.t ptr -> int -> unit
 
