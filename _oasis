@@ -36,6 +36,7 @@ Library openblas
   Path:             lib
   BuildTools:       ocamlbuild, ocamldoc
   Modules:          Openblas,
+                    Openblas_cblas,
                     Openblas_lapacke
   CSources:         cblas.h,
                     lapacke.h,

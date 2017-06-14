@@ -233,20 +233,28 @@ let convert_to_extern_fun funs =
     let fun_s = Printf.sprintf
       "external %s\n  : %s\n = %s\n" _fun_name args_s fun_extern_s
     in
-    fun_s
+    let val_s = Printf.sprintf
+      "val %s : %s\n" _fun_name args_s
+    in
+    fun_s, val_s
   ) funs
 
 
 let convert_lapacke_header_to_extern fname funs =
-  let h = open_out fname in
-  Printf.fprintf h "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
-  Printf.fprintf h "open Ctypes\n\n";
+  let h_ml = open_out fname in
+  let h_mli = open_out (fname ^ "i") in
+  Printf.fprintf h_ml "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
+  Printf.fprintf h_ml "open Ctypes\n\n";
+  Printf.fprintf h_mli "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
+  Printf.fprintf h_mli "open Ctypes\n\n";
 
-  Array.iter (fun s ->
-    Printf.fprintf h "%s\n" s;
+  Array.iter (fun (fun_s, val_s) ->
+    Printf.fprintf h_ml "%s\n" fun_s;
+    Printf.fprintf h_mli "%s\n" val_s;
   ) (convert_to_extern_fun funs);
 
-  close_out h
+  close_out h_ml;
+  close_out h_mli
 
 
 let _ =
