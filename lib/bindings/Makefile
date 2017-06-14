@@ -15,8 +15,8 @@ all:
 	./openblas_lapacke_stubgen.byte -ml > openblas_lapacke_generated.ml
 	./openblas_lapacke_stubgen.byte -c > openblas_lapacke_generated_stub.c
 install:
-	cp openblas_cblas_bindings.ml ../
-	cp openblas_cblas_generated* ../
+	cp openblas_cblas.ml* ../
+	cp openblas_cblas_generated_stub.c ../
 	cp openblas_lapacke.ml* ../
 	cp openblas_lapacke_generated_stub.c ../
 test:
