@@ -2,6 +2,9 @@ all:
 	# generate lapacke bindings
 	ocamlfind ocamlc -linkpkg -package str,unix openblas_lapacke_parser.ml -o openblas_lapacke_parser.native
 	./openblas_lapacke_parser.native ../lapacke.h openblas_lapacke_bindings.ml openblas_lapacke.ml
+	# generate cblas bindings
+	ocamlfind ocamlc -linkpkg -package str,unix openblas_cblas_parser.ml -o openblas_cblas_parser.native
+	./openblas_cblas_parser.native openblas_cblas_bindings.ml openblas_cblas.ml
 
 	ocamlfind ocamlc -c -linkpkg -package ctypes.stubs openblas_cblas_bindings.ml
 	ocamlfind ocamlc -linkpkg -package ctypes.stubs openblas_cblas_bindings.cmo openblas_cblas_stubgen.ml -o openblas_cblas_stubgen.byte

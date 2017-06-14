@@ -3,6 +3,8 @@
  * Copyright (c) 2016-2017 Liang Wang <liang.wang@cl.cam.ac.uk>
  *)
 
+(* This app parses lapacke.h file *)
+
 type arg = {
   mutable typ  : string;
   mutable name : string;

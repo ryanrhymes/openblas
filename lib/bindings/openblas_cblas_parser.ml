@@ -3,6 +3,8 @@
  * Copyright (c) 2016-2017 Liang Wang <liang.wang@cl.cam.ac.uk>
  *)
 
+(* This app parses lapacke.h file *)
+
 type arg = {
   mutable typ  : string;
   mutable name : string;
@@ -94,7 +96,7 @@ let is_work_fun s =
 (* parse through the lapacke header file, filter out the functions we want
   to interface to.
  *)
-let parse_lapacke_header fname =
+let parse_cblas_binding fname =
   let h = open_in fname in
   let s = _get_content h in
 
@@ -137,71 +139,6 @@ let process_args_to_argrec s =
 
 
 
-(* FOR CTYPES INTERFACE FILE *)
-
-
-(* convert argrec to ctype string, also append returning value *)
-let convert_argrec_to_ctypes args =
-  let s = Array.fold_left (fun a arg ->
-    let ctyp = convert_typ_to_ctypes arg.typ in
-    a ^ ctyp ^ " @-> ") "" args in
-  "( " ^ s ^ "returning int )"
-
-
-(* convert the list of functions into ctypes-compatible interfaces *)
-let convert_to_ctypes_fun funs =
-  let regex = Str.regexp "^lapack_int LAPACKE_\\([^(]+\\)(\\([^;]+\\));" in
-
-  Array.map (fun s ->
-    let _ = Str.search_forward regex s 0 in
-    let _fun_name = Str.matched_group 1 s in
-    let _fun_args = Str.matched_group 2 s in
-    let args = process_args_to_argrec _fun_args in
-    let args = convert_argrec_to_ctypes args in
-
-    (* assemble the function string *)
-    let fun_s = Printf.sprintf
-      "  let %s = foreign \"LAPACKE_%s\" %s\n" _fun_name _fun_name args
-    in
-    fun_s
-  ) funs
-
-
-(* convert the list of functions into extern c interfaces *)
-let convert_to_ctypes_fun funs =
-  let regex = Str.regexp "^lapack_int LAPACKE_\\([^(]+\\)(\\([^;]+\\));" in
-
-  Array.map (fun s ->
-    let _ = Str.search_forward regex s 0 in
-    let _fun_name = Str.matched_group 1 s in
-    let _fun_args = Str.matched_group 2 s in
-    let args = process_args_to_argrec _fun_args in
-    let args_s = convert_argrec_to_ctypes args in
-
-    (* assemble the function string *)
-    let fun_s = Printf.sprintf
-      "  let %s = foreign \"LAPACKE_%s\" %s\n" _fun_name _fun_name args_s
-    in
-    fun_s
-  ) funs
-
-
-let convert_lapacke_header_to_ctypes fname funs =
-  let h = open_out fname in
-  Printf.fprintf h "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
-  Printf.fprintf h "open Ctypes\n\n";
-  Printf.fprintf h "module Bindings (F : Cstubs.FOREIGN) = struct\n\n";
-  Printf.fprintf h "  open F\n\n";
-
-  Array.iter (fun s ->
-    Printf.fprintf h "%s\n" s;
-  ) (convert_to_ctypes_fun funs);
-  Printf.fprintf h "end";
-
-  close_out h
-
-
-
 (* FOR EXTERN INTERFACE FILE *)
 
 let convert_argrec_to_extern args =
@@ -240,7 +177,7 @@ let convert_to_extern_fun funs =
   ) funs
 
 
-let convert_lapacke_header_to_extern fname funs =
+let convert_cblas_binding_to_extern fname funs =
   let h_ml = open_out fname in
   let h_mli = open_out (fname ^ "i") in
   Printf.fprintf h_ml "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
@@ -261,11 +198,9 @@ let _ =
   if Array.length Sys.argv = 1 then
     print_help ()
   else (
-    let header_file = Sys.argv.(1) in
-    let ctypes_file = Sys.argv.(2) in
-    let binding_file = Sys.argv.(3) in
+    let binding_file = Sys.argv.(1) in
+    let out_ml_file = Sys.argv.(2) in
 
-    let funs = parse_lapacke_header header_file in
-    convert_lapacke_header_to_ctypes ctypes_file funs;
-    convert_lapacke_header_to_extern binding_file funs;
+    let funs = parse_cblas_binding binding_file in
+    convert_cblas_binding_to_extern out_ml_file funs;
 )
