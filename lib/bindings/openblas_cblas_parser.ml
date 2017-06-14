@@ -11,7 +11,7 @@ type arg = {
 let make_arg typ name = { typ; name }
 
 
-let print_help () = print_endline "Usage: EXE cblas.h ctypes_output_file binding_output_file"
+let print_help () = print_endline "Usage: EXE lapacke.h ctypes_output_file binding_output_file"
 
 
 (* convert c types to corresponding types in ctypes *)
@@ -94,11 +94,11 @@ let is_work_fun s =
 (* parse through the lapacke header file, filter out the functions we want
   to interface to.
  *)
-let parse_cblas_header fname =
+let parse_lapacke_header fname =
   let h = open_in fname in
   let s = _get_content h in
 
-  let regex = Str.regexp "^[^ ]+[ ]+cblas_[^;]+;" in
+  let regex = Str.regexp "^lapack_int [^;]+;" in
   let ofs = ref 0 in
   let funs = ref [||] in
   (
@@ -108,31 +108,26 @@ let parse_cblas_header fname =
       ofs := _ofs + (String.length _s);
 
       (* only accept high-level function *)
-      let regex = Str.regexp "[ \n]+" in
-      let _s = Str.global_replace regex " " _s in
-      funs := Array.append !funs [|_s|]
+      match is_work_fun _s with
+      | true -> ()
+      | false -> (
+          let regex = Str.regexp "[ \n]+" in
+          let _s = Str.global_replace regex " " _s in
+          funs := Array.append !funs [|_s|]
+        )
     done with exn -> ()
   );
   (* FIXME : DEBUG *)
-  (* funs := Array.sub !funs 0 0; *)
+  (* funs := Array.sub !funs 0 1; *)
   !funs
 
 
 (* convert function arguments into a list of arg record *)
 let process_args_to_argrec s =
-  let regex = Str.regexp "\\(const\\)*[ ]*\\([^ ]+\\)" in
   let regex0 = Str.regexp "const" in
   let regex1 = Str.regexp "[ ]+" in
   Str.split (Str.regexp ",") s
   |> List.map (fun arg ->
-    let arg = String.trim arg in
-    print_endline arg; flush_all();
-    let _ = Str.search_forward regex arg 0 in
-    let _const = Str.matched_group 1 arg in
-    let _var_typ = Str.matched_group 2 arg in
-    Printf.printf "c:%s t:%s\n" _const _var_typ;
-    flush_all ();
-
     let arg = Str.global_replace regex0 "" arg in
     let args = Str.split regex1 arg |> Array.of_list in
     assert (Array.length args = 2);
@@ -155,7 +150,7 @@ let convert_argrec_to_ctypes args =
 
 (* convert the list of functions into ctypes-compatible interfaces *)
 let convert_to_ctypes_fun funs =
-  let regex = Str.regexp "^[^ ]+[ ]+cblas_\\([^(]+\\)(\\([^;]+\\));" in
+  let regex = Str.regexp "^lapack_int LAPACKE_\\([^(]+\\)(\\([^;]+\\));" in
 
   Array.map (fun s ->
     let _ = Str.search_forward regex s 0 in
@@ -166,7 +161,7 @@ let convert_to_ctypes_fun funs =
 
     (* assemble the function string *)
     let fun_s = Printf.sprintf
-      "  let %s = foreign \"cblas_%s\" %s\n" _fun_name _fun_name args
+      "  let %s = foreign \"LAPACKE_%s\" %s\n" _fun_name _fun_name args
     in
     fun_s
   ) funs
@@ -174,7 +169,7 @@ let convert_to_ctypes_fun funs =
 
 (* convert the list of functions into extern c interfaces *)
 let convert_to_ctypes_fun funs =
-  let regex = Str.regexp "^[^ ]+[ ]+cblas_\\([^(]+\\)(\\([^;]+\\));" in
+  let regex = Str.regexp "^lapack_int LAPACKE_\\([^(]+\\)(\\([^;]+\\));" in
 
   Array.map (fun s ->
     let _ = Str.search_forward regex s 0 in
@@ -185,13 +180,13 @@ let convert_to_ctypes_fun funs =
 
     (* assemble the function string *)
     let fun_s = Printf.sprintf
-      "  let %s = foreign \"cblas_%s\" %s\n" _fun_name _fun_name args_s
+      "  let %s = foreign \"LAPACKE_%s\" %s\n" _fun_name _fun_name args_s
     in
     fun_s
   ) funs
 
 
-let convert_cblas_header_to_ctypes fname funs =
+let convert_lapacke_header_to_ctypes fname funs =
   let h = open_out fname in
   Printf.fprintf h "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h "open Ctypes\n\n";
@@ -227,8 +222,8 @@ let convert_to_extern_fun funs =
     let args_s = convert_argrec_to_extern args in
 
     (* NOTE: naming needs to be consistent with Ctypes *)
-    let fun_native_s = Printf.sprintf "owl_stub_%i_LAPACKE_%s" (i + 1) _fun_name in
-    let fun_byte_s = Printf.sprintf "owl_stub_%i_LAPACKE_%s_byte%i" (i + 1) _fun_name (Array.length args) in
+    let fun_native_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s" (i + 1) _fun_name in
+    let fun_byte_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s_byte%i" (i + 1) _fun_name (Array.length args) in
     let fun_extern_s =
       match Array.length args < 6 with
       | true  -> Printf.sprintf "\"%s\"" fun_native_s
@@ -238,20 +233,28 @@ let convert_to_extern_fun funs =
     let fun_s = Printf.sprintf
       "external %s\n  : %s\n = %s\n" _fun_name args_s fun_extern_s
     in
-    fun_s
+    let val_s = Printf.sprintf
+      "val %s : %s\n" _fun_name args_s
+    in
+    fun_s, val_s
   ) funs
 
 
-let convert_cblas_header_to_extern fname funs =
-  let h = open_out fname in
-  Printf.fprintf h "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
-  Printf.fprintf h "open Ctypes\n\n";
+let convert_lapacke_header_to_extern fname funs =
+  let h_ml = open_out fname in
+  let h_mli = open_out (fname ^ "i") in
+  Printf.fprintf h_ml "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
+  Printf.fprintf h_ml "open Ctypes\n\n";
+  Printf.fprintf h_mli "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
+  Printf.fprintf h_mli "open Ctypes\n\n";
 
-  Array.iter (fun s ->
-    Printf.fprintf h "%s\n" s;
+  Array.iter (fun (fun_s, val_s) ->
+    Printf.fprintf h_ml "%s\n" fun_s;
+    Printf.fprintf h_mli "%s\n" val_s;
   ) (convert_to_extern_fun funs);
 
-  close_out h
+  close_out h_ml;
+  close_out h_mli
 
 
 let _ =
@@ -262,7 +265,7 @@ let _ =
     let ctypes_file = Sys.argv.(2) in
     let binding_file = Sys.argv.(3) in
 
-    let funs = parse_cblas_header header_file in
-    convert_cblas_header_to_ctypes ctypes_file funs;
-    convert_cblas_header_to_extern binding_file funs;
+    let funs = parse_lapacke_header header_file in
+    convert_lapacke_header_to_ctypes ctypes_file funs;
+    convert_lapacke_header_to_extern binding_file funs;
 )
