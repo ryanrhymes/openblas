@@ -18,7 +18,13 @@ Homepage:     https://github.com/ryanrhymes/openblas
 # | Pre- & Post-build                                                 |
 # +-------------------------------------------------------------------+
 
-PreBuildCommand:    echo "Start compiling Owl ..."
+PreBuildCommand:    echo "Start compiling OpenBlas ...";
+                    ${rm} ${libdir}/libopenblas.a;
+                    cd lib/OpenBLAS-0.2.19;
+                    make FC=gfortran;
+                    cp libopenblas.a ${libdir};
+                    make clean;
+                    cd -;
 
 PostBuildCommand:   echo "Phew ... it is done!"
 
@@ -29,14 +35,16 @@ PostBuildCommand:   echo "Phew ... it is done!"
 Library openblas
   Path:             lib
   BuildTools:       ocamlbuild, ocamldoc
-  Modules:          Openblas
-  CCOpt:            -I$pkg_ctypes
+  Modules:          Openblas,
+                    Openblas_lapacke
+  CSources:         lapacke.h,
+                    lapacke_config.h,
+                    lapacke_mangling.h,
+                    lapacke_utils.h,
+                    openblas_lapacke_generated_stub.c
+  CCOpt:            -O3 -I$pkg_ctypes
+  CCLib:            -L${libdir} -lopenblas
   BuildDepends:     str, ctypes, ctypes.stubs
-  if system(linux) || system(linux_elf)
-    CCOpt+:         -g -O3 -Ofast
-  if system(macosx)
-    CCOpt+:         -O3
-    CCLib:          -framework Accelerate
 
 # +-------------------------------------------------------------------+
 # | Misc                                                              |

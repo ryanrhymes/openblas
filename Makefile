@@ -13,8 +13,6 @@ doc:
 clean:
 	rm -rf _build
 	rm -rf *.byte *.native
-	rm -rf examples/*.byte examples/*.native examples/*.tmp
-	rm -rf perftest/*.byte perftest/*.native perftest/*.tmp
 cleanall: uninstall
 	rm -rf _build setup.* *.odocl myocamlbuild.ml _tags
 	rm -rf `find . -name META`
