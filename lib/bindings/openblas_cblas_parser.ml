@@ -87,7 +87,8 @@ let convert_argrec_to_extern args =
   let s = Array.fold_left (fun a arg ->
     let ctyp = convert_typ_to_extern arg.typ in
     a ^ ctyp ^ " -> ") "" args in
-    s ^ "unit "
+    (* remove the last " -> " *)
+    String.(sub s 0 (length s - 4))
 
 
 let convert_to_extern_fun funs =
@@ -95,12 +96,15 @@ let convert_to_extern_fun funs =
 
     let args = process_args_to_argrec _typ_s in
     let args_s = convert_argrec_to_extern args in
+    (* NOTE: - 1 to exlucde "returning ..." term *)
+    let args_l = Array.length args - 1 in
 
     (* NOTE: naming needs to be consistent with Ctypes *)
-    let fun_native_s = Printf.sprintf "openblas_stub_%i_cblas_%s" (i + 1) _fun_name in
-    let fun_byte_s = Printf.sprintf "openblas_stub_%i_cblas_%s_byte%i" (i + 1) _fun_name (Array.length args) in
+    let fun_native_s = Printf.sprintf "openblas_stub_%i_%s" (i + 1) _fun_name in
+    let fun_byte_s = Printf.sprintf "openblas_stub_%i_%s_byte%i" (i + 1) _fun_name args_l in
     let fun_extern_s =
-      match Array.length args < 6 with
+
+      match args_l < 6 with
       | true  -> Printf.sprintf "\"%s\"" fun_native_s
       | false -> Printf.sprintf "\"%s\" \"%s\"" fun_byte_s fun_native_s
     in
