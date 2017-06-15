@@ -18,9 +18,9 @@ all:
 	./openblas_lapacke_stubgen.native -c > openblas_lapacke_generated_stub.c
 install:
 	cp openblas_cblas.ml* ../
-	cp openblas_cblas_generated_stub.c ../
+	cp openblas_cblas_generated_stub.c ../openblas_cblas_stub.c
 	cp openblas_lapacke.ml* ../
-	cp openblas_lapacke_generated_stub.c ../
+	cp openblas_lapacke_generated_stub.c ../openblas_lapacke_stub.c
 test:
 	#ocamlfind ocamlc -c -linkpkg -package ctypes.stubs openblas_lapacke_generated.ml
 	ocamlfind ocamlc -c -linkpkg -package ctypes.stubs openblas_cblas_generated.ml
