@@ -1,286 +1,288 @@
-(* auto-generated cblas interface file, timestamp:1497482850 *)
+(* auto-generated cblas interface file, timestamp:1497540017 *)
 
 open Ctypes
 
-module CI = Cstubs_internals
+val sdsdot : n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> float 
 
-val srotg : _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> unit
+val dsdot : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> float 
 
-val drotg : _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> unit
+val sdot : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> float 
 
-val srotmg : _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> float -> _ CI.fatptr -> unit
+val ddot : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> float 
 
-val drotmg : _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> float -> _ CI.fatptr -> unit
+val cdotu : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> dotu:(Complex.t ptr) -> unit 
 
-val srot : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> float -> unit
+val cdotc : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> dotc:(Complex.t ptr) -> unit 
 
-val drot : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> float -> unit
+val zdotu : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> dotu:(Complex.t ptr) -> unit 
 
-val sswap : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zdotc : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> dotc:(Complex.t ptr) -> unit 
 
-val dswap : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val snrm2 : n:int -> x:(float ptr) -> incx:int -> float 
 
-val cswap : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val sasum : n:int -> x:(float ptr) -> incx:int -> float 
 
-val zswap : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dnrm2 : n:int -> x:(float ptr) -> incx:int -> float 
 
-val sscal : int -> float -> _ CI.fatptr -> int -> unit
+val dasum : n:int -> x:(float ptr) -> incx:int -> float 
 
-val dscal : int -> float -> _ CI.fatptr -> int -> unit
+val scnrm2 : n:int -> x:(Complex.t ptr) -> incx:int -> float 
 
-val cscal : int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val scasum : n:int -> x:(Complex.t ptr) -> incx:int -> float 
 
-val zscal : int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val dznrm2 : n:int -> x:(Complex.t ptr) -> incx:int -> float 
 
-val csscal : int -> float -> _ CI.fatptr -> int -> unit
+val dzasum : n:int -> x:(Complex.t ptr) -> incx:int -> float 
 
-val zdscal : int -> float -> _ CI.fatptr -> int -> unit
+val isamax : n:int -> x:(float ptr) -> incx:int -> Unsigned.size_t 
 
-val scopy : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val idamax : n:int -> x:(float ptr) -> incx:int -> Unsigned.size_t 
 
-val dcopy : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val icamax : n:int -> x:(Complex.t ptr) -> incx:int -> Unsigned.size_t 
 
-val ccopy : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val izamax : n:int -> x:(Complex.t ptr) -> incx:int -> Unsigned.size_t 
 
-val zcopy : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val sswap : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> unit 
 
-val saxpy : int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val scopy : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> unit 
 
-val daxpy : int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val saxpy : n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> unit 
 
-val caxpy : int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dswap : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> unit 
 
-val zaxpy : int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dcopy : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> unit 
 
-val sdot : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float
+val daxpy : n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> unit 
 
-val ddot : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float
+val cswap : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val sdsdot : int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float
+val ccopy : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val dsdot : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float
+val caxpy : n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val cdotu : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zswap : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val cdotc : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zcopy : n:int -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val zdotu : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zaxpy : n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val zdotc : int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val srotg : a:(float ptr) -> b:(float ptr) -> c:(float ptr) -> s:(float ptr) -> unit 
 
-val snrm2 : int -> _ CI.fatptr -> int -> float
+val srotmg : d1:(float ptr) -> d2:(float ptr) -> b1:(float ptr) -> b2:float -> p:(float ptr) -> unit 
 
-val dnrm2 : int -> _ CI.fatptr -> int -> float
+val srot : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> c:float -> s:float -> unit 
 
-val scnrm2 : int -> _ CI.fatptr -> int -> float
+val srotm : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> p:(float ptr) -> unit 
 
-val dznrm2 : int -> _ CI.fatptr -> int -> float
+val drotg : a:(float ptr) -> b:(float ptr) -> c:(float ptr) -> s:(float ptr) -> unit 
 
-val sasum : int -> _ CI.fatptr -> int -> float
+val drotmg : d1:(float ptr) -> d2:(float ptr) -> b1:(float ptr) -> b2:float -> p:(float ptr) -> unit 
 
-val dasum : int -> _ CI.fatptr -> int -> float
+val drot : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> c:float -> s:float -> unit 
 
-val scasum : int -> _ CI.fatptr -> int -> float
+val drotm : n:int -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> p:(float ptr) -> unit 
 
-val dzasum : int -> _ CI.fatptr -> int -> float
+val sscal : n:int -> alpha:float -> x:(float ptr) -> incx:int -> unit 
 
-val isamax : int -> _ CI.fatptr -> int -> Unsigned.size_t
+val dscal : n:int -> alpha:float -> x:(float ptr) -> incx:int -> unit 
 
-val idamax : int -> _ CI.fatptr -> int -> Unsigned.size_t
+val cscal : n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val icamax : int -> _ CI.fatptr -> int -> Unsigned.size_t
+val zscal : n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val izamax : int -> _ CI.fatptr -> int -> Unsigned.size_t
+val csscal : n:int -> alpha:float -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val sgemv : int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val zdscal : n:int -> alpha:float -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val dgemv : int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val sgemv : order:int -> transa:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val cgemv : int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val sgbmv : order:int -> transa:int -> m:int -> n:int -> kl:int -> ku:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val zgemv : int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val strmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val sgbmv : int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val stbmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val dgbmv : int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val stpmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(float ptr) -> x:(float ptr) -> incx:int -> unit 
 
-val cgbmv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val strsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val zgbmv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val stbsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val strmv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val stpsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(float ptr) -> x:(float ptr) -> incx:int -> unit 
 
-val dtrmv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dgemv : order:int -> transa:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val ctrmv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dgbmv : order:int -> transa:int -> m:int -> n:int -> kl:int -> ku:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val ztrmv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dtrmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val stbmv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dtbmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val dtbmv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dtpmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(float ptr) -> x:(float ptr) -> incx:int -> unit 
 
-val ctbmv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dtrsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val ztbmv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dtbsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> unit 
 
-val stpmv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val dtpsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(float ptr) -> x:(float ptr) -> incx:int -> unit 
 
-val dtpmv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val cgemv : order:int -> transa:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val ctpmv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val cgbmv : order:int -> transa:int -> m:int -> n:int -> kl:int -> ku:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val ztpmv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ctrmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val strsv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctbmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val dtrsv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctpmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val ctrsv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctrsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val ztrsv : int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctbsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val stbsv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctpsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val dtbsv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zgemv : order:int -> transa:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val ctbsv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zgbmv : order:int -> transa:int -> m:int -> n:int -> kl:int -> ku:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val ztbsv : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ztrmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val stpsv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ztbmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val dtpsv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ztpmv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val ctpsv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ztrsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val ztpsv : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ztbsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val ssymv : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val ztpsv : order:int -> uplo:int -> transa:int -> diag:int -> n:int -> ap:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> unit 
 
-val dsymv : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val ssymv : order:int -> uplo:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val ssbmv : int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val ssbmv : order:int -> uplo:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val dsbmv : int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val sspmv : order:int -> uplo:int -> n:int -> alpha:float -> ap:(float ptr) -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val sspmv : int -> int -> int -> float -> _ CI.fatptr -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val sger : order:int -> m:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> a:(float ptr) -> lda:int -> unit 
 
-val dspmv : int -> int -> int -> float -> _ CI.fatptr -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val ssyr : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> a:(float ptr) -> lda:int -> unit 
 
-val sger : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val sspr : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> ap:(float ptr) -> unit 
 
-val dger : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ssyr2 : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> a:(float ptr) -> lda:int -> unit 
 
-val ssyr : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val sspr2 : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> a:(float ptr) -> unit 
 
-val dsyr : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dsymv : order:int -> uplo:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val sspr : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val dsbmv : order:int -> uplo:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val dspr : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val dspmv : order:int -> uplo:int -> n:int -> alpha:float -> ap:(float ptr) -> x:(float ptr) -> incx:int -> beta:float -> y:(float ptr) -> incy:int -> unit 
 
-val ssyr2 : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dger : order:int -> m:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> a:(float ptr) -> lda:int -> unit 
 
-val dsyr2 : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val dsyr : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> a:(float ptr) -> lda:int -> unit 
 
-val sspr2 : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val dspr : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> ap:(float ptr) -> unit 
 
-val dspr2 : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val dsyr2 : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> a:(float ptr) -> lda:int -> unit 
 
-val chemv : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val dspr2 : order:int -> uplo:int -> n:int -> alpha:float -> x:(float ptr) -> incx:int -> y:(float ptr) -> incy:int -> a:(float ptr) -> unit 
 
-val zhemv : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val chemv : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val chbmv : int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val chbmv : order:int -> uplo:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val zhbmv : int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val chpmv : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> ap:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val chpmv : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val cgeru : order:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val zhpmv : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val cgerc : order:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val cgeru : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val cher : order:int -> uplo:int -> n:int -> alpha:float -> x:(Complex.t ptr) -> incx:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val zgeru : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val chpr : order:int -> uplo:int -> n:int -> alpha:float -> x:(Complex.t ptr) -> incx:int -> a:(Complex.t ptr) -> unit 
 
-val cgerc : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val cher2 : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val zgerc : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val chpr2 : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> ap:(Complex.t ptr) -> unit 
 
-val cher : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zhemv : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val zher : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zhbmv : order:int -> uplo:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val chpr : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zhpmv : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> ap:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> beta:(Complex.t ptr) -> y:(Complex.t ptr) -> incy:int -> unit 
 
-val zhpr : int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zgeru : order:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val cher2 : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zgerc : order:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val zher2 : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zher : order:int -> uplo:int -> n:int -> alpha:float -> x:(Complex.t ptr) -> incx:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val chpr2 : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zhpr : order:int -> uplo:int -> n:int -> alpha:float -> x:(Complex.t ptr) -> incx:int -> a:(Complex.t ptr) -> unit 
 
-val zhpr2 : int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> unit
+val zher2 : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> a:(Complex.t ptr) -> lda:int -> unit 
 
-val sgemm : int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val zhpr2 : order:int -> uplo:int -> n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> y:(Complex.t ptr) -> incy:int -> ap:(Complex.t ptr) -> unit 
 
-val dgemm : int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val sgemm : order:int -> transa:int -> transb:int -> m:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val cgemm : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ssymm : order:int -> side:int -> uplo:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val zgemm : int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ssyrk : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val ssymm : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val ssyr2k : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val dsymm : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val strmm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> unit 
 
-val csymm : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val strsm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> unit 
 
-val zsymm : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val dgemm : order:int -> transa:int -> transb:int -> m:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val ssyrk : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val dsymm : order:int -> side:int -> uplo:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val dsyrk : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val dsyrk : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val csyrk : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val dsyr2k : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> beta:float -> c:(float ptr) -> ldc:int -> unit 
 
-val zsyrk : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val dtrmm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> unit 
 
-val ssyr2k : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val dtrsm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:float -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> unit 
 
-val dsyr2k : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val cgemm : order:int -> transa:int -> transb:int -> m:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val csyr2k : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val csymm : order:int -> side:int -> uplo:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val zsyr2k : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val csyrk : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val strmm : int -> int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val csyr2k : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val dtrmm : int -> int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctrmm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> unit 
 
-val ctrmm : int -> int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ctrsm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> unit 
 
-val ztrmm : int -> int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zgemm : order:int -> transa:int -> transb:int -> m:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val strsm : int -> int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zsymm : order:int -> side:int -> uplo:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val dtrsm : int -> int -> int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zsyrk : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val ctrsm : int -> int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val zsyr2k : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val ztrsm : int -> int -> int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> unit
+val ztrmm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> unit 
 
-val chemm : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val ztrsm : order:int -> side:int -> uplo:int -> transa:int -> diag:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> unit 
 
-val zhemm : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> unit
+val chemm : order:int -> side:int -> uplo:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val cherk : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val cherk : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:float -> a:(Complex.t ptr) -> lda:int -> beta:float -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val zherk : int -> int -> int -> int -> int -> float -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val cher2k : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:float -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val cher2k : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val zhemm : order:int -> side:int -> uplo:int -> m:int -> n:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> unit 
 
-val zher2k : int -> int -> int -> int -> int -> _ CI.fatptr -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> float -> _ CI.fatptr -> int -> unit
+val zherk : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:float -> a:(Complex.t ptr) -> lda:int -> beta:float -> c:(Complex.t ptr) -> ldc:int -> unit 
+
+val zher2k : order:int -> uplo:int -> trans:int -> n:int -> k:int -> alpha:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> beta:float -> c:(Complex.t ptr) -> ldc:int -> unit 
 
