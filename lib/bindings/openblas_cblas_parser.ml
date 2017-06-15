@@ -23,6 +23,15 @@ let convert_rval_to_ctypes = function
   | "CBLAS_INDEX" -> "returning size_t"
   |  _            -> failwith "convert_typ_to_ctypes"
 
+
+let convert_rval_to_extern = function
+  | "float"       -> "float"
+  | "double"      -> "float"
+  | "void"        -> "unit"
+  | "CBLAS_INDEX" -> "Unsigned.size_t"
+  |  _            -> failwith "convert_rval_to_extern"
+
+
 let convert_typ_to_ctypes fun_blas typ_name =
   match typ_name with
   | "int"                    -> "int"
@@ -58,14 +67,14 @@ let convert_typ_to_extern = function
   | "int"                    -> "int"
   | "float"                  -> "float"
   | "double"                 -> "float"
-  | "ptr float"              -> "_ CI.fatptr"
-  | "ptr double"             -> "_ CI.fatptr"
-  | "ptr complex32"          -> "_ CI.fatptr"
-  | "ptr complex64"          -> "_ CI.fatptr"
-  | "returning void"         -> "unit"
-  | "returning float"        -> "float"
-  | "returning double"       -> "float"
-  | "returning size_t"       -> "Unsigned.size_t"
+  | "float*"                 -> "_ CI.fatptr"
+  | "double*"                -> "_ CI.fatptr"
+  | "void*"                  -> "_ CI.fatptr"
+  | "CBLAS_ORDER"            -> "int"
+  | "CBLAS_TRANSPOSE"        -> "int"
+  | "CBLAS_UPLO"             -> "int"
+  | "CBLAS_DIAG"             -> "int"
+  | "CBLAS_SIDE"             -> "int"
   | _                        -> failwith "convert_typ_to_extern"
 
 
@@ -147,16 +156,6 @@ let convert_to_ctypes_fun funs =
 
     let args = process_args_to_argrec _typ_s in
     let args_s = convert_argrec_to_ctypes _fun_blas _fun_rval args in
-    (* NOTE: - 1 to exlucde "returning ..." term *)
-    let args_l = Array.length args - 1 in
-
-    (* NOTE: naming needs to be consistent with Ctypes *)
-    let fun_native_s = Printf.sprintf "openblas_stub_%i_%s" (i + 1) _fun_blas in
-    let fun_byte_s = Printf.sprintf "openblas_stub_%i_%s_byte%i" (i + 1) _fun_blas args_l in
-    let fun_extern_s = match args_l < 6 with
-      | true  -> Printf.sprintf "\"%s\"" fun_native_s
-      | false -> Printf.sprintf "\"%s\" \"%s\"" fun_byte_s fun_native_s
-    in
     (* assemble the function string *)
     let fun_s = Printf.sprintf
       "let cblas_%s = foreign \"%s\" (%s)\n" _fun_caml _fun_blas args_s
@@ -185,21 +184,39 @@ let convert_cblas_header_to_ctypes fname funs =
 
 (* FOR EXTERN INTERFACE FILE *)
 
-let convert_argrec_to_extern args =
+let convert_argrec_to_extern fun_rval args =
   let s = Array.fold_left (fun a arg ->
     let ctyp = convert_typ_to_extern arg.typ in
     a ^ ctyp ^ " -> ") "" args in
-    (* remove the last " -> " *)
-    String.(sub s 0 (length s - 4))
+    s ^ (convert_rval_to_extern fun_rval)
+
+
+let convert_argrec_to_caml fun_caml args =
+  let arg_names = Array.fold_left (fun a arg ->
+    let s = String.trim arg.name |> String.lowercase_ascii in
+    Printf.sprintf "%s ~%s" a s
+  ) "" args
+  in
+  let fun_param = Array.fold_left (fun a arg ->
+    let s = String.trim arg.name |> String.lowercase_ascii in
+    let t = String.trim arg.typ in
+    let s =
+      if String.get t (String.length t - 1) = '*' then
+        Printf.sprintf "(CI.cptr %s)" s
+      else s
+    in
+    Printf.sprintf "%s %s" a s
+  ) "" args
+  in
+  Printf.sprintf "let %s%s =\n  cblas_%s%s\n" fun_caml arg_names fun_caml fun_param
 
 
 let convert_to_extern_fun funs =
-  Array.mapi (fun i (_fun_caml, _fun_blas, _typ_s) ->
+  Array.mapi (fun i (_fun_caml, _fun_blas, _typ_s, _fun_rval) ->
 
     let args = process_args_to_argrec _typ_s in
-    let args_s = convert_argrec_to_extern args in
-    (* NOTE: - 1 to exlucde "returning ..." term *)
-    let args_l = Array.length args - 1 in
+    let args_s = convert_argrec_to_extern _fun_rval args in
+    let args_l = Array.length args in
 
     (* NOTE: naming needs to be consistent with Ctypes *)
     let fun_native_s = Printf.sprintf "openblas_stub_%i_%s" (i + 1) _fun_blas in
@@ -209,32 +226,39 @@ let convert_to_extern_fun funs =
       | false -> Printf.sprintf "\"%s\" \"%s\"" fun_byte_s fun_native_s
     in
     (* assemble the function string *)
-    let fun_s = Printf.sprintf
-      "external %s\n  : %s\n = %s\n" _fun_caml args_s fun_extern_s
+    let fun_stub_s = Printf.sprintf
+      "external cblas_%s\n  : %s\n = %s\n" _fun_caml args_s fun_extern_s
     in
     let val_s = Printf.sprintf
       "val %s : %s\n" _fun_caml args_s
     in
-    fun_s, val_s
+    _fun_caml, fun_stub_s, val_s, args
   ) funs
 
 
-let convert_cblas_binding_to_extern fname funs =
+let convert_cblas_header_to_extern fname funs =
   let h_ml = open_out fname in
-  let h_mli = open_out (fname ^ "i") in
   Printf.fprintf h_ml "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_ml "open Ctypes\n\n";
   Printf.fprintf h_ml "module CI = Cstubs_internals\n\n";
-  Printf.fprintf h_mli "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
-  Printf.fprintf h_mli "open Ctypes\n\n";
-  Printf.fprintf h_mli "module CI = Cstubs_internals\n\n";
+  Array.iter (fun (fun_caml, fun_stub_s, val_s, args) ->
+    Printf.fprintf h_ml "%s\n" fun_stub_s;
+  ) (convert_to_extern_fun funs);
 
-  Array.iter (fun (fun_s, val_s) ->
-    Printf.fprintf h_ml "%s\n" fun_s;
-    Printf.fprintf h_mli "%s\n" val_s;
+  Array.iter (fun (fun_caml, fun_stub_s, val_s, args) ->
+    Printf.fprintf h_ml "%s\n" (convert_argrec_to_caml fun_caml args);
   ) (convert_to_extern_fun funs);
 
   close_out h_ml;
+
+  let h_mli = open_out (fname ^ "i") in
+  Printf.fprintf h_mli "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
+  Printf.fprintf h_mli "open Ctypes\n\n";
+  Printf.fprintf h_mli "module CI = Cstubs_internals\n\n";
+  Array.iter (fun (fun_caml, fun_stub_s, val_s, args) ->
+    Printf.fprintf h_mli "%s\n" val_s;
+  ) (convert_to_extern_fun funs);
+
   close_out h_mli
 
 
@@ -247,6 +271,6 @@ let _ =
     let out_ml_file = Sys.argv.(3) in
 
     let funs = parse_cblas_binding header_file in
-    convert_cblas_header_to_ctypes ctypes_file funs
-    (* convert_cblas_binding_to_extern out_ml_file funs; *)
+    convert_cblas_header_to_ctypes ctypes_file funs;
+    convert_cblas_header_to_extern out_ml_file funs
 )
