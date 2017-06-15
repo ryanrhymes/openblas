@@ -21,10 +21,10 @@ let convert_typ_to_extern = function
   | "int"                    -> "int"
   | "float"                  -> "float"
   | "double"                 -> "float"
-  | "ptr float"              -> "float ptr"
-  | "ptr double"             -> "float ptr"
-  | "ptr complex32"          -> "Complex.t ptr"
-  | "ptr complex64"          -> "Complex.t ptr"
+  | "ptr float"              -> "_ CI.fatptr"
+  | "ptr double"             -> "_ CI.fatptr"
+  | "ptr complex32"          -> "_ CI.fatptr"
+  | "ptr complex64"          -> "_ CI.fatptr"
   | "returning void"         -> "unit"
   | "returning float"        -> "float"
   | "returning double"       -> "float"
@@ -123,8 +123,10 @@ let convert_cblas_binding_to_extern fname funs =
   let h_mli = open_out (fname ^ "i") in
   Printf.fprintf h_ml "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_ml "open Ctypes\n\n";
+  Printf.fprintf h_ml "module CI = Cstubs_internals\n\n";
   Printf.fprintf h_mli "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_mli "open Ctypes\n\n";
+  Printf.fprintf h_mli "module CI = Cstubs_internals\n\n";
 
   Array.iter (fun (fun_s, val_s) ->
     Printf.fprintf h_ml "%s\n" fun_s;
