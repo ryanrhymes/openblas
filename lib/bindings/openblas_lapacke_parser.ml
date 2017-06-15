@@ -92,14 +92,14 @@ let convert_typ_to_caml = function
   | "lapack_complex_double*" -> "(Complex.t ptr)"
   | "lapack_int*"            -> "(int ptr)"
   | "lapack_logical*"        -> "(int ptr)"
-  | "LAPACK_C_SELECT1"       -> "(void ptr)"
-  | "LAPACK_Z_SELECT1"       -> "(void ptr)"
-  | "LAPACK_S_SELECT2"       -> "(void ptr)"
-  | "LAPACK_D_SELECT2"       -> "(void ptr)"
-  | "LAPACK_C_SELECT2"       -> "(void ptr)"
-  | "LAPACK_Z_SELECT2"       -> "(void ptr)"
-  | "LAPACK_S_SELECT3"       -> "(void ptr)"
-  | "LAPACK_D_SELECT3"       -> "(void ptr)"
+  | "LAPACK_C_SELECT1"       -> "(unit ptr)"
+  | "LAPACK_Z_SELECT1"       -> "(unit ptr)"
+  | "LAPACK_S_SELECT2"       -> "(unit ptr)"
+  | "LAPACK_D_SELECT2"       -> "(unit ptr)"
+  | "LAPACK_C_SELECT2"       -> "(unit ptr)"
+  | "LAPACK_Z_SELECT2"       -> "(unit ptr)"
+  | "LAPACK_S_SELECT3"       -> "(unit ptr)"
+  | "LAPACK_D_SELECT3"       -> "(unit ptr)"
   | _                        -> failwith "convert_typ_to_caml"
 
 
@@ -176,12 +176,16 @@ let is_in_funlist t s =
 
 (* convert function arguments into a list of arg record *)
 let process_args_to_argrec s =
-  let regex0 = Str.regexp "const" in
-  let regex1 = Str.regexp "[ ]+" in
   Str.split (Str.regexp ",") s
   |> List.map (fun arg ->
-    let arg = Str.global_replace regex0 "" arg in
-    let args = Str.split regex1 arg |> Array.of_list in
+    let args = arg
+      |> Str.global_replace (Str.regexp "const") ""
+      |> Str.global_replace (Str.regexp "type") "typ"
+      |> Str.global_replace (Str.regexp "matrix_layout") "layout"
+      |> String.trim
+      |> Str.split (Str.regexp "[ ]+")
+      |> Array.of_list
+    in
     assert (Array.length args = 2);
     make_arg args.(0) args.(1)
   )
@@ -273,7 +277,10 @@ let convert_argrec_to_caml fun_caml args =
     let s = String.trim arg.name |> String.lowercase_ascii in
     let t = String.trim arg.typ in
     let s =
-      if String.get t (String.length t - 1) = '*' then
+      (* this is for LAPACK_X_SELECTX cases *)
+      if (String.length t > 7) && (Str.string_before t 7 = "LAPACK_") then
+        Printf.sprintf "(CI.cptr %s)" s
+      else if String.get t (String.length t - 1) = '*' then
         Printf.sprintf "(CI.cptr %s)" s
       else s
     in

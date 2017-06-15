@@ -36,15 +36,15 @@ Library openblas
   Path:             lib
   BuildTools:       ocamlbuild, ocamldoc
   Modules:          Openblas,
-                    Openblas_cblas
-                    #Openblas_lapacke
+                    Openblas_cblas,
+                    Openblas_lapacke
   CSources:         cblas.h,
                     lapacke.h,
                     lapacke_config.h,
                     lapacke_mangling.h,
                     lapacke_utils.h,
-                    openblas_cblas_stub.c
-                    #openblas_lapacke_stub.c
+                    openblas_cblas_stub.c,
+                    openblas_lapacke_stub.c
   CCOpt:            -O3 -I$pkg_ctypes
   CCLib:            -L${libdir} -lopenblas
                     -L${libdir}/gcc/7/ -lgfortran

@@ -3,7 +3,7 @@
  * Copyright (c) 2016-2017 Liang Wang <liang.wang@cl.cam.ac.uk>
  *)
 
-(* auto-generated lapacke interface file, timestamp:1497549494 *)
+(* auto-generated lapacke interface file, timestamp:1497550939 *)
 
 open Ctypes
 
@@ -4193,29 +4193,29 @@ external lapacke_zsyr
   : int -> char -> int -> Complex.t -> _ CI.fatptr -> int -> _ CI.fatptr -> int -> int 
   = "openblas_stub_1046_LAPACKE_zsyr_byte8" "openblas_stub_1046_LAPACKE_zsyr"
 
-let sbdsdc ~matrix_layout ~uplo ~compq ~n ~d ~e ~u ~ldu ~vt ~ldvt ~q ~iq =
-  lapacke_sbdsdc matrix_layout uplo compq n (CI.cptr d) (CI.cptr e) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr q) (CI.cptr iq)
+let sbdsdc ~layout ~uplo ~compq ~n ~d ~e ~u ~ldu ~vt ~ldvt ~q ~iq =
+  lapacke_sbdsdc layout uplo compq n (CI.cptr d) (CI.cptr e) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr q) (CI.cptr iq)
 
-let dbdsdc ~matrix_layout ~uplo ~compq ~n ~d ~e ~u ~ldu ~vt ~ldvt ~q ~iq =
-  lapacke_dbdsdc matrix_layout uplo compq n (CI.cptr d) (CI.cptr e) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr q) (CI.cptr iq)
+let dbdsdc ~layout ~uplo ~compq ~n ~d ~e ~u ~ldu ~vt ~ldvt ~q ~iq =
+  lapacke_dbdsdc layout uplo compq n (CI.cptr d) (CI.cptr e) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr q) (CI.cptr iq)
 
-let sbdsqr ~matrix_layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
-  lapacke_sbdsqr matrix_layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
+let sbdsqr ~layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
+  lapacke_sbdsqr layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
 
-let dbdsqr ~matrix_layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
-  lapacke_dbdsqr matrix_layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
+let dbdsqr ~layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
+  lapacke_dbdsqr layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
 
-let cbdsqr ~matrix_layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
-  lapacke_cbdsqr matrix_layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
+let cbdsqr ~layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
+  lapacke_cbdsqr layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
 
-let zbdsqr ~matrix_layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
-  lapacke_zbdsqr matrix_layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
+let zbdsqr ~layout ~uplo ~n ~ncvt ~nru ~ncc ~d ~e ~vt ~ldvt ~u ~ldu ~c ~ldc =
+  lapacke_zbdsqr layout uplo n ncvt nru ncc (CI.cptr d) (CI.cptr e) (CI.cptr vt) ldvt (CI.cptr u) ldu (CI.cptr c) ldc
 
-let sbdsvdx ~matrix_layout ~uplo ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~ns ~s ~z ~ldz ~superb =
-  lapacke_sbdsvdx matrix_layout uplo jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr z) ldz (CI.cptr superb)
+let sbdsvdx ~layout ~uplo ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~ns ~s ~z ~ldz ~superb =
+  lapacke_sbdsvdx layout uplo jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr z) ldz (CI.cptr superb)
 
-let dbdsvdx ~matrix_layout ~uplo ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~ns ~s ~z ~ldz ~superb =
-  lapacke_dbdsvdx matrix_layout uplo jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr z) ldz (CI.cptr superb)
+let dbdsvdx ~layout ~uplo ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~ns ~s ~z ~ldz ~superb =
+  lapacke_dbdsvdx layout uplo jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr z) ldz (CI.cptr superb)
 
 let sdisna ~job ~m ~n ~d ~sep =
   lapacke_sdisna job m n (CI.cptr d) (CI.cptr sep)
@@ -4223,779 +4223,779 @@ let sdisna ~job ~m ~n ~d ~sep =
 let ddisna ~job ~m ~n ~d ~sep =
   lapacke_ddisna job m n (CI.cptr d) (CI.cptr sep)
 
-let sgbbrd ~matrix_layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
-  lapacke_sgbbrd matrix_layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
+let sgbbrd ~layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
+  lapacke_sgbbrd layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
 
-let dgbbrd ~matrix_layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
-  lapacke_dgbbrd matrix_layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
+let dgbbrd ~layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
+  lapacke_dgbbrd layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
 
-let cgbbrd ~matrix_layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
-  lapacke_cgbbrd matrix_layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
+let cgbbrd ~layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
+  lapacke_cgbbrd layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
 
-let zgbbrd ~matrix_layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
-  lapacke_zgbbrd matrix_layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
+let zgbbrd ~layout ~vect ~m ~n ~ncc ~kl ~ku ~ab ~ldab ~d ~e ~q ~ldq ~pt ~ldpt ~c ~ldc =
+  lapacke_zgbbrd layout vect m n ncc kl ku (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq (CI.cptr pt) ldpt (CI.cptr c) ldc
 
-let sgbcon ~matrix_layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
-  lapacke_sgbcon matrix_layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
+let sgbcon ~layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
+  lapacke_sgbcon layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let dgbcon ~matrix_layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
-  lapacke_dgbcon matrix_layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
+let dgbcon ~layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
+  lapacke_dgbcon layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let cgbcon ~matrix_layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
-  lapacke_cgbcon matrix_layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
+let cgbcon ~layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
+  lapacke_cgbcon layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let zgbcon ~matrix_layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
-  lapacke_zgbcon matrix_layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
+let zgbcon ~layout ~norm ~n ~kl ~ku ~ab ~ldab ~ipiv ~anorm ~rcond =
+  lapacke_zgbcon layout norm n kl ku (CI.cptr ab) ldab (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let sgbequ ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_sgbequ matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let sgbequ ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_sgbequ layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let dgbequ ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_dgbequ matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let dgbequ ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_dgbequ layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let cgbequ ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_cgbequ matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let cgbequ ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_cgbequ layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let zgbequ ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_zgbequ matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let zgbequ ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_zgbequ layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let sgbequb ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_sgbequb matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let sgbequb ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_sgbequb layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let dgbequb ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_dgbequb matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let dgbequb ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_dgbequb layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let cgbequb ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_cgbequb matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let cgbequb ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_cgbequb layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let zgbequb ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_zgbequb matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let zgbequb ~layout ~m ~n ~kl ~ku ~ab ~ldab ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_zgbequb layout m n kl ku (CI.cptr ab) ldab (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let sgbrfs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_sgbrfs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let sgbrfs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_sgbrfs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dgbrfs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dgbrfs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dgbrfs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dgbrfs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cgbrfs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cgbrfs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cgbrfs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cgbrfs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zgbrfs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zgbrfs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zgbrfs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zgbrfs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sgbsv ~matrix_layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_sgbsv matrix_layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let sgbsv ~layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_sgbsv layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dgbsv ~matrix_layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_dgbsv matrix_layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let dgbsv ~layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_dgbsv layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cgbsv ~matrix_layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_cgbsv matrix_layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let cgbsv ~layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_cgbsv layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zgbsv ~matrix_layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_zgbsv matrix_layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let zgbsv ~layout ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_zgbsv layout n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let sgbsvx ~matrix_layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_sgbsvx matrix_layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let sgbsvx ~layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_sgbsvx layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let dgbsvx ~matrix_layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_dgbsvx matrix_layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let dgbsvx ~layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_dgbsvx layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let cgbsvx ~matrix_layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_cgbsvx matrix_layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let cgbsvx ~layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_cgbsvx layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let zgbsvx ~matrix_layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_zgbsvx matrix_layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let zgbsvx ~layout ~fact ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~afb ~ldafb ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_zgbsvx layout fact trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let sgbtrf ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
-  lapacke_sgbtrf matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
+let sgbtrf ~layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
+  lapacke_sgbtrf layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
 
-let dgbtrf ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
-  lapacke_dgbtrf matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
+let dgbtrf ~layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
+  lapacke_dgbtrf layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
 
-let cgbtrf ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
-  lapacke_cgbtrf matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
+let cgbtrf ~layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
+  lapacke_cgbtrf layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
 
-let zgbtrf ~matrix_layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
-  lapacke_zgbtrf matrix_layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
+let zgbtrf ~layout ~m ~n ~kl ~ku ~ab ~ldab ~ipiv =
+  lapacke_zgbtrf layout m n kl ku (CI.cptr ab) ldab (CI.cptr ipiv)
 
-let sgbtrs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_sgbtrs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let sgbtrs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_sgbtrs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dgbtrs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_dgbtrs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let dgbtrs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_dgbtrs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cgbtrs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_cgbtrs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let cgbtrs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_cgbtrs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zgbtrs ~matrix_layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
-  lapacke_zgbtrs matrix_layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
+let zgbtrs ~layout ~trans ~n ~kl ~ku ~nrhs ~ab ~ldab ~ipiv ~b ~ldb =
+  lapacke_zgbtrs layout trans n kl ku nrhs (CI.cptr ab) ldab (CI.cptr ipiv) (CI.cptr b) ldb
 
-let sgebak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
-  lapacke_sgebak matrix_layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
+let sgebak ~layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
+  lapacke_sgebak layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
 
-let dgebak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
-  lapacke_dgebak matrix_layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
+let dgebak ~layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
+  lapacke_dgebak layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
 
-let cgebak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
-  lapacke_cgebak matrix_layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
+let cgebak ~layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
+  lapacke_cgebak layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
 
-let zgebak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
-  lapacke_zgebak matrix_layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
+let zgebak ~layout ~job ~side ~n ~ilo ~ihi ~scale ~m ~v ~ldv =
+  lapacke_zgebak layout job side n ilo ihi (CI.cptr scale) m (CI.cptr v) ldv
 
-let sgebal ~matrix_layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
-  lapacke_sgebal matrix_layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
+let sgebal ~layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
+  lapacke_sgebal layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
 
-let dgebal ~matrix_layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
-  lapacke_dgebal matrix_layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
+let dgebal ~layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
+  lapacke_dgebal layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
 
-let cgebal ~matrix_layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
-  lapacke_cgebal matrix_layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
+let cgebal ~layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
+  lapacke_cgebal layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
 
-let zgebal ~matrix_layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
-  lapacke_zgebal matrix_layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
+let zgebal ~layout ~job ~n ~a ~lda ~ilo ~ihi ~scale =
+  lapacke_zgebal layout job n (CI.cptr a) lda (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale)
 
-let sgebrd ~matrix_layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
-  lapacke_sgebrd matrix_layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
+let sgebrd ~layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
+  lapacke_sgebrd layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
 
-let dgebrd ~matrix_layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
-  lapacke_dgebrd matrix_layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
+let dgebrd ~layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
+  lapacke_dgebrd layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
 
-let cgebrd ~matrix_layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
-  lapacke_cgebrd matrix_layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
+let cgebrd ~layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
+  lapacke_cgebrd layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
 
-let zgebrd ~matrix_layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
-  lapacke_zgebrd matrix_layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
+let zgebrd ~layout ~m ~n ~a ~lda ~d ~e ~tauq ~taup =
+  lapacke_zgebrd layout m n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tauq) (CI.cptr taup)
 
-let sgecon ~matrix_layout ~norm ~n ~a ~lda ~anorm ~rcond =
-  lapacke_sgecon matrix_layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
+let sgecon ~layout ~norm ~n ~a ~lda ~anorm ~rcond =
+  lapacke_sgecon layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let dgecon ~matrix_layout ~norm ~n ~a ~lda ~anorm ~rcond =
-  lapacke_dgecon matrix_layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
+let dgecon ~layout ~norm ~n ~a ~lda ~anorm ~rcond =
+  lapacke_dgecon layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let cgecon ~matrix_layout ~norm ~n ~a ~lda ~anorm ~rcond =
-  lapacke_cgecon matrix_layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
+let cgecon ~layout ~norm ~n ~a ~lda ~anorm ~rcond =
+  lapacke_cgecon layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let zgecon ~matrix_layout ~norm ~n ~a ~lda ~anorm ~rcond =
-  lapacke_zgecon matrix_layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
+let zgecon ~layout ~norm ~n ~a ~lda ~anorm ~rcond =
+  lapacke_zgecon layout norm n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let sgeequ ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_sgeequ matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let sgeequ ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_sgeequ layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let dgeequ ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_dgeequ matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let dgeequ ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_dgeequ layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let cgeequ ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_cgeequ matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let cgeequ ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_cgeequ layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let zgeequ ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_zgeequ matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let zgeequ ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_zgeequ layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let sgeequb ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_sgeequb matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let sgeequb ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_sgeequb layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let dgeequb ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_dgeequb matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let dgeequb ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_dgeequb layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let cgeequb ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_cgeequb matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let cgeequb ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_cgeequb layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let zgeequb ~matrix_layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
-  lapacke_zgeequb matrix_layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
+let zgeequb ~layout ~m ~n ~a ~lda ~r ~c ~rowcnd ~colcnd ~amax =
+  lapacke_zgeequb layout m n (CI.cptr a) lda (CI.cptr r) (CI.cptr c) (CI.cptr rowcnd) (CI.cptr colcnd) (CI.cptr amax)
 
-let sgees ~matrix_layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs =
-  lapacke_sgees matrix_layout jobvs sort select n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs
+let sgees ~layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs =
+  lapacke_sgees layout jobvs sort (CI.cptr select) n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs
 
-let dgees ~matrix_layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs =
-  lapacke_dgees matrix_layout jobvs sort select n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs
+let dgees ~layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs =
+  lapacke_dgees layout jobvs sort (CI.cptr select) n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs
 
-let cgees ~matrix_layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~w ~vs ~ldvs =
-  lapacke_cgees matrix_layout jobvs sort select n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs
+let cgees ~layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~w ~vs ~ldvs =
+  lapacke_cgees layout jobvs sort (CI.cptr select) n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs
 
-let zgees ~matrix_layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~w ~vs ~ldvs =
-  lapacke_zgees matrix_layout jobvs sort select n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs
+let zgees ~layout ~jobvs ~sort ~select ~n ~a ~lda ~sdim ~w ~vs ~ldvs =
+  lapacke_zgees layout jobvs sort (CI.cptr select) n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs
 
-let sgeesx ~matrix_layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs ~rconde ~rcondv =
-  lapacke_sgeesx matrix_layout jobvs sort select sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
+let sgeesx ~layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs ~rconde ~rcondv =
+  lapacke_sgeesx layout jobvs sort (CI.cptr select) sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
 
-let dgeesx ~matrix_layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs ~rconde ~rcondv =
-  lapacke_dgeesx matrix_layout jobvs sort select sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
+let dgeesx ~layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~wr ~wi ~vs ~ldvs ~rconde ~rcondv =
+  lapacke_dgeesx layout jobvs sort (CI.cptr select) sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr wr) (CI.cptr wi) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
 
-let cgeesx ~matrix_layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~w ~vs ~ldvs ~rconde ~rcondv =
-  lapacke_cgeesx matrix_layout jobvs sort select sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
+let cgeesx ~layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~w ~vs ~ldvs ~rconde ~rcondv =
+  lapacke_cgeesx layout jobvs sort (CI.cptr select) sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
 
-let zgeesx ~matrix_layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~w ~vs ~ldvs ~rconde ~rcondv =
-  lapacke_zgeesx matrix_layout jobvs sort select sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
+let zgeesx ~layout ~jobvs ~sort ~select ~sense ~n ~a ~lda ~sdim ~w ~vs ~ldvs ~rconde ~rcondv =
+  lapacke_zgeesx layout jobvs sort (CI.cptr select) sense n (CI.cptr a) lda (CI.cptr sdim) (CI.cptr w) (CI.cptr vs) ldvs (CI.cptr rconde) (CI.cptr rcondv)
 
-let sgeev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr =
-  lapacke_sgeev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let sgeev ~layout ~jobvl ~jobvr ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr =
+  lapacke_sgeev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let dgeev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr =
-  lapacke_dgeev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let dgeev ~layout ~jobvl ~jobvr ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr =
+  lapacke_dgeev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let cgeev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr =
-  lapacke_cgeev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let cgeev ~layout ~jobvl ~jobvr ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr =
+  lapacke_cgeev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let zgeev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr =
-  lapacke_zgeev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let zgeev ~layout ~jobvl ~jobvr ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr =
+  lapacke_zgeev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let sgeevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
-  lapacke_sgeevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let sgeevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
+  lapacke_sgeevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let dgeevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
-  lapacke_dgeevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let dgeevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
+  lapacke_dgeevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let cgeevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
-  lapacke_cgeevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let cgeevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
+  lapacke_cgeevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let zgeevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
-  lapacke_zgeevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let zgeevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~w ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~scale ~abnrm ~rconde ~rcondv =
+  lapacke_zgeevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr scale) (CI.cptr abnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let sgehrd ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_sgehrd matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let sgehrd ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_sgehrd layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let dgehrd ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_dgehrd matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let dgehrd ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_dgehrd layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let cgehrd ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_cgehrd matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let cgehrd ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_cgehrd layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let zgehrd ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_zgehrd matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let zgehrd ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_zgehrd layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let sgejsv ~matrix_layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
-  lapacke_sgejsv matrix_layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
+let sgejsv ~layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
+  lapacke_sgejsv layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
 
-let dgejsv ~matrix_layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
-  lapacke_dgejsv matrix_layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
+let dgejsv ~layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
+  lapacke_dgejsv layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
 
-let cgejsv ~matrix_layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
-  lapacke_cgejsv matrix_layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
+let cgejsv ~layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
+  lapacke_cgejsv layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
 
-let zgejsv ~matrix_layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
-  lapacke_zgejsv matrix_layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
+let zgejsv ~layout ~joba ~jobu ~jobv ~jobr ~jobt ~jobp ~m ~n ~a ~lda ~sva ~u ~ldu ~v ~ldv ~stat ~istat =
+  lapacke_zgejsv layout joba jobu jobv jobr jobt jobp m n (CI.cptr a) lda (CI.cptr sva) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr stat) (CI.cptr istat)
 
-let sgelq2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgelq2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgelq2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgelq2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgelq2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgelq2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgelq2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgelq2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgelq2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgelq2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgelq2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgelq2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgelq2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgelq2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgelq2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgelq2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgelqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgelqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgelqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgelqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgelqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgelqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgelqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgelqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgelqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgelqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgelqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgelqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgelqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgelqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgelqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgelqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgels ~matrix_layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_sgels matrix_layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let sgels ~layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_sgels layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let dgels ~matrix_layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_dgels matrix_layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let dgels ~layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_dgels layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let cgels ~matrix_layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_cgels matrix_layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let cgels ~layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_cgels layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let zgels ~matrix_layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_zgels matrix_layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let zgels ~layout ~trans ~m ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_zgels layout trans m n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let sgelsd ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_sgelsd matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let sgelsd ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_sgelsd layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let dgelsd ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_dgelsd matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let dgelsd ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_dgelsd layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let cgelsd ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_cgelsd matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let cgelsd ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_cgelsd layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let zgelsd ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_zgelsd matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let zgelsd ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_zgelsd layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let sgelss ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_sgelss matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let sgelss ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_sgelss layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let dgelss ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_dgelss matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let dgelss ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_dgelss layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let cgelss ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_cgelss matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let cgelss ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_cgelss layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let zgelss ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
-  lapacke_zgelss matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
+let zgelss ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~s ~rcond ~rank =
+  lapacke_zgelss layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr s) rcond (CI.cptr rank)
 
-let sgelsy ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
-  lapacke_sgelsy matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
+let sgelsy ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
+  lapacke_sgelsy layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
 
-let dgelsy ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
-  lapacke_dgelsy matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
+let dgelsy ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
+  lapacke_dgelsy layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
 
-let cgelsy ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
-  lapacke_cgelsy matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
+let cgelsy ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
+  lapacke_cgelsy layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
 
-let zgelsy ~matrix_layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
-  lapacke_zgelsy matrix_layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
+let zgelsy ~layout ~m ~n ~nrhs ~a ~lda ~b ~ldb ~jpvt ~rcond ~rank =
+  lapacke_zgelsy layout m n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr jpvt) rcond (CI.cptr rank)
 
-let sgeqlf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgeqlf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgeqlf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgeqlf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgeqlf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgeqlf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgeqlf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgeqlf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgeqlf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgeqlf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgeqlf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgeqlf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgeqlf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgeqlf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgeqlf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgeqlf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgeqp3 ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_sgeqp3 matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let sgeqp3 ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_sgeqp3 layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let dgeqp3 ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_dgeqp3 matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let dgeqp3 ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_dgeqp3 layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let cgeqp3 ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_cgeqp3 matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let cgeqp3 ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_cgeqp3 layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let zgeqp3 ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_zgeqp3 matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let zgeqp3 ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_zgeqp3 layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let sgeqpf ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_sgeqpf matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let sgeqpf ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_sgeqpf layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let dgeqpf ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_dgeqpf matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let dgeqpf ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_dgeqpf layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let cgeqpf ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_cgeqpf matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let cgeqpf ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_cgeqpf layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let zgeqpf ~matrix_layout ~m ~n ~a ~lda ~jpvt ~tau =
-  lapacke_zgeqpf matrix_layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
+let zgeqpf ~layout ~m ~n ~a ~lda ~jpvt ~tau =
+  lapacke_zgeqpf layout m n (CI.cptr a) lda (CI.cptr jpvt) (CI.cptr tau)
 
-let sgeqr2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgeqr2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgeqr2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgeqr2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgeqr2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgeqr2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgeqr2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgeqr2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgeqr2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgeqr2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgeqr2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgeqr2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgeqr2 ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgeqr2 matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgeqr2 ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgeqr2 layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgeqrf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgeqrf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgeqrf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgeqrf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgeqrf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgeqrf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgeqrf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgeqrf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgeqrf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgeqrf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgeqrf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgeqrf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgeqrf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgeqrf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgeqrf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgeqrf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgeqrfp ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgeqrfp matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgeqrfp ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgeqrfp layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgeqrfp ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgeqrfp matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgeqrfp ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgeqrfp layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgeqrfp ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgeqrfp matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgeqrfp ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgeqrfp layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgeqrfp ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgeqrfp matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgeqrfp ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgeqrfp layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgerfs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_sgerfs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let sgerfs ~layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_sgerfs layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dgerfs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dgerfs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dgerfs ~layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dgerfs layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cgerfs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cgerfs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cgerfs ~layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cgerfs layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zgerfs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zgerfs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zgerfs ~layout ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zgerfs layout trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sgerqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_sgerqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let sgerqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_sgerqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dgerqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dgerqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dgerqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dgerqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cgerqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_cgerqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let cgerqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_cgerqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let zgerqf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_zgerqf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let zgerqf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_zgerqf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let sgesdd ~matrix_layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
-  lapacke_sgesdd matrix_layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
+let sgesdd ~layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
+  lapacke_sgesdd layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
 
-let dgesdd ~matrix_layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
-  lapacke_dgesdd matrix_layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
+let dgesdd ~layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
+  lapacke_dgesdd layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
 
-let cgesdd ~matrix_layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
-  lapacke_cgesdd matrix_layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
+let cgesdd ~layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
+  lapacke_cgesdd layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
 
-let zgesdd ~matrix_layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
-  lapacke_zgesdd matrix_layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
+let zgesdd ~layout ~jobz ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt =
+  lapacke_zgesdd layout jobz m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt
 
-let sgesv ~matrix_layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_sgesv matrix_layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let sgesv ~layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_sgesv layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dgesv ~matrix_layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dgesv matrix_layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dgesv ~layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dgesv layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cgesv ~matrix_layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_cgesv matrix_layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let cgesv ~layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_cgesv layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zgesv ~matrix_layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zgesv matrix_layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zgesv ~layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zgesv layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dsgesv ~matrix_layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb ~x ~ldx ~iter =
-  lapacke_dsgesv matrix_layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
+let dsgesv ~layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb ~x ~ldx ~iter =
+  lapacke_dsgesv layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
 
-let zcgesv ~matrix_layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb ~x ~ldx ~iter =
-  lapacke_zcgesv matrix_layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
+let zcgesv ~layout ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb ~x ~ldx ~iter =
+  lapacke_zcgesv layout n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
 
-let sgesvd ~matrix_layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_sgesvd matrix_layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let sgesvd ~layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_sgesvd layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let dgesvd ~matrix_layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_dgesvd matrix_layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let dgesvd ~layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_dgesvd layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let cgesvd ~matrix_layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_cgesvd matrix_layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let cgesvd ~layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_cgesvd layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let zgesvd ~matrix_layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_zgesvd matrix_layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let zgesvd ~layout ~jobu ~jobvt ~m ~n ~a ~lda ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_zgesvd layout jobu jobvt m n (CI.cptr a) lda (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let sgesvdx ~matrix_layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_sgesvdx matrix_layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let sgesvdx ~layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_sgesvdx layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let dgesvdx ~matrix_layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_dgesvdx matrix_layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let dgesvdx ~layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_dgesvdx layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let cgesvdx ~matrix_layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_cgesvdx matrix_layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let cgesvdx ~layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_cgesvdx layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let zgesvdx ~matrix_layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
-  lapacke_zgesvdx matrix_layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
+let zgesvdx ~layout ~jobu ~jobvt ~range ~m ~n ~a ~lda ~vl ~vu ~il ~iu ~ns ~s ~u ~ldu ~vt ~ldvt ~superb =
+  lapacke_zgesvdx layout jobu jobvt range m n (CI.cptr a) lda vl vu il iu (CI.cptr ns) (CI.cptr s) (CI.cptr u) ldu (CI.cptr vt) ldvt (CI.cptr superb)
 
-let sgesvj ~matrix_layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
-  lapacke_sgesvj matrix_layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
+let sgesvj ~layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
+  lapacke_sgesvj layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
 
-let dgesvj ~matrix_layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
-  lapacke_dgesvj matrix_layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
+let dgesvj ~layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
+  lapacke_dgesvj layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
 
-let cgesvj ~matrix_layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
-  lapacke_cgesvj matrix_layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
+let cgesvj ~layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
+  lapacke_cgesvj layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
 
-let zgesvj ~matrix_layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
-  lapacke_zgesvj matrix_layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
+let zgesvj ~layout ~joba ~jobu ~jobv ~m ~n ~a ~lda ~sva ~mv ~v ~ldv ~stat =
+  lapacke_zgesvj layout joba jobu jobv m n (CI.cptr a) lda (CI.cptr sva) mv (CI.cptr v) ldv (CI.cptr stat)
 
-let sgesvx ~matrix_layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_sgesvx matrix_layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let sgesvx ~layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_sgesvx layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let dgesvx ~matrix_layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_dgesvx matrix_layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let dgesvx ~layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_dgesvx layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let cgesvx ~matrix_layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_cgesvx matrix_layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let cgesvx ~layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_cgesvx layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let zgesvx ~matrix_layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
-  lapacke_zgesvx matrix_layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
+let zgesvx ~layout ~fact ~trans ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~equed ~r ~c ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr ~rpivot =
+  lapacke_zgesvx layout fact trans n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr equed) (CI.cptr r) (CI.cptr c) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr) (CI.cptr rpivot)
 
-let sgetf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_sgetf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let sgetf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_sgetf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dgetf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_dgetf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let dgetf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_dgetf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let cgetf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_cgetf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let cgetf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_cgetf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zgetf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_zgetf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let zgetf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_zgetf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let sgetrf ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_sgetrf matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let sgetrf ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_sgetrf layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dgetrf ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_dgetrf matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let dgetrf ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_dgetrf layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let cgetrf ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_cgetrf matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let cgetrf ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_cgetrf layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zgetrf ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_zgetrf matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let zgetrf ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_zgetrf layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let sgetrf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_sgetrf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let sgetrf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_sgetrf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dgetrf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_dgetrf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let dgetrf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_dgetrf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let cgetrf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_cgetrf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let cgetrf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_cgetrf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zgetrf2 ~matrix_layout ~m ~n ~a ~lda ~ipiv =
-  lapacke_zgetrf2 matrix_layout m n (CI.cptr a) lda (CI.cptr ipiv)
+let zgetrf2 ~layout ~m ~n ~a ~lda ~ipiv =
+  lapacke_zgetrf2 layout m n (CI.cptr a) lda (CI.cptr ipiv)
 
-let sgetri ~matrix_layout ~n ~a ~lda ~ipiv =
-  lapacke_sgetri matrix_layout n (CI.cptr a) lda (CI.cptr ipiv)
+let sgetri ~layout ~n ~a ~lda ~ipiv =
+  lapacke_sgetri layout n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dgetri ~matrix_layout ~n ~a ~lda ~ipiv =
-  lapacke_dgetri matrix_layout n (CI.cptr a) lda (CI.cptr ipiv)
+let dgetri ~layout ~n ~a ~lda ~ipiv =
+  lapacke_dgetri layout n (CI.cptr a) lda (CI.cptr ipiv)
 
-let cgetri ~matrix_layout ~n ~a ~lda ~ipiv =
-  lapacke_cgetri matrix_layout n (CI.cptr a) lda (CI.cptr ipiv)
+let cgetri ~layout ~n ~a ~lda ~ipiv =
+  lapacke_cgetri layout n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zgetri ~matrix_layout ~n ~a ~lda ~ipiv =
-  lapacke_zgetri matrix_layout n (CI.cptr a) lda (CI.cptr ipiv)
+let zgetri ~layout ~n ~a ~lda ~ipiv =
+  lapacke_zgetri layout n (CI.cptr a) lda (CI.cptr ipiv)
 
-let sgetrs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_sgetrs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let sgetrs ~layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_sgetrs layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dgetrs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dgetrs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dgetrs ~layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dgetrs layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cgetrs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_cgetrs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let cgetrs ~layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_cgetrs layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zgetrs ~matrix_layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zgetrs matrix_layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zgetrs ~layout ~trans ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zgetrs layout trans n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let sggbak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
-  lapacke_sggbak matrix_layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
+let sggbak ~layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
+  lapacke_sggbak layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
 
-let dggbak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
-  lapacke_dggbak matrix_layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
+let dggbak ~layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
+  lapacke_dggbak layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
 
-let cggbak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
-  lapacke_cggbak matrix_layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
+let cggbak ~layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
+  lapacke_cggbak layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
 
-let zggbak ~matrix_layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
-  lapacke_zggbak matrix_layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
+let zggbak ~layout ~job ~side ~n ~ilo ~ihi ~lscale ~rscale ~m ~v ~ldv =
+  lapacke_zggbak layout job side n ilo ihi (CI.cptr lscale) (CI.cptr rscale) m (CI.cptr v) ldv
 
-let sggbal ~matrix_layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
-  lapacke_sggbal matrix_layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
+let sggbal ~layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
+  lapacke_sggbal layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
 
-let dggbal ~matrix_layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
-  lapacke_dggbal matrix_layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
+let dggbal ~layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
+  lapacke_dggbal layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
 
-let cggbal ~matrix_layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
-  lapacke_cggbal matrix_layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
+let cggbal ~layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
+  lapacke_cggbal layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
 
-let zggbal ~matrix_layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
-  lapacke_zggbal matrix_layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
+let zggbal ~layout ~job ~n ~a ~lda ~b ~ldb ~ilo ~ihi ~lscale ~rscale =
+  lapacke_zggbal layout job n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale)
 
-let sgges ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_sgges matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let sgges ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_sgges layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let dgges ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_dgges matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let dgges ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_dgges layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let cgges ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_cgges matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let cgges ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_cgges layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let zgges ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_zgges matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let zgges ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_zgges layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let sgges3 ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_sgges3 matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let sgges3 ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_sgges3 layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let dgges3 ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_dgges3 matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let dgges3 ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_dgges3 layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let cgges3 ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_cgges3 matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let cgges3 ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_cgges3 layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let zgges3 ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
-  lapacke_zgges3 matrix_layout jobvsl jobvsr sort selctg n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
+let zgges3 ~layout ~jobvsl ~jobvsr ~sort ~selctg ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr =
+  lapacke_zgges3 layout jobvsl jobvsr sort (CI.cptr selctg) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr
 
-let sggesx ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
-  lapacke_sggesx matrix_layout jobvsl jobvsr sort selctg sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
+let sggesx ~layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
+  lapacke_sggesx layout jobvsl jobvsr sort (CI.cptr selctg) sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
 
-let dggesx ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
-  lapacke_dggesx matrix_layout jobvsl jobvsr sort selctg sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
+let dggesx ~layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alphar ~alphai ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
+  lapacke_dggesx layout jobvsl jobvsr sort (CI.cptr selctg) sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
 
-let cggesx ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
-  lapacke_cggesx matrix_layout jobvsl jobvsr sort selctg sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
+let cggesx ~layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
+  lapacke_cggesx layout jobvsl jobvsr sort (CI.cptr selctg) sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
 
-let zggesx ~matrix_layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
-  lapacke_zggesx matrix_layout jobvsl jobvsr sort selctg sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
+let zggesx ~layout ~jobvsl ~jobvsr ~sort ~selctg ~sense ~n ~a ~lda ~b ~ldb ~sdim ~alpha ~beta ~vsl ~ldvsl ~vsr ~ldvsr ~rconde ~rcondv =
+  lapacke_zggesx layout jobvsl jobvsr sort (CI.cptr selctg) sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr sdim) (CI.cptr alpha) (CI.cptr beta) (CI.cptr vsl) ldvsl (CI.cptr vsr) ldvsr (CI.cptr rconde) (CI.cptr rcondv)
 
-let sggev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_sggev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let sggev ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_sggev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let dggev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_dggev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let dggev ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_dggev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let cggev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_cggev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let cggev ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_cggev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let zggev ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_zggev matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let zggev ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_zggev layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let sggev3 ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_sggev3 matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let sggev3 ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_sggev3 layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let dggev3 ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_dggev3 matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let dggev3 ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_dggev3 layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let cggev3 ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_cggev3 matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let cggev3 ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_cggev3 layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let zggev3 ~matrix_layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
-  lapacke_zggev3 matrix_layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
+let zggev3 ~layout ~jobvl ~jobvr ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr =
+  lapacke_zggev3 layout jobvl jobvr n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr
 
-let sggevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
-  lapacke_sggevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let sggevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
+  lapacke_sggevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let dggevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
-  lapacke_dggevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let dggevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
+  lapacke_dggevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let cggevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
-  lapacke_cggevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let cggevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
+  lapacke_cggevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let zggevx ~matrix_layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
-  lapacke_zggevx matrix_layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
+let zggevx ~layout ~balanc ~jobvl ~jobvr ~sense ~n ~a ~lda ~b ~ldb ~alpha ~beta ~vl ~ldvl ~vr ~ldvr ~ilo ~ihi ~lscale ~rscale ~abnrm ~bbnrm ~rconde ~rcondv =
+  lapacke_zggevx layout balanc jobvl jobvr sense n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr ilo) (CI.cptr ihi) (CI.cptr lscale) (CI.cptr rscale) (CI.cptr abnrm) (CI.cptr bbnrm) (CI.cptr rconde) (CI.cptr rcondv)
 
-let sggglm ~matrix_layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
-  lapacke_sggglm matrix_layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
+let sggglm ~layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
+  lapacke_sggglm layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
 
-let dggglm ~matrix_layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
-  lapacke_dggglm matrix_layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
+let dggglm ~layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
+  lapacke_dggglm layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
 
-let cggglm ~matrix_layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
-  lapacke_cggglm matrix_layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
+let cggglm ~layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
+  lapacke_cggglm layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
 
-let zggglm ~matrix_layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
-  lapacke_zggglm matrix_layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
+let zggglm ~layout ~n ~m ~p ~a ~lda ~b ~ldb ~d ~x ~y =
+  lapacke_zggglm layout n m p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr d) (CI.cptr x) (CI.cptr y)
 
-let sgghrd ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_sgghrd matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let sgghrd ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_sgghrd layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let dgghrd ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_dgghrd matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let dgghrd ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_dgghrd layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let cgghrd ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_cgghrd matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let cgghrd ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_cgghrd layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let zgghrd ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_zgghrd matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let zgghrd ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_zgghrd layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let sgghd3 ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_sgghd3 matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let sgghd3 ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_sgghd3 layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let dgghd3 ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_dgghd3 matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let dgghd3 ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_dgghd3 layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let cgghd3 ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_cgghd3 matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let cgghd3 ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_cgghd3 layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let zgghd3 ~matrix_layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
-  lapacke_zgghd3 matrix_layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
+let zgghd3 ~layout ~compq ~compz ~n ~ilo ~ihi ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz =
+  lapacke_zgghd3 layout compq compz n ilo ihi (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz
 
-let sgglse ~matrix_layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
-  lapacke_sgglse matrix_layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
+let sgglse ~layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
+  lapacke_sgglse layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
 
-let dgglse ~matrix_layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
-  lapacke_dgglse matrix_layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
+let dgglse ~layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
+  lapacke_dgglse layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
 
-let cgglse ~matrix_layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
-  lapacke_cgglse matrix_layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
+let cgglse ~layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
+  lapacke_cgglse layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
 
-let zgglse ~matrix_layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
-  lapacke_zgglse matrix_layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
+let zgglse ~layout ~m ~n ~p ~a ~lda ~b ~ldb ~c ~d ~x =
+  lapacke_zgglse layout m n p (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) (CI.cptr d) (CI.cptr x)
 
-let sggqrf ~matrix_layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_sggqrf matrix_layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let sggqrf ~layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_sggqrf layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let dggqrf ~matrix_layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_dggqrf matrix_layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let dggqrf ~layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_dggqrf layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let cggqrf ~matrix_layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_cggqrf matrix_layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let cggqrf ~layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_cggqrf layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let zggqrf ~matrix_layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_zggqrf matrix_layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let zggqrf ~layout ~n ~m ~p ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_zggqrf layout n m p (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let sggrqf ~matrix_layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_sggrqf matrix_layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let sggrqf ~layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_sggrqf layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let dggrqf ~matrix_layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_dggrqf matrix_layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let dggrqf ~layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_dggrqf layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let cggrqf ~matrix_layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_cggrqf matrix_layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let cggrqf ~layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_cggrqf layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let zggrqf ~matrix_layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
-  lapacke_zggrqf matrix_layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
+let zggrqf ~layout ~m ~p ~n ~a ~lda ~taua ~b ~ldb ~taub =
+  lapacke_zggrqf layout m p n (CI.cptr a) lda (CI.cptr taua) (CI.cptr b) ldb (CI.cptr taub)
 
-let sggsvd ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_sggsvd matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let sggsvd ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_sggsvd layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let dggsvd ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_dggsvd matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let dggsvd ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_dggsvd layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let cggsvd ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_cggsvd matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let cggsvd ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_cggsvd layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let zggsvd ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_zggsvd matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let zggsvd ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_zggsvd layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let sggsvd3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_sggsvd3 matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let sggsvd3 ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_sggsvd3 layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let dggsvd3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_dggsvd3 matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let dggsvd3 ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_dggsvd3 layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let cggsvd3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_cggsvd3 matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let cggsvd3 ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_cggsvd3 layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let zggsvd3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
-  lapacke_zggsvd3 matrix_layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
+let zggsvd3 ~layout ~jobu ~jobv ~jobq ~m ~n ~p ~k ~l ~a ~lda ~b ~ldb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~iwork =
+  lapacke_zggsvd3 layout jobu jobv jobq m n p (CI.cptr k) (CI.cptr l) (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr iwork)
 
-let sggsvp ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_sggsvp matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let sggsvp ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_sggsvp layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let dggsvp ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_dggsvp matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let dggsvp ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_dggsvp layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let cggsvp ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_cggsvp matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let cggsvp ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_cggsvp layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let zggsvp ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_zggsvp matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let zggsvp ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_zggsvp layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let sggsvp3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_sggsvp3 matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let sggsvp3 ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_sggsvp3 layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let dggsvp3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_dggsvp3 matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let dggsvp3 ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_dggsvp3 layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let cggsvp3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_cggsvp3 matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let cggsvp3 ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_cggsvp3 layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
-let zggsvp3 ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
-  lapacke_zggsvp3 matrix_layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
+let zggsvp3 ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~a ~lda ~b ~ldb ~tola ~tolb ~k ~l ~u ~ldu ~v ~ldv ~q ~ldq =
+  lapacke_zggsvp3 layout jobu jobv jobq m p n (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr k) (CI.cptr l) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq
 
 let sgtcon ~norm ~n ~dl ~d ~du ~du2 ~ipiv ~anorm ~rcond =
   lapacke_sgtcon norm n (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) anorm (CI.cptr rcond)
@@ -5009,41 +5009,41 @@ let cgtcon ~norm ~n ~dl ~d ~du ~du2 ~ipiv ~anorm ~rcond =
 let zgtcon ~norm ~n ~dl ~d ~du ~du2 ~ipiv ~anorm ~rcond =
   lapacke_zgtcon norm n (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let sgtrfs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_sgtrfs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let sgtrfs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_sgtrfs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dgtrfs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dgtrfs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dgtrfs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dgtrfs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cgtrfs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cgtrfs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cgtrfs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cgtrfs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zgtrfs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zgtrfs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zgtrfs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zgtrfs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sgtsv ~matrix_layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
-  lapacke_sgtsv matrix_layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
+let sgtsv ~layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
+  lapacke_sgtsv layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
 
-let dgtsv ~matrix_layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
-  lapacke_dgtsv matrix_layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
+let dgtsv ~layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
+  lapacke_dgtsv layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
 
-let cgtsv ~matrix_layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
-  lapacke_cgtsv matrix_layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
+let cgtsv ~layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
+  lapacke_cgtsv layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
 
-let zgtsv ~matrix_layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
-  lapacke_zgtsv matrix_layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
+let zgtsv ~layout ~n ~nrhs ~dl ~d ~du ~b ~ldb =
+  lapacke_zgtsv layout n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr b) ldb
 
-let sgtsvx ~matrix_layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_sgtsvx matrix_layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let sgtsvx ~layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_sgtsvx layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dgtsvx ~matrix_layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dgtsvx matrix_layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dgtsvx ~layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dgtsvx layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let cgtsvx ~matrix_layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_cgtsvx matrix_layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let cgtsvx ~layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_cgtsvx layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zgtsvx ~matrix_layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zgtsvx matrix_layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zgtsvx ~layout ~fact ~trans ~n ~nrhs ~dl ~d ~du ~dlf ~df ~duf ~du2 ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zgtsvx layout fact trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr dlf) (CI.cptr df) (CI.cptr duf) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
 let sgttrf ~n ~dl ~d ~du ~du2 ~ipiv =
   lapacke_sgttrf n (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv)
@@ -5057,299 +5057,299 @@ let cgttrf ~n ~dl ~d ~du ~du2 ~ipiv =
 let zgttrf ~n ~dl ~d ~du ~du2 ~ipiv =
   lapacke_zgttrf n (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv)
 
-let sgttrs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
-  lapacke_sgttrs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
+let sgttrs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
+  lapacke_sgttrs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dgttrs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
-  lapacke_dgttrs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
+let dgttrs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
+  lapacke_dgttrs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cgttrs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
-  lapacke_cgttrs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
+let cgttrs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
+  lapacke_cgttrs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zgttrs ~matrix_layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
-  lapacke_zgttrs matrix_layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
+let zgttrs ~layout ~trans ~n ~nrhs ~dl ~d ~du ~du2 ~ipiv ~b ~ldb =
+  lapacke_zgttrs layout trans n nrhs (CI.cptr dl) (CI.cptr d) (CI.cptr du) (CI.cptr du2) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let chbev ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_chbev matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let chbev ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_chbev layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let zhbev ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_zhbev matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let zhbev ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_zhbev layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let chbevd ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_chbevd matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let chbevd ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_chbevd layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let zhbevd ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_zhbevd matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let zhbevd ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_zhbevd layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let chbevx ~matrix_layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_chbevx matrix_layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let chbevx ~layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_chbevx layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let zhbevx ~matrix_layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_zhbevx matrix_layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let zhbevx ~layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_zhbevx layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let chbgst ~matrix_layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
-  lapacke_chbgst matrix_layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
+let chbgst ~layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
+  lapacke_chbgst layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
 
-let zhbgst ~matrix_layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
-  lapacke_zhbgst matrix_layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
+let zhbgst ~layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
+  lapacke_zhbgst layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
 
-let chbgv ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_chbgv matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let chbgv ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_chbgv layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let zhbgv ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_zhbgv matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let zhbgv ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_zhbgv layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let chbgvd ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_chbgvd matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let chbgvd ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_chbgvd layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let zhbgvd ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_zhbgvd matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let zhbgvd ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_zhbgvd layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let chbgvx ~matrix_layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_chbgvx matrix_layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let chbgvx ~layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_chbgvx layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let zhbgvx ~matrix_layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_zhbgvx matrix_layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let zhbgvx ~layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_zhbgvx layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let chbtrd ~matrix_layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
-  lapacke_chbtrd matrix_layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
+let chbtrd ~layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
+  lapacke_chbtrd layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
 
-let zhbtrd ~matrix_layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
-  lapacke_zhbtrd matrix_layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
+let zhbtrd ~layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
+  lapacke_zhbtrd layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
 
-let checon ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
-  lapacke_checon matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
+let checon ~layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
+  lapacke_checon layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let zhecon ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
-  lapacke_zhecon matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
+let zhecon ~layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
+  lapacke_zhecon layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let cheequb ~matrix_layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_cheequb matrix_layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let cheequb ~layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_cheequb layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let zheequb ~matrix_layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_zheequb matrix_layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let zheequb ~layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_zheequb layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let cheev ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_cheev matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let cheev ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_cheev layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let zheev ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_zheev matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let zheev ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_zheev layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let cheevd ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_cheevd matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let cheevd ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_cheevd layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let zheevd ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_zheevd matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let zheevd ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_zheevd layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let cheevr ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_cheevr matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let cheevr ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_cheevr layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let zheevr ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_zheevr matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let zheevr ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_zheevr layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let cheevx ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_cheevx matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let cheevx ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_cheevx layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let zheevx ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_zheevx matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let zheevx ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_zheevx layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let chegst ~matrix_layout ~itype ~uplo ~n ~a ~lda ~b ~ldb =
-  lapacke_chegst matrix_layout itype uplo n (CI.cptr a) lda (CI.cptr b) ldb
+let chegst ~layout ~ityp ~uplo ~n ~a ~lda ~b ~ldb =
+  lapacke_chegst layout ityp uplo n (CI.cptr a) lda (CI.cptr b) ldb
 
-let zhegst ~matrix_layout ~itype ~uplo ~n ~a ~lda ~b ~ldb =
-  lapacke_zhegst matrix_layout itype uplo n (CI.cptr a) lda (CI.cptr b) ldb
+let zhegst ~layout ~ityp ~uplo ~n ~a ~lda ~b ~ldb =
+  lapacke_zhegst layout ityp uplo n (CI.cptr a) lda (CI.cptr b) ldb
 
-let chegv ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_chegv matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let chegv ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_chegv layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let zhegv ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_zhegv matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let zhegv ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_zhegv layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let chegvd ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_chegvd matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let chegvd ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_chegvd layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let zhegvd ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_zhegvd matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let zhegvd ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_zhegvd layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let chegvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_chegvx matrix_layout itype jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let chegvx ~layout ~ityp ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_chegvx layout ityp jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let zhegvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_zhegvx matrix_layout itype jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let zhegvx ~layout ~ityp ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_zhegvx layout ityp jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let cherfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cherfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cherfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cherfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zherfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zherfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zherfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zherfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let chesv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_chesv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let chesv ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_chesv layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zhesv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zhesv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zhesv ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zhesv layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let chesvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_chesvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let chesvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_chesvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zhesvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zhesvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zhesvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zhesvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let chetrd ~matrix_layout ~uplo ~n ~a ~lda ~d ~e ~tau =
-  lapacke_chetrd matrix_layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let chetrd ~layout ~uplo ~n ~a ~lda ~d ~e ~tau =
+  lapacke_chetrd layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let zhetrd ~matrix_layout ~uplo ~n ~a ~lda ~d ~e ~tau =
-  lapacke_zhetrd matrix_layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let zhetrd ~layout ~uplo ~n ~a ~lda ~d ~e ~tau =
+  lapacke_zhetrd layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let chetrf ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_chetrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let chetrf ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_chetrf layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zhetrf ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zhetrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zhetrf ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zhetrf layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let chetri ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_chetri matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let chetri ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_chetri layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zhetri ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zhetri matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zhetri ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zhetri layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let chetrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_chetrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let chetrs ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_chetrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zhetrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zhetrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zhetrs ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zhetrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let chfrk ~matrix_layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
-  lapacke_chfrk matrix_layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
+let chfrk ~layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
+  lapacke_chfrk layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
 
-let zhfrk ~matrix_layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
-  lapacke_zhfrk matrix_layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
+let zhfrk ~layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
+  lapacke_zhfrk layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
 
-let shgeqz ~matrix_layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz =
-  lapacke_shgeqz matrix_layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
+let shgeqz ~layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz =
+  lapacke_shgeqz layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
 
-let dhgeqz ~matrix_layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz =
-  lapacke_dhgeqz matrix_layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
+let dhgeqz ~layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz =
+  lapacke_dhgeqz layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
 
-let chgeqz ~matrix_layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alpha ~beta ~q ~ldq ~z ~ldz =
-  lapacke_chgeqz matrix_layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
+let chgeqz ~layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alpha ~beta ~q ~ldq ~z ~ldz =
+  lapacke_chgeqz layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
 
-let zhgeqz ~matrix_layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alpha ~beta ~q ~ldq ~z ~ldz =
-  lapacke_zhgeqz matrix_layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
+let zhgeqz ~layout ~job ~compq ~compz ~n ~ilo ~ihi ~h ~ldh ~t ~ldt ~alpha ~beta ~q ~ldq ~z ~ldz =
+  lapacke_zhgeqz layout job compq compz n ilo ihi (CI.cptr h) ldh (CI.cptr t) ldt (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz
 
-let chpcon ~matrix_layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
-  lapacke_chpcon matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
+let chpcon ~layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
+  lapacke_chpcon layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let zhpcon ~matrix_layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
-  lapacke_zhpcon matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
+let zhpcon ~layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
+  lapacke_zhpcon layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let chpev ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_chpev matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let chpev ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_chpev layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let zhpev ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_zhpev matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let zhpev ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_zhpev layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let chpevd ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_chpevd matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let chpevd ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_chpevd layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let zhpevd ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_zhpevd matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let zhpevd ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_zhpevd layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let chpevx ~matrix_layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_chpevx matrix_layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let chpevx ~layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_chpevx layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let zhpevx ~matrix_layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_zhpevx matrix_layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let zhpevx ~layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_zhpevx layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let chpgst ~matrix_layout ~itype ~uplo ~n ~ap ~bp =
-  lapacke_chpgst matrix_layout itype uplo n (CI.cptr ap) (CI.cptr bp)
+let chpgst ~layout ~ityp ~uplo ~n ~ap ~bp =
+  lapacke_chpgst layout ityp uplo n (CI.cptr ap) (CI.cptr bp)
 
-let zhpgst ~matrix_layout ~itype ~uplo ~n ~ap ~bp =
-  lapacke_zhpgst matrix_layout itype uplo n (CI.cptr ap) (CI.cptr bp)
+let zhpgst ~layout ~ityp ~uplo ~n ~ap ~bp =
+  lapacke_zhpgst layout ityp uplo n (CI.cptr ap) (CI.cptr bp)
 
-let chpgv ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_chpgv matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let chpgv ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_chpgv layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let zhpgv ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_zhpgv matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let zhpgv ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_zhpgv layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let chpgvd ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_chpgvd matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let chpgvd ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_chpgvd layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let zhpgvd ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_zhpgvd matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let zhpgvd ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_zhpgvd layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let chpgvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_chpgvx matrix_layout itype jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let chpgvx ~layout ~ityp ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_chpgvx layout ityp jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let zhpgvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_zhpgvx matrix_layout itype jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let zhpgvx ~layout ~ityp ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_zhpgvx layout ityp jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let chprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_chprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let chprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_chprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zhprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zhprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zhprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zhprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let chpsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_chpsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let chpsv ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_chpsv layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zhpsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_zhpsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let zhpsv ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_zhpsv layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let chpsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_chpsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let chpsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_chpsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zhpsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zhpsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zhpsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zhpsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let chptrd ~matrix_layout ~uplo ~n ~ap ~d ~e ~tau =
-  lapacke_chptrd matrix_layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let chptrd ~layout ~uplo ~n ~ap ~d ~e ~tau =
+  lapacke_chptrd layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let zhptrd ~matrix_layout ~uplo ~n ~ap ~d ~e ~tau =
-  lapacke_zhptrd matrix_layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let zhptrd ~layout ~uplo ~n ~ap ~d ~e ~tau =
+  lapacke_zhptrd layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let chptrf ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_chptrf matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let chptrf ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_chptrf layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let zhptrf ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_zhptrf matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let zhptrf ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_zhptrf layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let chptri ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_chptri matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let chptri ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_chptri layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let zhptri ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_zhptri matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let zhptri ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_zhptri layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let chptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_chptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let chptrs ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_chptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zhptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_zhptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let zhptrs ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_zhptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let shsein ~matrix_layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
-  lapacke_shsein matrix_layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
+let shsein ~layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
+  lapacke_shsein layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
 
-let dhsein ~matrix_layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
-  lapacke_dhsein matrix_layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
+let dhsein ~layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~wr ~wi ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
+  lapacke_dhsein layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
 
-let chsein ~matrix_layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~w ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
-  lapacke_chsein matrix_layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
+let chsein ~layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~w ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
+  lapacke_chsein layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
 
-let zhsein ~matrix_layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~w ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
-  lapacke_zhsein matrix_layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
+let zhsein ~layout ~job ~eigsrc ~initv ~select ~n ~h ~ldh ~w ~vl ~ldvl ~vr ~ldvr ~mm ~m ~ifaill ~ifailr =
+  lapacke_zhsein layout job eigsrc initv (CI.cptr select) n (CI.cptr h) ldh (CI.cptr w) (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m) (CI.cptr ifaill) (CI.cptr ifailr)
 
-let shseqr ~matrix_layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~wr ~wi ~z ~ldz =
-  lapacke_shseqr matrix_layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr z) ldz
+let shseqr ~layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~wr ~wi ~z ~ldz =
+  lapacke_shseqr layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr z) ldz
 
-let dhseqr ~matrix_layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~wr ~wi ~z ~ldz =
-  lapacke_dhseqr matrix_layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr z) ldz
+let dhseqr ~layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~wr ~wi ~z ~ldz =
+  lapacke_dhseqr layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr wr) (CI.cptr wi) (CI.cptr z) ldz
 
-let chseqr ~matrix_layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~w ~z ~ldz =
-  lapacke_chseqr matrix_layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr w) (CI.cptr z) ldz
+let chseqr ~layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~w ~z ~ldz =
+  lapacke_chseqr layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr w) (CI.cptr z) ldz
 
-let zhseqr ~matrix_layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~w ~z ~ldz =
-  lapacke_zhseqr matrix_layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr w) (CI.cptr z) ldz
+let zhseqr ~layout ~job ~compz ~n ~ilo ~ihi ~h ~ldh ~w ~z ~ldz =
+  lapacke_zhseqr layout job compz n ilo ihi (CI.cptr h) ldh (CI.cptr w) (CI.cptr z) ldz
 
 let clacgv ~n ~x ~incx =
   lapacke_clacgv n (CI.cptr x) incx
@@ -5369,59 +5369,59 @@ let clacn2 ~n ~v ~x ~est ~kase ~isave =
 let zlacn2 ~n ~v ~x ~est ~kase ~isave =
   lapacke_zlacn2 n (CI.cptr v) (CI.cptr x) (CI.cptr est) (CI.cptr kase) (CI.cptr isave)
 
-let slacpy ~matrix_layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
-  lapacke_slacpy matrix_layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
+let slacpy ~layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
+  lapacke_slacpy layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
 
-let dlacpy ~matrix_layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
-  lapacke_dlacpy matrix_layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
+let dlacpy ~layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
+  lapacke_dlacpy layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
 
-let clacpy ~matrix_layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
-  lapacke_clacpy matrix_layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
+let clacpy ~layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
+  lapacke_clacpy layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
 
-let zlacpy ~matrix_layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
-  lapacke_zlacpy matrix_layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
+let zlacpy ~layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
+  lapacke_zlacpy layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
 
-let clacp2 ~matrix_layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
-  lapacke_clacp2 matrix_layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
+let clacp2 ~layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
+  lapacke_clacp2 layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
 
-let zlacp2 ~matrix_layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
-  lapacke_zlacp2 matrix_layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
+let zlacp2 ~layout ~uplo ~m ~n ~a ~lda ~b ~ldb =
+  lapacke_zlacp2 layout uplo m n (CI.cptr a) lda (CI.cptr b) ldb
 
-let zlag2c ~matrix_layout ~m ~n ~a ~lda ~sa ~ldsa =
-  lapacke_zlag2c matrix_layout m n (CI.cptr a) lda (CI.cptr sa) ldsa
+let zlag2c ~layout ~m ~n ~a ~lda ~sa ~ldsa =
+  lapacke_zlag2c layout m n (CI.cptr a) lda (CI.cptr sa) ldsa
 
-let slag2d ~matrix_layout ~m ~n ~sa ~ldsa ~a ~lda =
-  lapacke_slag2d matrix_layout m n (CI.cptr sa) ldsa (CI.cptr a) lda
+let slag2d ~layout ~m ~n ~sa ~ldsa ~a ~lda =
+  lapacke_slag2d layout m n (CI.cptr sa) ldsa (CI.cptr a) lda
 
-let dlag2s ~matrix_layout ~m ~n ~a ~lda ~sa ~ldsa =
-  lapacke_dlag2s matrix_layout m n (CI.cptr a) lda (CI.cptr sa) ldsa
+let dlag2s ~layout ~m ~n ~a ~lda ~sa ~ldsa =
+  lapacke_dlag2s layout m n (CI.cptr a) lda (CI.cptr sa) ldsa
 
-let clag2z ~matrix_layout ~m ~n ~sa ~ldsa ~a ~lda =
-  lapacke_clag2z matrix_layout m n (CI.cptr sa) ldsa (CI.cptr a) lda
+let clag2z ~layout ~m ~n ~sa ~ldsa ~a ~lda =
+  lapacke_clag2z layout m n (CI.cptr sa) ldsa (CI.cptr a) lda
 
-let slagge ~matrix_layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
-  lapacke_slagge matrix_layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let slagge ~layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
+  lapacke_slagge layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let dlagge ~matrix_layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
-  lapacke_dlagge matrix_layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let dlagge ~layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
+  lapacke_dlagge layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let clagge ~matrix_layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
-  lapacke_clagge matrix_layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let clagge ~layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
+  lapacke_clagge layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let zlagge ~matrix_layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
-  lapacke_zlagge matrix_layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let zlagge ~layout ~m ~n ~kl ~ku ~d ~a ~lda ~iseed =
+  lapacke_zlagge layout m n kl ku (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let slarfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_slarfb matrix_layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let slarfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_slarfb layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let dlarfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_dlarfb matrix_layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let dlarfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_dlarfb layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let clarfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_clarfb matrix_layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let clarfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_clarfb layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let zlarfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_zlarfb matrix_layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let zlarfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_zlarfb layout side trans direct storev m n k (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
 let slarfg ~n ~alpha ~x ~incx ~tau =
   lapacke_slarfg n (CI.cptr alpha) (CI.cptr x) incx (CI.cptr tau)
@@ -5435,29 +5435,29 @@ let clarfg ~n ~alpha ~x ~incx ~tau =
 let zlarfg ~n ~alpha ~x ~incx ~tau =
   lapacke_zlarfg n (CI.cptr alpha) (CI.cptr x) incx (CI.cptr tau)
 
-let slarft ~matrix_layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
-  lapacke_slarft matrix_layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
+let slarft ~layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
+  lapacke_slarft layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
 
-let dlarft ~matrix_layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
-  lapacke_dlarft matrix_layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
+let dlarft ~layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
+  lapacke_dlarft layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
 
-let clarft ~matrix_layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
-  lapacke_clarft matrix_layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
+let clarft ~layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
+  lapacke_clarft layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
 
-let zlarft ~matrix_layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
-  lapacke_zlarft matrix_layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
+let zlarft ~layout ~direct ~storev ~n ~k ~v ~ldv ~tau ~t ~ldt =
+  lapacke_zlarft layout direct storev n k (CI.cptr v) ldv (CI.cptr tau) (CI.cptr t) ldt
 
-let slarfx ~matrix_layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
-  lapacke_slarfx matrix_layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
+let slarfx ~layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
+  lapacke_slarfx layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
 
-let dlarfx ~matrix_layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
-  lapacke_dlarfx matrix_layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
+let dlarfx ~layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
+  lapacke_dlarfx layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
 
-let clarfx ~matrix_layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
-  lapacke_clarfx matrix_layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
+let clarfx ~layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
+  lapacke_clarfx layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
 
-let zlarfx ~matrix_layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
-  lapacke_zlarfx matrix_layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
+let zlarfx ~layout ~side ~m ~n ~v ~tau ~c ~ldc ~work =
+  lapacke_zlarfx layout side m n (CI.cptr v) tau (CI.cptr c) ldc (CI.cptr work)
 
 let slarnv ~idist ~iseed ~n ~x =
   lapacke_slarnv idist (CI.cptr iseed) n (CI.cptr x)
@@ -5471,29 +5471,29 @@ let clarnv ~idist ~iseed ~n ~x =
 let zlarnv ~idist ~iseed ~n ~x =
   lapacke_zlarnv idist (CI.cptr iseed) n (CI.cptr x)
 
-let slascl ~matrix_layout ~type ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
-  lapacke_slascl matrix_layout type kl ku cfrom cto m n (CI.cptr a) lda
+let slascl ~layout ~typ ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
+  lapacke_slascl layout typ kl ku cfrom cto m n (CI.cptr a) lda
 
-let dlascl ~matrix_layout ~type ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
-  lapacke_dlascl matrix_layout type kl ku cfrom cto m n (CI.cptr a) lda
+let dlascl ~layout ~typ ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
+  lapacke_dlascl layout typ kl ku cfrom cto m n (CI.cptr a) lda
 
-let clascl ~matrix_layout ~type ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
-  lapacke_clascl matrix_layout type kl ku cfrom cto m n (CI.cptr a) lda
+let clascl ~layout ~typ ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
+  lapacke_clascl layout typ kl ku cfrom cto m n (CI.cptr a) lda
 
-let zlascl ~matrix_layout ~type ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
-  lapacke_zlascl matrix_layout type kl ku cfrom cto m n (CI.cptr a) lda
+let zlascl ~layout ~typ ~kl ~ku ~cfrom ~cto ~m ~n ~a ~lda =
+  lapacke_zlascl layout typ kl ku cfrom cto m n (CI.cptr a) lda
 
-let slaset ~matrix_layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
-  lapacke_slaset matrix_layout uplo m n alpha beta (CI.cptr a) lda
+let slaset ~layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
+  lapacke_slaset layout uplo m n alpha beta (CI.cptr a) lda
 
-let dlaset ~matrix_layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
-  lapacke_dlaset matrix_layout uplo m n alpha beta (CI.cptr a) lda
+let dlaset ~layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
+  lapacke_dlaset layout uplo m n alpha beta (CI.cptr a) lda
 
-let claset ~matrix_layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
-  lapacke_claset matrix_layout uplo m n alpha beta (CI.cptr a) lda
+let claset ~layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
+  lapacke_claset layout uplo m n alpha beta (CI.cptr a) lda
 
-let zlaset ~matrix_layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
-  lapacke_zlaset matrix_layout uplo m n alpha beta (CI.cptr a) lda
+let zlaset ~layout ~uplo ~m ~n ~alpha ~beta ~a ~lda =
+  lapacke_zlaset layout uplo m n alpha beta (CI.cptr a) lda
 
 let slasrt ~id ~n ~d =
   lapacke_slasrt id n (CI.cptr d)
@@ -5501,509 +5501,509 @@ let slasrt ~id ~n ~d =
 let dlasrt ~id ~n ~d =
   lapacke_dlasrt id n (CI.cptr d)
 
-let slaswp ~matrix_layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
-  lapacke_slaswp matrix_layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
+let slaswp ~layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
+  lapacke_slaswp layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
 
-let dlaswp ~matrix_layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
-  lapacke_dlaswp matrix_layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
+let dlaswp ~layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
+  lapacke_dlaswp layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
 
-let claswp ~matrix_layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
-  lapacke_claswp matrix_layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
+let claswp ~layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
+  lapacke_claswp layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
 
-let zlaswp ~matrix_layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
-  lapacke_zlaswp matrix_layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
+let zlaswp ~layout ~n ~a ~lda ~k1 ~k2 ~ipiv ~incx =
+  lapacke_zlaswp layout n (CI.cptr a) lda k1 k2 (CI.cptr ipiv) incx
 
-let slatms ~matrix_layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
-  lapacke_slatms matrix_layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
+let slatms ~layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
+  lapacke_slatms layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
 
-let dlatms ~matrix_layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
-  lapacke_dlatms matrix_layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
+let dlatms ~layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
+  lapacke_dlatms layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
 
-let clatms ~matrix_layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
-  lapacke_clatms matrix_layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
+let clatms ~layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
+  lapacke_clatms layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
 
-let zlatms ~matrix_layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
-  lapacke_zlatms matrix_layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
+let zlatms ~layout ~m ~n ~dist ~iseed ~sym ~d ~mode ~cond ~dmax ~kl ~ku ~pack ~a ~lda =
+  lapacke_zlatms layout m n dist (CI.cptr iseed) sym (CI.cptr d) mode cond dmax kl ku pack (CI.cptr a) lda
 
-let slauum ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_slauum matrix_layout uplo n (CI.cptr a) lda
+let slauum ~layout ~uplo ~n ~a ~lda =
+  lapacke_slauum layout uplo n (CI.cptr a) lda
 
-let dlauum ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_dlauum matrix_layout uplo n (CI.cptr a) lda
+let dlauum ~layout ~uplo ~n ~a ~lda =
+  lapacke_dlauum layout uplo n (CI.cptr a) lda
 
-let clauum ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_clauum matrix_layout uplo n (CI.cptr a) lda
+let clauum ~layout ~uplo ~n ~a ~lda =
+  lapacke_clauum layout uplo n (CI.cptr a) lda
 
-let zlauum ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_zlauum matrix_layout uplo n (CI.cptr a) lda
+let zlauum ~layout ~uplo ~n ~a ~lda =
+  lapacke_zlauum layout uplo n (CI.cptr a) lda
 
-let sopgtr ~matrix_layout ~uplo ~n ~ap ~tau ~q ~ldq =
-  lapacke_sopgtr matrix_layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
+let sopgtr ~layout ~uplo ~n ~ap ~tau ~q ~ldq =
+  lapacke_sopgtr layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
 
-let dopgtr ~matrix_layout ~uplo ~n ~ap ~tau ~q ~ldq =
-  lapacke_dopgtr matrix_layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
+let dopgtr ~layout ~uplo ~n ~ap ~tau ~q ~ldq =
+  lapacke_dopgtr layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
 
-let sopmtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
-  lapacke_sopmtr matrix_layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
+let sopmtr ~layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
+  lapacke_sopmtr layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
 
-let dopmtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
-  lapacke_dopmtr matrix_layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
+let dopmtr ~layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
+  lapacke_dopmtr layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
 
-let sorgbr ~matrix_layout ~vect ~m ~n ~k ~a ~lda ~tau =
-  lapacke_sorgbr matrix_layout vect m n k (CI.cptr a) lda (CI.cptr tau)
+let sorgbr ~layout ~vect ~m ~n ~k ~a ~lda ~tau =
+  lapacke_sorgbr layout vect m n k (CI.cptr a) lda (CI.cptr tau)
 
-let dorgbr ~matrix_layout ~vect ~m ~n ~k ~a ~lda ~tau =
-  lapacke_dorgbr matrix_layout vect m n k (CI.cptr a) lda (CI.cptr tau)
+let dorgbr ~layout ~vect ~m ~n ~k ~a ~lda ~tau =
+  lapacke_dorgbr layout vect m n k (CI.cptr a) lda (CI.cptr tau)
 
-let sorghr ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_sorghr matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let sorghr ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_sorghr layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let dorghr ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_dorghr matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let dorghr ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_dorghr layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let sorglq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_sorglq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let sorglq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_sorglq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let dorglq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_dorglq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let dorglq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_dorglq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let sorgql ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_sorgql matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let sorgql ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_sorgql layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let dorgql ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_dorgql matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let dorgql ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_dorgql layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let sorgqr ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_sorgqr matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let sorgqr ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_sorgqr layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let dorgqr ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_dorgqr matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let dorgqr ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_dorgqr layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let sorgrq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_sorgrq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let sorgrq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_sorgrq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let dorgrq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_dorgrq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let dorgrq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_dorgrq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let sorgtr ~matrix_layout ~uplo ~n ~a ~lda ~tau =
-  lapacke_sorgtr matrix_layout uplo n (CI.cptr a) lda (CI.cptr tau)
+let sorgtr ~layout ~uplo ~n ~a ~lda ~tau =
+  lapacke_sorgtr layout uplo n (CI.cptr a) lda (CI.cptr tau)
 
-let dorgtr ~matrix_layout ~uplo ~n ~a ~lda ~tau =
-  lapacke_dorgtr matrix_layout uplo n (CI.cptr a) lda (CI.cptr tau)
+let dorgtr ~layout ~uplo ~n ~a ~lda ~tau =
+  lapacke_dorgtr layout uplo n (CI.cptr a) lda (CI.cptr tau)
 
-let sormbr ~matrix_layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormbr matrix_layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormbr ~layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormbr layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormbr ~matrix_layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormbr matrix_layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormbr ~layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormbr layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormhr ~matrix_layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormhr matrix_layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormhr ~layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormhr layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormhr ~matrix_layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormhr matrix_layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormhr ~layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormhr layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormlq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormlq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormlq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormlq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormlq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormlq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormlq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormlq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormql ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormql matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormql ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormql layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormql ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormql matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormql ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormql layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormqr ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormqr matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormqr ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormqr layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormqr ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormqr matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormqr ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormqr layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormrq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormrq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormrq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormrq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormrq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormrq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormrq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormrq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormrz ~matrix_layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormrz matrix_layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormrz ~layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormrz layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormrz ~matrix_layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormrz matrix_layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormrz ~layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormrz layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let sormtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
-  lapacke_sormtr matrix_layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let sormtr ~layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
+  lapacke_sormtr layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let dormtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
-  lapacke_dormtr matrix_layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let dormtr ~layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
+  lapacke_dormtr layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let spbcon ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
-  lapacke_spbcon matrix_layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
+let spbcon ~layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
+  lapacke_spbcon layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
 
-let dpbcon ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
-  lapacke_dpbcon matrix_layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
+let dpbcon ~layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
+  lapacke_dpbcon layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
 
-let cpbcon ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
-  lapacke_cpbcon matrix_layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
+let cpbcon ~layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
+  lapacke_cpbcon layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
 
-let zpbcon ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
-  lapacke_zpbcon matrix_layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
+let zpbcon ~layout ~uplo ~n ~kd ~ab ~ldab ~anorm ~rcond =
+  lapacke_zpbcon layout uplo n kd (CI.cptr ab) ldab anorm (CI.cptr rcond)
 
-let spbequ ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
-  lapacke_spbequ matrix_layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let spbequ ~layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
+  lapacke_spbequ layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let dpbequ ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
-  lapacke_dpbequ matrix_layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let dpbequ ~layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
+  lapacke_dpbequ layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let cpbequ ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
-  lapacke_cpbequ matrix_layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let cpbequ ~layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
+  lapacke_cpbequ layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let zpbequ ~matrix_layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
-  lapacke_zpbequ matrix_layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let zpbequ ~layout ~uplo ~n ~kd ~ab ~ldab ~s ~scond ~amax =
+  lapacke_zpbequ layout uplo n kd (CI.cptr ab) ldab (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let spbrfs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_spbrfs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let spbrfs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_spbrfs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dpbrfs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dpbrfs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dpbrfs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dpbrfs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cpbrfs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cpbrfs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cpbrfs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cpbrfs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zpbrfs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zpbrfs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zpbrfs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zpbrfs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let spbstf ~matrix_layout ~uplo ~n ~kb ~bb ~ldbb =
-  lapacke_spbstf matrix_layout uplo n kb (CI.cptr bb) ldbb
+let spbstf ~layout ~uplo ~n ~kb ~bb ~ldbb =
+  lapacke_spbstf layout uplo n kb (CI.cptr bb) ldbb
 
-let dpbstf ~matrix_layout ~uplo ~n ~kb ~bb ~ldbb =
-  lapacke_dpbstf matrix_layout uplo n kb (CI.cptr bb) ldbb
+let dpbstf ~layout ~uplo ~n ~kb ~bb ~ldbb =
+  lapacke_dpbstf layout uplo n kb (CI.cptr bb) ldbb
 
-let cpbstf ~matrix_layout ~uplo ~n ~kb ~bb ~ldbb =
-  lapacke_cpbstf matrix_layout uplo n kb (CI.cptr bb) ldbb
+let cpbstf ~layout ~uplo ~n ~kb ~bb ~ldbb =
+  lapacke_cpbstf layout uplo n kb (CI.cptr bb) ldbb
 
-let zpbstf ~matrix_layout ~uplo ~n ~kb ~bb ~ldbb =
-  lapacke_zpbstf matrix_layout uplo n kb (CI.cptr bb) ldbb
+let zpbstf ~layout ~uplo ~n ~kb ~bb ~ldbb =
+  lapacke_zpbstf layout uplo n kb (CI.cptr bb) ldbb
 
-let spbsv ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_spbsv matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let spbsv ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_spbsv layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let dpbsv ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_dpbsv matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let dpbsv ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_dpbsv layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let cpbsv ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_cpbsv matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let cpbsv ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_cpbsv layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let zpbsv ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_zpbsv matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let zpbsv ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_zpbsv layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let spbsvx ~matrix_layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_spbsvx matrix_layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let spbsvx ~layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_spbsvx layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dpbsvx ~matrix_layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dpbsvx matrix_layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dpbsvx ~layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dpbsvx layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let cpbsvx ~matrix_layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_cpbsvx matrix_layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let cpbsvx ~layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_cpbsvx layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zpbsvx ~matrix_layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zpbsvx matrix_layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zpbsvx ~layout ~fact ~uplo ~n ~kd ~nrhs ~ab ~ldab ~afb ~ldafb ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zpbsvx layout fact uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr afb) ldafb (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let spbtrf ~matrix_layout ~uplo ~n ~kd ~ab ~ldab =
-  lapacke_spbtrf matrix_layout uplo n kd (CI.cptr ab) ldab
+let spbtrf ~layout ~uplo ~n ~kd ~ab ~ldab =
+  lapacke_spbtrf layout uplo n kd (CI.cptr ab) ldab
 
-let dpbtrf ~matrix_layout ~uplo ~n ~kd ~ab ~ldab =
-  lapacke_dpbtrf matrix_layout uplo n kd (CI.cptr ab) ldab
+let dpbtrf ~layout ~uplo ~n ~kd ~ab ~ldab =
+  lapacke_dpbtrf layout uplo n kd (CI.cptr ab) ldab
 
-let cpbtrf ~matrix_layout ~uplo ~n ~kd ~ab ~ldab =
-  lapacke_cpbtrf matrix_layout uplo n kd (CI.cptr ab) ldab
+let cpbtrf ~layout ~uplo ~n ~kd ~ab ~ldab =
+  lapacke_cpbtrf layout uplo n kd (CI.cptr ab) ldab
 
-let zpbtrf ~matrix_layout ~uplo ~n ~kd ~ab ~ldab =
-  lapacke_zpbtrf matrix_layout uplo n kd (CI.cptr ab) ldab
+let zpbtrf ~layout ~uplo ~n ~kd ~ab ~ldab =
+  lapacke_zpbtrf layout uplo n kd (CI.cptr ab) ldab
 
-let spbtrs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_spbtrs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let spbtrs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_spbtrs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let dpbtrs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_dpbtrs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let dpbtrs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_dpbtrs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let cpbtrs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_cpbtrs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let cpbtrs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_cpbtrs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let zpbtrs ~matrix_layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_zpbtrs matrix_layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let zpbtrs ~layout ~uplo ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_zpbtrs layout uplo n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let spftrf ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_spftrf matrix_layout transr uplo n (CI.cptr a)
+let spftrf ~layout ~transr ~uplo ~n ~a =
+  lapacke_spftrf layout transr uplo n (CI.cptr a)
 
-let dpftrf ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_dpftrf matrix_layout transr uplo n (CI.cptr a)
+let dpftrf ~layout ~transr ~uplo ~n ~a =
+  lapacke_dpftrf layout transr uplo n (CI.cptr a)
 
-let cpftrf ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_cpftrf matrix_layout transr uplo n (CI.cptr a)
+let cpftrf ~layout ~transr ~uplo ~n ~a =
+  lapacke_cpftrf layout transr uplo n (CI.cptr a)
 
-let zpftrf ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_zpftrf matrix_layout transr uplo n (CI.cptr a)
+let zpftrf ~layout ~transr ~uplo ~n ~a =
+  lapacke_zpftrf layout transr uplo n (CI.cptr a)
 
-let spftri ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_spftri matrix_layout transr uplo n (CI.cptr a)
+let spftri ~layout ~transr ~uplo ~n ~a =
+  lapacke_spftri layout transr uplo n (CI.cptr a)
 
-let dpftri ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_dpftri matrix_layout transr uplo n (CI.cptr a)
+let dpftri ~layout ~transr ~uplo ~n ~a =
+  lapacke_dpftri layout transr uplo n (CI.cptr a)
 
-let cpftri ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_cpftri matrix_layout transr uplo n (CI.cptr a)
+let cpftri ~layout ~transr ~uplo ~n ~a =
+  lapacke_cpftri layout transr uplo n (CI.cptr a)
 
-let zpftri ~matrix_layout ~transr ~uplo ~n ~a =
-  lapacke_zpftri matrix_layout transr uplo n (CI.cptr a)
+let zpftri ~layout ~transr ~uplo ~n ~a =
+  lapacke_zpftri layout transr uplo n (CI.cptr a)
 
-let spftrs ~matrix_layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
-  lapacke_spftrs matrix_layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
+let spftrs ~layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
+  lapacke_spftrs layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
 
-let dpftrs ~matrix_layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
-  lapacke_dpftrs matrix_layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
+let dpftrs ~layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
+  lapacke_dpftrs layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
 
-let cpftrs ~matrix_layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
-  lapacke_cpftrs matrix_layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
+let cpftrs ~layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
+  lapacke_cpftrs layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
 
-let zpftrs ~matrix_layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
-  lapacke_zpftrs matrix_layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
+let zpftrs ~layout ~transr ~uplo ~n ~nrhs ~a ~b ~ldb =
+  lapacke_zpftrs layout transr uplo n nrhs (CI.cptr a) (CI.cptr b) ldb
 
-let spocon ~matrix_layout ~uplo ~n ~a ~lda ~anorm ~rcond =
-  lapacke_spocon matrix_layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
+let spocon ~layout ~uplo ~n ~a ~lda ~anorm ~rcond =
+  lapacke_spocon layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let dpocon ~matrix_layout ~uplo ~n ~a ~lda ~anorm ~rcond =
-  lapacke_dpocon matrix_layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
+let dpocon ~layout ~uplo ~n ~a ~lda ~anorm ~rcond =
+  lapacke_dpocon layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let cpocon ~matrix_layout ~uplo ~n ~a ~lda ~anorm ~rcond =
-  lapacke_cpocon matrix_layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
+let cpocon ~layout ~uplo ~n ~a ~lda ~anorm ~rcond =
+  lapacke_cpocon layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let zpocon ~matrix_layout ~uplo ~n ~a ~lda ~anorm ~rcond =
-  lapacke_zpocon matrix_layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
+let zpocon ~layout ~uplo ~n ~a ~lda ~anorm ~rcond =
+  lapacke_zpocon layout uplo n (CI.cptr a) lda anorm (CI.cptr rcond)
 
-let spoequ ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_spoequ matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let spoequ ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_spoequ layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let dpoequ ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_dpoequ matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let dpoequ ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_dpoequ layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let cpoequ ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_cpoequ matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let cpoequ ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_cpoequ layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let zpoequ ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_zpoequ matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let zpoequ ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_zpoequ layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let spoequb ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_spoequb matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let spoequb ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_spoequb layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let dpoequb ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_dpoequb matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let dpoequb ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_dpoequb layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let cpoequb ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_cpoequb matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let cpoequb ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_cpoequb layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let zpoequb ~matrix_layout ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_zpoequb matrix_layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let zpoequb ~layout ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_zpoequb layout n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let sporfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_sporfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let sporfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_sporfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dporfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dporfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dporfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dporfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cporfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cporfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cporfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cporfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zporfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zporfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zporfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zporfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sposv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_sposv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let sposv ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_sposv layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let dposv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_dposv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let dposv ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_dposv layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let cposv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_cposv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let cposv ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_cposv layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let zposv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_zposv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let zposv ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_zposv layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let dsposv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~iter =
-  lapacke_dsposv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
+let dsposv ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~iter =
+  lapacke_dsposv layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
 
-let zcposv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~iter =
-  lapacke_zcposv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
+let zcposv ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~iter =
+  lapacke_zcposv layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr iter)
 
-let sposvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_sposvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let sposvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_sposvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dposvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dposvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dposvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dposvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let cposvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_cposvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let cposvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_cposvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zposvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zposvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zposvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zposvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let spotrf2 ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_spotrf2 matrix_layout uplo n (CI.cptr a) lda
+let spotrf2 ~layout ~uplo ~n ~a ~lda =
+  lapacke_spotrf2 layout uplo n (CI.cptr a) lda
 
-let dpotrf2 ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_dpotrf2 matrix_layout uplo n (CI.cptr a) lda
+let dpotrf2 ~layout ~uplo ~n ~a ~lda =
+  lapacke_dpotrf2 layout uplo n (CI.cptr a) lda
 
-let cpotrf2 ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_cpotrf2 matrix_layout uplo n (CI.cptr a) lda
+let cpotrf2 ~layout ~uplo ~n ~a ~lda =
+  lapacke_cpotrf2 layout uplo n (CI.cptr a) lda
 
-let zpotrf2 ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_zpotrf2 matrix_layout uplo n (CI.cptr a) lda
+let zpotrf2 ~layout ~uplo ~n ~a ~lda =
+  lapacke_zpotrf2 layout uplo n (CI.cptr a) lda
 
-let spotrf ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_spotrf matrix_layout uplo n (CI.cptr a) lda
+let spotrf ~layout ~uplo ~n ~a ~lda =
+  lapacke_spotrf layout uplo n (CI.cptr a) lda
 
-let dpotrf ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_dpotrf matrix_layout uplo n (CI.cptr a) lda
+let dpotrf ~layout ~uplo ~n ~a ~lda =
+  lapacke_dpotrf layout uplo n (CI.cptr a) lda
 
-let cpotrf ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_cpotrf matrix_layout uplo n (CI.cptr a) lda
+let cpotrf ~layout ~uplo ~n ~a ~lda =
+  lapacke_cpotrf layout uplo n (CI.cptr a) lda
 
-let zpotrf ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_zpotrf matrix_layout uplo n (CI.cptr a) lda
+let zpotrf ~layout ~uplo ~n ~a ~lda =
+  lapacke_zpotrf layout uplo n (CI.cptr a) lda
 
-let spotri ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_spotri matrix_layout uplo n (CI.cptr a) lda
+let spotri ~layout ~uplo ~n ~a ~lda =
+  lapacke_spotri layout uplo n (CI.cptr a) lda
 
-let dpotri ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_dpotri matrix_layout uplo n (CI.cptr a) lda
+let dpotri ~layout ~uplo ~n ~a ~lda =
+  lapacke_dpotri layout uplo n (CI.cptr a) lda
 
-let cpotri ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_cpotri matrix_layout uplo n (CI.cptr a) lda
+let cpotri ~layout ~uplo ~n ~a ~lda =
+  lapacke_cpotri layout uplo n (CI.cptr a) lda
 
-let zpotri ~matrix_layout ~uplo ~n ~a ~lda =
-  lapacke_zpotri matrix_layout uplo n (CI.cptr a) lda
+let zpotri ~layout ~uplo ~n ~a ~lda =
+  lapacke_zpotri layout uplo n (CI.cptr a) lda
 
-let spotrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_spotrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let spotrs ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_spotrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let dpotrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_dpotrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let dpotrs ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_dpotrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let cpotrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_cpotrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let cpotrs ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_cpotrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let zpotrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_zpotrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let zpotrs ~layout ~uplo ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_zpotrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let sppcon ~matrix_layout ~uplo ~n ~ap ~anorm ~rcond =
-  lapacke_sppcon matrix_layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
+let sppcon ~layout ~uplo ~n ~ap ~anorm ~rcond =
+  lapacke_sppcon layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
 
-let dppcon ~matrix_layout ~uplo ~n ~ap ~anorm ~rcond =
-  lapacke_dppcon matrix_layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
+let dppcon ~layout ~uplo ~n ~ap ~anorm ~rcond =
+  lapacke_dppcon layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
 
-let cppcon ~matrix_layout ~uplo ~n ~ap ~anorm ~rcond =
-  lapacke_cppcon matrix_layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
+let cppcon ~layout ~uplo ~n ~ap ~anorm ~rcond =
+  lapacke_cppcon layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
 
-let zppcon ~matrix_layout ~uplo ~n ~ap ~anorm ~rcond =
-  lapacke_zppcon matrix_layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
+let zppcon ~layout ~uplo ~n ~ap ~anorm ~rcond =
+  lapacke_zppcon layout uplo n (CI.cptr ap) anorm (CI.cptr rcond)
 
-let sppequ ~matrix_layout ~uplo ~n ~ap ~s ~scond ~amax =
-  lapacke_sppequ matrix_layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let sppequ ~layout ~uplo ~n ~ap ~s ~scond ~amax =
+  lapacke_sppequ layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let dppequ ~matrix_layout ~uplo ~n ~ap ~s ~scond ~amax =
-  lapacke_dppequ matrix_layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let dppequ ~layout ~uplo ~n ~ap ~s ~scond ~amax =
+  lapacke_dppequ layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let cppequ ~matrix_layout ~uplo ~n ~ap ~s ~scond ~amax =
-  lapacke_cppequ matrix_layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let cppequ ~layout ~uplo ~n ~ap ~s ~scond ~amax =
+  lapacke_cppequ layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let zppequ ~matrix_layout ~uplo ~n ~ap ~s ~scond ~amax =
-  lapacke_zppequ matrix_layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let zppequ ~layout ~uplo ~n ~ap ~s ~scond ~amax =
+  lapacke_zppequ layout uplo n (CI.cptr ap) (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let spprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_spprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let spprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_spprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dpprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dpprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dpprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dpprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cpprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cpprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cpprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cpprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zpprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zpprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zpprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zpprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sppsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_sppsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let sppsv ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_sppsv layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let dppsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_dppsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let dppsv ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_dppsv layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let cppsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_cppsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let cppsv ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_cppsv layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let zppsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_zppsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let zppsv ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_zppsv layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let sppsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_sppsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let sppsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_sppsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dppsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dppsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dppsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dppsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let cppsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_cppsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let cppsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_cppsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zppsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zppsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zppsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~equed ~s ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zppsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr equed) (CI.cptr s) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let spptrf ~matrix_layout ~uplo ~n ~ap =
-  lapacke_spptrf matrix_layout uplo n (CI.cptr ap)
+let spptrf ~layout ~uplo ~n ~ap =
+  lapacke_spptrf layout uplo n (CI.cptr ap)
 
-let dpptrf ~matrix_layout ~uplo ~n ~ap =
-  lapacke_dpptrf matrix_layout uplo n (CI.cptr ap)
+let dpptrf ~layout ~uplo ~n ~ap =
+  lapacke_dpptrf layout uplo n (CI.cptr ap)
 
-let cpptrf ~matrix_layout ~uplo ~n ~ap =
-  lapacke_cpptrf matrix_layout uplo n (CI.cptr ap)
+let cpptrf ~layout ~uplo ~n ~ap =
+  lapacke_cpptrf layout uplo n (CI.cptr ap)
 
-let zpptrf ~matrix_layout ~uplo ~n ~ap =
-  lapacke_zpptrf matrix_layout uplo n (CI.cptr ap)
+let zpptrf ~layout ~uplo ~n ~ap =
+  lapacke_zpptrf layout uplo n (CI.cptr ap)
 
-let spptri ~matrix_layout ~uplo ~n ~ap =
-  lapacke_spptri matrix_layout uplo n (CI.cptr ap)
+let spptri ~layout ~uplo ~n ~ap =
+  lapacke_spptri layout uplo n (CI.cptr ap)
 
-let dpptri ~matrix_layout ~uplo ~n ~ap =
-  lapacke_dpptri matrix_layout uplo n (CI.cptr ap)
+let dpptri ~layout ~uplo ~n ~ap =
+  lapacke_dpptri layout uplo n (CI.cptr ap)
 
-let cpptri ~matrix_layout ~uplo ~n ~ap =
-  lapacke_cpptri matrix_layout uplo n (CI.cptr ap)
+let cpptri ~layout ~uplo ~n ~ap =
+  lapacke_cpptri layout uplo n (CI.cptr ap)
 
-let zpptri ~matrix_layout ~uplo ~n ~ap =
-  lapacke_zpptri matrix_layout uplo n (CI.cptr ap)
+let zpptri ~layout ~uplo ~n ~ap =
+  lapacke_zpptri layout uplo n (CI.cptr ap)
 
-let spptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_spptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let spptrs ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_spptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let dpptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_dpptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let dpptrs ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_dpptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let cpptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_cpptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let cpptrs ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_cpptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let zpptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_zpptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let zpptrs ~layout ~uplo ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_zpptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let spstrf ~matrix_layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
-  lapacke_spstrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
+let spstrf ~layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
+  lapacke_spstrf layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
 
-let dpstrf ~matrix_layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
-  lapacke_dpstrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
+let dpstrf ~layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
+  lapacke_dpstrf layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
 
-let cpstrf ~matrix_layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
-  lapacke_cpstrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
+let cpstrf ~layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
+  lapacke_cpstrf layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
 
-let zpstrf ~matrix_layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
-  lapacke_zpstrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
+let zpstrf ~layout ~uplo ~n ~a ~lda ~piv ~rank ~tol =
+  lapacke_zpstrf layout uplo n (CI.cptr a) lda (CI.cptr piv) (CI.cptr rank) tol
 
 let sptcon ~n ~d ~e ~anorm ~rcond =
   lapacke_sptcon n (CI.cptr d) (CI.cptr e) anorm (CI.cptr rcond)
@@ -6017,53 +6017,53 @@ let cptcon ~n ~d ~e ~anorm ~rcond =
 let zptcon ~n ~d ~e ~anorm ~rcond =
   lapacke_zptcon n (CI.cptr d) (CI.cptr e) anorm (CI.cptr rcond)
 
-let spteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_spteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let spteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_spteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let dpteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_dpteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let dpteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_dpteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let cpteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_cpteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let cpteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_cpteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let zpteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_zpteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let zpteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_zpteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let sptrfs ~matrix_layout ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_sptrfs matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let sptrfs ~layout ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_sptrfs layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dptrfs ~matrix_layout ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dptrfs matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dptrfs ~layout ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dptrfs layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let cptrfs ~matrix_layout ~uplo ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_cptrfs matrix_layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let cptrfs ~layout ~uplo ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_cptrfs layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zptrfs ~matrix_layout ~uplo ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zptrfs matrix_layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zptrfs ~layout ~uplo ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zptrfs layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sptsv ~matrix_layout ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_sptsv matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let sptsv ~layout ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_sptsv layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let dptsv ~matrix_layout ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_dptsv matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let dptsv ~layout ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_dptsv layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let cptsv ~matrix_layout ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_cptsv matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let cptsv ~layout ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_cptsv layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let zptsv ~matrix_layout ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_zptsv matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let zptsv ~layout ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_zptsv layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let sptsvx ~matrix_layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_sptsvx matrix_layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let sptsvx ~layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_sptsvx layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dptsvx ~matrix_layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dptsvx matrix_layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dptsvx ~layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dptsvx layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let cptsvx ~matrix_layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_cptsvx matrix_layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let cptsvx ~layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_cptsvx layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zptsvx ~matrix_layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zptsvx matrix_layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zptsvx ~layout ~fact ~n ~nrhs ~d ~e ~df ~ef ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zptsvx layout fact n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr df) (CI.cptr ef) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
 let spttrf ~n ~d ~e =
   lapacke_spttrf n (CI.cptr d) (CI.cptr e)
@@ -6077,203 +6077,203 @@ let cpttrf ~n ~d ~e =
 let zpttrf ~n ~d ~e =
   lapacke_zpttrf n (CI.cptr d) (CI.cptr e)
 
-let spttrs ~matrix_layout ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_spttrs matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let spttrs ~layout ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_spttrs layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let dpttrs ~matrix_layout ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_dpttrs matrix_layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let dpttrs ~layout ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_dpttrs layout n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let cpttrs ~matrix_layout ~uplo ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_cpttrs matrix_layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let cpttrs ~layout ~uplo ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_cpttrs layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let zpttrs ~matrix_layout ~uplo ~n ~nrhs ~d ~e ~b ~ldb =
-  lapacke_zpttrs matrix_layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
+let zpttrs ~layout ~uplo ~n ~nrhs ~d ~e ~b ~ldb =
+  lapacke_zpttrs layout uplo n nrhs (CI.cptr d) (CI.cptr e) (CI.cptr b) ldb
 
-let ssbev ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_ssbev matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let ssbev ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_ssbev layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let dsbev ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_dsbev matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let dsbev ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_dsbev layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let ssbevd ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_ssbevd matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let ssbevd ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_ssbevd layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let dsbevd ~matrix_layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
-  lapacke_dsbevd matrix_layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
+let dsbevd ~layout ~jobz ~uplo ~n ~kd ~ab ~ldab ~w ~z ~ldz =
+  lapacke_dsbevd layout jobz uplo n kd (CI.cptr ab) ldab (CI.cptr w) (CI.cptr z) ldz
 
-let ssbevx ~matrix_layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_ssbevx matrix_layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let ssbevx ~layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_ssbevx layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dsbevx ~matrix_layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dsbevx matrix_layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dsbevx ~layout ~jobz ~range ~uplo ~n ~kd ~ab ~ldab ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dsbevx layout jobz range uplo n kd (CI.cptr ab) ldab (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let ssbgst ~matrix_layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
-  lapacke_ssbgst matrix_layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
+let ssbgst ~layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
+  lapacke_ssbgst layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
 
-let dsbgst ~matrix_layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
-  lapacke_dsbgst matrix_layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
+let dsbgst ~layout ~vect ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~x ~ldx =
+  lapacke_dsbgst layout vect uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr x) ldx
 
-let ssbgv ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_ssbgv matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let ssbgv ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_ssbgv layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let dsbgv ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_dsbgv matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let dsbgv ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_dsbgv layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let ssbgvd ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_ssbgvd matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let ssbgvd ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_ssbgvd layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let dsbgvd ~matrix_layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
-  lapacke_dsbgvd matrix_layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
+let dsbgvd ~layout ~jobz ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~w ~z ~ldz =
+  lapacke_dsbgvd layout jobz uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr w) (CI.cptr z) ldz
 
-let ssbgvx ~matrix_layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_ssbgvx matrix_layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let ssbgvx ~layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_ssbgvx layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dsbgvx ~matrix_layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dsbgvx matrix_layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dsbgvx ~layout ~jobz ~range ~uplo ~n ~ka ~kb ~ab ~ldab ~bb ~ldbb ~q ~ldq ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dsbgvx layout jobz range uplo n ka kb (CI.cptr ab) ldab (CI.cptr bb) ldbb (CI.cptr q) ldq vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let ssbtrd ~matrix_layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
-  lapacke_ssbtrd matrix_layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
+let ssbtrd ~layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
+  lapacke_ssbtrd layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
 
-let dsbtrd ~matrix_layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
-  lapacke_dsbtrd matrix_layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
+let dsbtrd ~layout ~vect ~uplo ~n ~kd ~ab ~ldab ~d ~e ~q ~ldq =
+  lapacke_dsbtrd layout vect uplo n kd (CI.cptr ab) ldab (CI.cptr d) (CI.cptr e) (CI.cptr q) ldq
 
-let ssfrk ~matrix_layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
-  lapacke_ssfrk matrix_layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
+let ssfrk ~layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
+  lapacke_ssfrk layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
 
-let dsfrk ~matrix_layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
-  lapacke_dsfrk matrix_layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
+let dsfrk ~layout ~transr ~uplo ~trans ~n ~k ~alpha ~a ~lda ~beta ~c =
+  lapacke_dsfrk layout transr uplo trans n k alpha (CI.cptr a) lda beta (CI.cptr c)
 
-let sspcon ~matrix_layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
-  lapacke_sspcon matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
+let sspcon ~layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
+  lapacke_sspcon layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let dspcon ~matrix_layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
-  lapacke_dspcon matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
+let dspcon ~layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
+  lapacke_dspcon layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let cspcon ~matrix_layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
-  lapacke_cspcon matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
+let cspcon ~layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
+  lapacke_cspcon layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let zspcon ~matrix_layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
-  lapacke_zspcon matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
+let zspcon ~layout ~uplo ~n ~ap ~ipiv ~anorm ~rcond =
+  lapacke_zspcon layout uplo n (CI.cptr ap) (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let sspev ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_sspev matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let sspev ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_sspev layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let dspev ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_dspev matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let dspev ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_dspev layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let sspevd ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_sspevd matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let sspevd ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_sspevd layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let dspevd ~matrix_layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
-  lapacke_dspevd matrix_layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
+let dspevd ~layout ~jobz ~uplo ~n ~ap ~w ~z ~ldz =
+  lapacke_dspevd layout jobz uplo n (CI.cptr ap) (CI.cptr w) (CI.cptr z) ldz
 
-let sspevx ~matrix_layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_sspevx matrix_layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let sspevx ~layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_sspevx layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dspevx ~matrix_layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dspevx matrix_layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dspevx ~layout ~jobz ~range ~uplo ~n ~ap ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dspevx layout jobz range uplo n (CI.cptr ap) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let sspgst ~matrix_layout ~itype ~uplo ~n ~ap ~bp =
-  lapacke_sspgst matrix_layout itype uplo n (CI.cptr ap) (CI.cptr bp)
+let sspgst ~layout ~ityp ~uplo ~n ~ap ~bp =
+  lapacke_sspgst layout ityp uplo n (CI.cptr ap) (CI.cptr bp)
 
-let dspgst ~matrix_layout ~itype ~uplo ~n ~ap ~bp =
-  lapacke_dspgst matrix_layout itype uplo n (CI.cptr ap) (CI.cptr bp)
+let dspgst ~layout ~ityp ~uplo ~n ~ap ~bp =
+  lapacke_dspgst layout ityp uplo n (CI.cptr ap) (CI.cptr bp)
 
-let sspgv ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_sspgv matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let sspgv ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_sspgv layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let dspgv ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_dspgv matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let dspgv ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_dspgv layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let sspgvd ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_sspgvd matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let sspgvd ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_sspgvd layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let dspgvd ~matrix_layout ~itype ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
-  lapacke_dspgvd matrix_layout itype jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
+let dspgvd ~layout ~ityp ~jobz ~uplo ~n ~ap ~bp ~w ~z ~ldz =
+  lapacke_dspgvd layout ityp jobz uplo n (CI.cptr ap) (CI.cptr bp) (CI.cptr w) (CI.cptr z) ldz
 
-let sspgvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_sspgvx matrix_layout itype jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let sspgvx ~layout ~ityp ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_sspgvx layout ityp jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dspgvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dspgvx matrix_layout itype jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dspgvx ~layout ~ityp ~jobz ~range ~uplo ~n ~ap ~bp ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dspgvx layout ityp jobz range uplo n (CI.cptr ap) (CI.cptr bp) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let ssprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ssprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ssprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ssprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dsprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dsprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dsprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dsprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let csprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_csprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let csprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_csprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zsprfs ~matrix_layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zsprfs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zsprfs ~layout ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zsprfs layout uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let sspsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_sspsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let sspsv ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_sspsv layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dspsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_dspsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let dspsv ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_dspsv layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cspsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_cspsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let cspsv ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_cspsv layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zspsv ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_zspsv matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let zspsv ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_zspsv layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let sspsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_sspsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let sspsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_sspsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dspsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dspsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dspsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dspsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let cspsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_cspsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let cspsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_cspsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zspsvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zspsvx matrix_layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zspsvx ~layout ~fact ~uplo ~n ~nrhs ~ap ~afp ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zspsvx layout fact uplo n nrhs (CI.cptr ap) (CI.cptr afp) (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let ssptrd ~matrix_layout ~uplo ~n ~ap ~d ~e ~tau =
-  lapacke_ssptrd matrix_layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let ssptrd ~layout ~uplo ~n ~ap ~d ~e ~tau =
+  lapacke_ssptrd layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let dsptrd ~matrix_layout ~uplo ~n ~ap ~d ~e ~tau =
-  lapacke_dsptrd matrix_layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let dsptrd ~layout ~uplo ~n ~ap ~d ~e ~tau =
+  lapacke_dsptrd layout uplo n (CI.cptr ap) (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let ssptrf ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_ssptrf matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let ssptrf ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_ssptrf layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let dsptrf ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_dsptrf matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let dsptrf ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_dsptrf layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let csptrf ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_csptrf matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let csptrf ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_csptrf layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let zsptrf ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_zsptrf matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let zsptrf ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_zsptrf layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let ssptri ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_ssptri matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let ssptri ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_ssptri layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let dsptri ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_dsptri matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let dsptri ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_dsptri layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let csptri ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_csptri matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let csptri ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_csptri layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let zsptri ~matrix_layout ~uplo ~n ~ap ~ipiv =
-  lapacke_zsptri matrix_layout uplo n (CI.cptr ap) (CI.cptr ipiv)
+let zsptri ~layout ~uplo ~n ~ap ~ipiv =
+  lapacke_zsptri layout uplo n (CI.cptr ap) (CI.cptr ipiv)
 
-let ssptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_ssptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let ssptrs ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_ssptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dsptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_dsptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let dsptrs ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_dsptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_csptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let csptrs ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_csptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zsptrs ~matrix_layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
-  lapacke_zsptrs matrix_layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
+let zsptrs ~layout ~uplo ~n ~nrhs ~ap ~ipiv ~b ~ldb =
+  lapacke_zsptrs layout uplo n nrhs (CI.cptr ap) (CI.cptr ipiv) (CI.cptr b) ldb
 
 let sstebz ~range ~order ~n ~vl ~vu ~il ~iu ~abstol ~d ~e ~m ~nsplit ~w ~iblock ~isplit =
   lapacke_sstebz range order n vl vu il iu abstol (CI.cptr d) (CI.cptr e) (CI.cptr m) (CI.cptr nsplit) (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit)
@@ -6281,65 +6281,65 @@ let sstebz ~range ~order ~n ~vl ~vu ~il ~iu ~abstol ~d ~e ~m ~nsplit ~w ~iblock 
 let dstebz ~range ~order ~n ~vl ~vu ~il ~iu ~abstol ~d ~e ~m ~nsplit ~w ~iblock ~isplit =
   lapacke_dstebz range order n vl vu il iu abstol (CI.cptr d) (CI.cptr e) (CI.cptr m) (CI.cptr nsplit) (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit)
 
-let sstedc ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_sstedc matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let sstedc ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_sstedc layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let dstedc ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_dstedc matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let dstedc ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_dstedc layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let cstedc ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_cstedc matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let cstedc ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_cstedc layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let zstedc ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_zstedc matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let zstedc ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_zstedc layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let sstegr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_sstegr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let sstegr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_sstegr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let dstegr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_dstegr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let dstegr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_dstegr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let cstegr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_cstegr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let cstegr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_cstegr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let zstegr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_zstegr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let zstegr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_zstegr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let sstein ~matrix_layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
-  lapacke_sstein matrix_layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
+let sstein ~layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
+  lapacke_sstein layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
 
-let dstein ~matrix_layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
-  lapacke_dstein matrix_layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
+let dstein ~layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
+  lapacke_dstein layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
 
-let cstein ~matrix_layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
-  lapacke_cstein matrix_layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
+let cstein ~layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
+  lapacke_cstein layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
 
-let zstein ~matrix_layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
-  lapacke_zstein matrix_layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
+let zstein ~layout ~n ~d ~e ~m ~w ~iblock ~isplit ~z ~ldz ~ifailv =
+  lapacke_zstein layout n (CI.cptr d) (CI.cptr e) m (CI.cptr w) (CI.cptr iblock) (CI.cptr isplit) (CI.cptr z) ldz (CI.cptr ifailv)
 
-let sstemr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
-  lapacke_sstemr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
+let sstemr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
+  lapacke_sstemr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
 
-let dstemr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
-  lapacke_dstemr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
+let dstemr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
+  lapacke_dstemr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
 
-let cstemr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
-  lapacke_cstemr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
+let cstemr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
+  lapacke_cstemr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
 
-let zstemr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
-  lapacke_zstemr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
+let zstemr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~m ~w ~z ~ldz ~nzc ~isuppz ~tryrac =
+  lapacke_zstemr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz nzc (CI.cptr isuppz) (CI.cptr tryrac)
 
-let ssteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_ssteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let ssteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_ssteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let dsteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_dsteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let dsteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_dsteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let csteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_csteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let csteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_csteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let zsteqr ~matrix_layout ~compz ~n ~d ~e ~z ~ldz =
-  lapacke_zsteqr matrix_layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let zsteqr ~layout ~compz ~n ~d ~e ~z ~ldz =
+  lapacke_zsteqr layout compz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
 let ssterf ~n ~d ~e =
   lapacke_ssterf n (CI.cptr d) (CI.cptr e)
@@ -6347,695 +6347,695 @@ let ssterf ~n ~d ~e =
 let dsterf ~n ~d ~e =
   lapacke_dsterf n (CI.cptr d) (CI.cptr e)
 
-let sstev ~matrix_layout ~jobz ~n ~d ~e ~z ~ldz =
-  lapacke_sstev matrix_layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let sstev ~layout ~jobz ~n ~d ~e ~z ~ldz =
+  lapacke_sstev layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let dstev ~matrix_layout ~jobz ~n ~d ~e ~z ~ldz =
-  lapacke_dstev matrix_layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let dstev ~layout ~jobz ~n ~d ~e ~z ~ldz =
+  lapacke_dstev layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let sstevd ~matrix_layout ~jobz ~n ~d ~e ~z ~ldz =
-  lapacke_sstevd matrix_layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let sstevd ~layout ~jobz ~n ~d ~e ~z ~ldz =
+  lapacke_sstevd layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let dstevd ~matrix_layout ~jobz ~n ~d ~e ~z ~ldz =
-  lapacke_dstevd matrix_layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
+let dstevd ~layout ~jobz ~n ~d ~e ~z ~ldz =
+  lapacke_dstevd layout jobz n (CI.cptr d) (CI.cptr e) (CI.cptr z) ldz
 
-let sstevr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_sstevr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let sstevr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_sstevr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let dstevr ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_dstevr matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let dstevr ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_dstevr layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let sstevx ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_sstevx matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let sstevx ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_sstevx layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dstevx ~matrix_layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dstevx matrix_layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dstevx ~layout ~jobz ~range ~n ~d ~e ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dstevx layout jobz range n (CI.cptr d) (CI.cptr e) vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let ssycon ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
-  lapacke_ssycon matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
+let ssycon ~layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
+  lapacke_ssycon layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let dsycon ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
-  lapacke_dsycon matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
+let dsycon ~layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
+  lapacke_dsycon layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let csycon ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
-  lapacke_csycon matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
+let csycon ~layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
+  lapacke_csycon layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let zsycon ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
-  lapacke_zsycon matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
+let zsycon ~layout ~uplo ~n ~a ~lda ~ipiv ~anorm ~rcond =
+  lapacke_zsycon layout uplo n (CI.cptr a) lda (CI.cptr ipiv) anorm (CI.cptr rcond)
 
-let ssyequb ~matrix_layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_ssyequb matrix_layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let ssyequb ~layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_ssyequb layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let dsyequb ~matrix_layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_dsyequb matrix_layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let dsyequb ~layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_dsyequb layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let csyequb ~matrix_layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_csyequb matrix_layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let csyequb ~layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_csyequb layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let zsyequb ~matrix_layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
-  lapacke_zsyequb matrix_layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
+let zsyequb ~layout ~uplo ~n ~a ~lda ~s ~scond ~amax =
+  lapacke_zsyequb layout uplo n (CI.cptr a) lda (CI.cptr s) (CI.cptr scond) (CI.cptr amax)
 
-let ssyev ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_ssyev matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let ssyev ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_ssyev layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let dsyev ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_dsyev matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let dsyev ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_dsyev layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let ssyevd ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_ssyevd matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let ssyevd ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_ssyevd layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let dsyevd ~matrix_layout ~jobz ~uplo ~n ~a ~lda ~w =
-  lapacke_dsyevd matrix_layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
+let dsyevd ~layout ~jobz ~uplo ~n ~a ~lda ~w =
+  lapacke_dsyevd layout jobz uplo n (CI.cptr a) lda (CI.cptr w)
 
-let ssyevr ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_ssyevr matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let ssyevr ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_ssyevr layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let dsyevr ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
-  lapacke_dsyevr matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
+let dsyevr ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~isuppz =
+  lapacke_dsyevr layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr isuppz)
 
-let ssyevx ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_ssyevx matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let ssyevx ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_ssyevx layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dsyevx ~matrix_layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dsyevx matrix_layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dsyevx ~layout ~jobz ~range ~uplo ~n ~a ~lda ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dsyevx layout jobz range uplo n (CI.cptr a) lda vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let ssygst ~matrix_layout ~itype ~uplo ~n ~a ~lda ~b ~ldb =
-  lapacke_ssygst matrix_layout itype uplo n (CI.cptr a) lda (CI.cptr b) ldb
+let ssygst ~layout ~ityp ~uplo ~n ~a ~lda ~b ~ldb =
+  lapacke_ssygst layout ityp uplo n (CI.cptr a) lda (CI.cptr b) ldb
 
-let dsygst ~matrix_layout ~itype ~uplo ~n ~a ~lda ~b ~ldb =
-  lapacke_dsygst matrix_layout itype uplo n (CI.cptr a) lda (CI.cptr b) ldb
+let dsygst ~layout ~ityp ~uplo ~n ~a ~lda ~b ~ldb =
+  lapacke_dsygst layout ityp uplo n (CI.cptr a) lda (CI.cptr b) ldb
 
-let ssygv ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_ssygv matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let ssygv ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_ssygv layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let dsygv ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_dsygv matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let dsygv ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_dsygv layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let ssygvd ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_ssygvd matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let ssygvd ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_ssygvd layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let dsygvd ~matrix_layout ~itype ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
-  lapacke_dsygvd matrix_layout itype jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
+let dsygvd ~layout ~ityp ~jobz ~uplo ~n ~a ~lda ~b ~ldb ~w =
+  lapacke_dsygvd layout ityp jobz uplo n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr w)
 
-let ssygvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_ssygvx matrix_layout itype jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let ssygvx ~layout ~ityp ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_ssygvx layout ityp jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let dsygvx ~matrix_layout ~itype ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
-  lapacke_dsygvx matrix_layout itype jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
+let dsygvx ~layout ~ityp ~jobz ~range ~uplo ~n ~a ~lda ~b ~ldb ~vl ~vu ~il ~iu ~abstol ~m ~w ~z ~ldz ~ifail =
+  lapacke_dsygvx layout ityp jobz range uplo n (CI.cptr a) lda (CI.cptr b) ldb vl vu il iu abstol (CI.cptr m) (CI.cptr w) (CI.cptr z) ldz (CI.cptr ifail)
 
-let ssyrfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ssyrfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ssyrfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ssyrfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dsyrfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dsyrfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dsyrfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dsyrfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let csyrfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_csyrfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let csyrfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_csyrfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let zsyrfs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_zsyrfs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let zsyrfs ~layout ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_zsyrfs layout uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ssysv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_ssysv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let ssysv ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_ssysv layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dsysv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dsysv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dsysv ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dsysv layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csysv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_csysv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let csysv ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_csysv layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zsysv ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zsysv matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zsysv ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zsysv layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let ssysvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_ssysvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let ssysvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_ssysvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let dsysvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_dsysvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let dsysvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_dsysvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let csysvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_csysvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let csysvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_csysvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let zsysvx ~matrix_layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
-  lapacke_zsysvx matrix_layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
+let zsysvx ~layout ~fact ~uplo ~n ~nrhs ~a ~lda ~af ~ldaf ~ipiv ~b ~ldb ~x ~ldx ~rcond ~ferr ~berr =
+  lapacke_zsysvx layout fact uplo n nrhs (CI.cptr a) lda (CI.cptr af) ldaf (CI.cptr ipiv) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr rcond) (CI.cptr ferr) (CI.cptr berr)
 
-let ssytrd ~matrix_layout ~uplo ~n ~a ~lda ~d ~e ~tau =
-  lapacke_ssytrd matrix_layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let ssytrd ~layout ~uplo ~n ~a ~lda ~d ~e ~tau =
+  lapacke_ssytrd layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let dsytrd ~matrix_layout ~uplo ~n ~a ~lda ~d ~e ~tau =
-  lapacke_dsytrd matrix_layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
+let dsytrd ~layout ~uplo ~n ~a ~lda ~d ~e ~tau =
+  lapacke_dsytrd layout uplo n (CI.cptr a) lda (CI.cptr d) (CI.cptr e) (CI.cptr tau)
 
-let ssytrf ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_ssytrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let ssytrf ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_ssytrf layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dsytrf ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_dsytrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let dsytrf ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_dsytrf layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let csytrf ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_csytrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let csytrf ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_csytrf layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zsytrf ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zsytrf matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zsytrf ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zsytrf layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let ssytri ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_ssytri matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let ssytri ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_ssytri layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dsytri ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_dsytri matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let dsytri ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_dsytri layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let csytri ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_csytri matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let csytri ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_csytri layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zsytri ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zsytri matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zsytri ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zsytri layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let ssytrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_ssytrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let ssytrs ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_ssytrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dsytrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dsytrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dsytrs ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dsytrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csytrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_csytrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let csytrs ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_csytrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zsytrs ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zsytrs matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zsytrs ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zsytrs layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let stbcon ~matrix_layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
-  lapacke_stbcon matrix_layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
+let stbcon ~layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
+  lapacke_stbcon layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
 
-let dtbcon ~matrix_layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
-  lapacke_dtbcon matrix_layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
+let dtbcon ~layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
+  lapacke_dtbcon layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
 
-let ctbcon ~matrix_layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
-  lapacke_ctbcon matrix_layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
+let ctbcon ~layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
+  lapacke_ctbcon layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
 
-let ztbcon ~matrix_layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
-  lapacke_ztbcon matrix_layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
+let ztbcon ~layout ~norm ~uplo ~diag ~n ~kd ~ab ~ldab ~rcond =
+  lapacke_ztbcon layout norm uplo diag n kd (CI.cptr ab) ldab (CI.cptr rcond)
 
-let stbrfs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_stbrfs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let stbrfs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_stbrfs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dtbrfs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dtbrfs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dtbrfs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dtbrfs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ctbrfs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ctbrfs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ctbrfs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ctbrfs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ztbrfs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ztbrfs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ztbrfs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ztbrfs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let stbtrs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_stbtrs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let stbtrs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_stbtrs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let dtbtrs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_dtbtrs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let dtbtrs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_dtbtrs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let ctbtrs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_ctbtrs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let ctbtrs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_ctbtrs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let ztbtrs ~matrix_layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
-  lapacke_ztbtrs matrix_layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
+let ztbtrs ~layout ~uplo ~trans ~diag ~n ~kd ~nrhs ~ab ~ldab ~b ~ldb =
+  lapacke_ztbtrs layout uplo trans diag n kd nrhs (CI.cptr ab) ldab (CI.cptr b) ldb
 
-let stfsm ~matrix_layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
-  lapacke_stfsm matrix_layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
+let stfsm ~layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
+  lapacke_stfsm layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
 
-let dtfsm ~matrix_layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
-  lapacke_dtfsm matrix_layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
+let dtfsm ~layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
+  lapacke_dtfsm layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
 
-let ctfsm ~matrix_layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
-  lapacke_ctfsm matrix_layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
+let ctfsm ~layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
+  lapacke_ctfsm layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
 
-let ztfsm ~matrix_layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
-  lapacke_ztfsm matrix_layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
+let ztfsm ~layout ~transr ~side ~uplo ~trans ~diag ~m ~n ~alpha ~a ~b ~ldb =
+  lapacke_ztfsm layout transr side uplo trans diag m n alpha (CI.cptr a) (CI.cptr b) ldb
 
-let stftri ~matrix_layout ~transr ~uplo ~diag ~n ~a =
-  lapacke_stftri matrix_layout transr uplo diag n (CI.cptr a)
+let stftri ~layout ~transr ~uplo ~diag ~n ~a =
+  lapacke_stftri layout transr uplo diag n (CI.cptr a)
 
-let dtftri ~matrix_layout ~transr ~uplo ~diag ~n ~a =
-  lapacke_dtftri matrix_layout transr uplo diag n (CI.cptr a)
+let dtftri ~layout ~transr ~uplo ~diag ~n ~a =
+  lapacke_dtftri layout transr uplo diag n (CI.cptr a)
 
-let ctftri ~matrix_layout ~transr ~uplo ~diag ~n ~a =
-  lapacke_ctftri matrix_layout transr uplo diag n (CI.cptr a)
+let ctftri ~layout ~transr ~uplo ~diag ~n ~a =
+  lapacke_ctftri layout transr uplo diag n (CI.cptr a)
 
-let ztftri ~matrix_layout ~transr ~uplo ~diag ~n ~a =
-  lapacke_ztftri matrix_layout transr uplo diag n (CI.cptr a)
+let ztftri ~layout ~transr ~uplo ~diag ~n ~a =
+  lapacke_ztftri layout transr uplo diag n (CI.cptr a)
 
-let stfttp ~matrix_layout ~transr ~uplo ~n ~arf ~ap =
-  lapacke_stfttp matrix_layout transr uplo n (CI.cptr arf) (CI.cptr ap)
+let stfttp ~layout ~transr ~uplo ~n ~arf ~ap =
+  lapacke_stfttp layout transr uplo n (CI.cptr arf) (CI.cptr ap)
 
-let dtfttp ~matrix_layout ~transr ~uplo ~n ~arf ~ap =
-  lapacke_dtfttp matrix_layout transr uplo n (CI.cptr arf) (CI.cptr ap)
+let dtfttp ~layout ~transr ~uplo ~n ~arf ~ap =
+  lapacke_dtfttp layout transr uplo n (CI.cptr arf) (CI.cptr ap)
 
-let ctfttp ~matrix_layout ~transr ~uplo ~n ~arf ~ap =
-  lapacke_ctfttp matrix_layout transr uplo n (CI.cptr arf) (CI.cptr ap)
+let ctfttp ~layout ~transr ~uplo ~n ~arf ~ap =
+  lapacke_ctfttp layout transr uplo n (CI.cptr arf) (CI.cptr ap)
 
-let ztfttp ~matrix_layout ~transr ~uplo ~n ~arf ~ap =
-  lapacke_ztfttp matrix_layout transr uplo n (CI.cptr arf) (CI.cptr ap)
+let ztfttp ~layout ~transr ~uplo ~n ~arf ~ap =
+  lapacke_ztfttp layout transr uplo n (CI.cptr arf) (CI.cptr ap)
 
-let stfttr ~matrix_layout ~transr ~uplo ~n ~arf ~a ~lda =
-  lapacke_stfttr matrix_layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
+let stfttr ~layout ~transr ~uplo ~n ~arf ~a ~lda =
+  lapacke_stfttr layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
 
-let dtfttr ~matrix_layout ~transr ~uplo ~n ~arf ~a ~lda =
-  lapacke_dtfttr matrix_layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
+let dtfttr ~layout ~transr ~uplo ~n ~arf ~a ~lda =
+  lapacke_dtfttr layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
 
-let ctfttr ~matrix_layout ~transr ~uplo ~n ~arf ~a ~lda =
-  lapacke_ctfttr matrix_layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
+let ctfttr ~layout ~transr ~uplo ~n ~arf ~a ~lda =
+  lapacke_ctfttr layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
 
-let ztfttr ~matrix_layout ~transr ~uplo ~n ~arf ~a ~lda =
-  lapacke_ztfttr matrix_layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
+let ztfttr ~layout ~transr ~uplo ~n ~arf ~a ~lda =
+  lapacke_ztfttr layout transr uplo n (CI.cptr arf) (CI.cptr a) lda
 
-let stgevc ~matrix_layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_stgevc matrix_layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let stgevc ~layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_stgevc layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let dtgevc ~matrix_layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_dtgevc matrix_layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let dtgevc ~layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_dtgevc layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let ctgevc ~matrix_layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_ctgevc matrix_layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let ctgevc ~layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_ctgevc layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let ztgevc ~matrix_layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_ztgevc matrix_layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let ztgevc ~layout ~side ~howmny ~select ~n ~s ~lds ~p ~ldp ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_ztgevc layout side howmny (CI.cptr select) n (CI.cptr s) lds (CI.cptr p) ldp (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let stgexc ~matrix_layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
-  lapacke_stgexc matrix_layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr ifst) (CI.cptr ilst)
+let stgexc ~layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
+  lapacke_stgexc layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr ifst) (CI.cptr ilst)
 
-let dtgexc ~matrix_layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
-  lapacke_dtgexc matrix_layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr ifst) (CI.cptr ilst)
+let dtgexc ~layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
+  lapacke_dtgexc layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr ifst) (CI.cptr ilst)
 
-let ctgexc ~matrix_layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
-  lapacke_ctgexc matrix_layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz ifst ilst
+let ctgexc ~layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
+  lapacke_ctgexc layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz ifst ilst
 
-let ztgexc ~matrix_layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
-  lapacke_ztgexc matrix_layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz ifst ilst
+let ztgexc ~layout ~wantq ~wantz ~n ~a ~lda ~b ~ldb ~q ~ldq ~z ~ldz ~ifst ~ilst =
+  lapacke_ztgexc layout wantq wantz n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr q) ldq (CI.cptr z) ldz ifst ilst
 
-let stgsen ~matrix_layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
-  lapacke_stgsen matrix_layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
+let stgsen ~layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
+  lapacke_stgsen layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
 
-let dtgsen ~matrix_layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
-  lapacke_dtgsen matrix_layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
+let dtgsen ~layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alphar ~alphai ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
+  lapacke_dtgsen layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alphar) (CI.cptr alphai) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
 
-let ctgsen ~matrix_layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alpha ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
-  lapacke_ctgsen matrix_layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
+let ctgsen ~layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alpha ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
+  lapacke_ctgsen layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
 
-let ztgsen ~matrix_layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alpha ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
-  lapacke_ztgsen matrix_layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
+let ztgsen ~layout ~ijob ~wantq ~wantz ~select ~n ~a ~lda ~b ~ldb ~alpha ~beta ~q ~ldq ~z ~ldz ~m ~pl ~pr ~dif =
+  lapacke_ztgsen layout ijob wantq wantz (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr alpha) (CI.cptr beta) (CI.cptr q) ldq (CI.cptr z) ldz (CI.cptr m) (CI.cptr pl) (CI.cptr pr) (CI.cptr dif)
 
-let stgsja ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
-  lapacke_stgsja matrix_layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
+let stgsja ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
+  lapacke_stgsja layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
 
-let dtgsja ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
-  lapacke_dtgsja matrix_layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
+let dtgsja ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
+  lapacke_dtgsja layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
 
-let ctgsja ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
-  lapacke_ctgsja matrix_layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
+let ctgsja ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
+  lapacke_ctgsja layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
 
-let ztgsja ~matrix_layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
-  lapacke_ztgsja matrix_layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
+let ztgsja ~layout ~jobu ~jobv ~jobq ~m ~p ~n ~k ~l ~a ~lda ~b ~ldb ~tola ~tolb ~alpha ~beta ~u ~ldu ~v ~ldv ~q ~ldq ~ncycle =
+  lapacke_ztgsja layout jobu jobv jobq m p n k l (CI.cptr a) lda (CI.cptr b) ldb tola tolb (CI.cptr alpha) (CI.cptr beta) (CI.cptr u) ldu (CI.cptr v) ldv (CI.cptr q) ldq (CI.cptr ncycle)
 
-let stgsna ~matrix_layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
-  lapacke_stgsna matrix_layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
+let stgsna ~layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
+  lapacke_stgsna layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
 
-let dtgsna ~matrix_layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
-  lapacke_dtgsna matrix_layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
+let dtgsna ~layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
+  lapacke_dtgsna layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
 
-let ctgsna ~matrix_layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
-  lapacke_ctgsna matrix_layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
+let ctgsna ~layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
+  lapacke_ctgsna layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
 
-let ztgsna ~matrix_layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
-  lapacke_ztgsna matrix_layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
+let ztgsna ~layout ~job ~howmny ~select ~n ~a ~lda ~b ~ldb ~vl ~ldvl ~vr ~ldvr ~s ~dif ~mm ~m =
+  lapacke_ztgsna layout job howmny (CI.cptr select) n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr dif) mm (CI.cptr m)
 
-let stgsyl ~matrix_layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
-  lapacke_stgsyl matrix_layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
+let stgsyl ~layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
+  lapacke_stgsyl layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
 
-let dtgsyl ~matrix_layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
-  lapacke_dtgsyl matrix_layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
+let dtgsyl ~layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
+  lapacke_dtgsyl layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
 
-let ctgsyl ~matrix_layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
-  lapacke_ctgsyl matrix_layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
+let ctgsyl ~layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
+  lapacke_ctgsyl layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
 
-let ztgsyl ~matrix_layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
-  lapacke_ztgsyl matrix_layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
+let ztgsyl ~layout ~trans ~ijob ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~d ~ldd ~e ~lde ~f ~ldf ~scale ~dif =
+  lapacke_ztgsyl layout trans ijob m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr d) ldd (CI.cptr e) lde (CI.cptr f) ldf (CI.cptr scale) (CI.cptr dif)
 
-let stpcon ~matrix_layout ~norm ~uplo ~diag ~n ~ap ~rcond =
-  lapacke_stpcon matrix_layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
+let stpcon ~layout ~norm ~uplo ~diag ~n ~ap ~rcond =
+  lapacke_stpcon layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
 
-let dtpcon ~matrix_layout ~norm ~uplo ~diag ~n ~ap ~rcond =
-  lapacke_dtpcon matrix_layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
+let dtpcon ~layout ~norm ~uplo ~diag ~n ~ap ~rcond =
+  lapacke_dtpcon layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
 
-let ctpcon ~matrix_layout ~norm ~uplo ~diag ~n ~ap ~rcond =
-  lapacke_ctpcon matrix_layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
+let ctpcon ~layout ~norm ~uplo ~diag ~n ~ap ~rcond =
+  lapacke_ctpcon layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
 
-let ztpcon ~matrix_layout ~norm ~uplo ~diag ~n ~ap ~rcond =
-  lapacke_ztpcon matrix_layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
+let ztpcon ~layout ~norm ~uplo ~diag ~n ~ap ~rcond =
+  lapacke_ztpcon layout norm uplo diag n (CI.cptr ap) (CI.cptr rcond)
 
-let stprfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_stprfs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let stprfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_stprfs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dtprfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dtprfs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dtprfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dtprfs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ctprfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ctprfs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ctprfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ctprfs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ztprfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ztprfs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ztprfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ztprfs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let stptri ~matrix_layout ~uplo ~diag ~n ~ap =
-  lapacke_stptri matrix_layout uplo diag n (CI.cptr ap)
+let stptri ~layout ~uplo ~diag ~n ~ap =
+  lapacke_stptri layout uplo diag n (CI.cptr ap)
 
-let dtptri ~matrix_layout ~uplo ~diag ~n ~ap =
-  lapacke_dtptri matrix_layout uplo diag n (CI.cptr ap)
+let dtptri ~layout ~uplo ~diag ~n ~ap =
+  lapacke_dtptri layout uplo diag n (CI.cptr ap)
 
-let ctptri ~matrix_layout ~uplo ~diag ~n ~ap =
-  lapacke_ctptri matrix_layout uplo diag n (CI.cptr ap)
+let ctptri ~layout ~uplo ~diag ~n ~ap =
+  lapacke_ctptri layout uplo diag n (CI.cptr ap)
 
-let ztptri ~matrix_layout ~uplo ~diag ~n ~ap =
-  lapacke_ztptri matrix_layout uplo diag n (CI.cptr ap)
+let ztptri ~layout ~uplo ~diag ~n ~ap =
+  lapacke_ztptri layout uplo diag n (CI.cptr ap)
 
-let stptrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_stptrs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let stptrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_stptrs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let dtptrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_dtptrs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let dtptrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_dtptrs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let ctptrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_ctptrs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let ctptrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_ctptrs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let ztptrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
-  lapacke_ztptrs matrix_layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
+let ztptrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~ap ~b ~ldb =
+  lapacke_ztptrs layout uplo trans diag n nrhs (CI.cptr ap) (CI.cptr b) ldb
 
-let stpttf ~matrix_layout ~transr ~uplo ~n ~ap ~arf =
-  lapacke_stpttf matrix_layout transr uplo n (CI.cptr ap) (CI.cptr arf)
+let stpttf ~layout ~transr ~uplo ~n ~ap ~arf =
+  lapacke_stpttf layout transr uplo n (CI.cptr ap) (CI.cptr arf)
 
-let dtpttf ~matrix_layout ~transr ~uplo ~n ~ap ~arf =
-  lapacke_dtpttf matrix_layout transr uplo n (CI.cptr ap) (CI.cptr arf)
+let dtpttf ~layout ~transr ~uplo ~n ~ap ~arf =
+  lapacke_dtpttf layout transr uplo n (CI.cptr ap) (CI.cptr arf)
 
-let ctpttf ~matrix_layout ~transr ~uplo ~n ~ap ~arf =
-  lapacke_ctpttf matrix_layout transr uplo n (CI.cptr ap) (CI.cptr arf)
+let ctpttf ~layout ~transr ~uplo ~n ~ap ~arf =
+  lapacke_ctpttf layout transr uplo n (CI.cptr ap) (CI.cptr arf)
 
-let ztpttf ~matrix_layout ~transr ~uplo ~n ~ap ~arf =
-  lapacke_ztpttf matrix_layout transr uplo n (CI.cptr ap) (CI.cptr arf)
+let ztpttf ~layout ~transr ~uplo ~n ~ap ~arf =
+  lapacke_ztpttf layout transr uplo n (CI.cptr ap) (CI.cptr arf)
 
-let stpttr ~matrix_layout ~uplo ~n ~ap ~a ~lda =
-  lapacke_stpttr matrix_layout uplo n (CI.cptr ap) (CI.cptr a) lda
+let stpttr ~layout ~uplo ~n ~ap ~a ~lda =
+  lapacke_stpttr layout uplo n (CI.cptr ap) (CI.cptr a) lda
 
-let dtpttr ~matrix_layout ~uplo ~n ~ap ~a ~lda =
-  lapacke_dtpttr matrix_layout uplo n (CI.cptr ap) (CI.cptr a) lda
+let dtpttr ~layout ~uplo ~n ~ap ~a ~lda =
+  lapacke_dtpttr layout uplo n (CI.cptr ap) (CI.cptr a) lda
 
-let ctpttr ~matrix_layout ~uplo ~n ~ap ~a ~lda =
-  lapacke_ctpttr matrix_layout uplo n (CI.cptr ap) (CI.cptr a) lda
+let ctpttr ~layout ~uplo ~n ~ap ~a ~lda =
+  lapacke_ctpttr layout uplo n (CI.cptr ap) (CI.cptr a) lda
 
-let ztpttr ~matrix_layout ~uplo ~n ~ap ~a ~lda =
-  lapacke_ztpttr matrix_layout uplo n (CI.cptr ap) (CI.cptr a) lda
+let ztpttr ~layout ~uplo ~n ~ap ~a ~lda =
+  lapacke_ztpttr layout uplo n (CI.cptr ap) (CI.cptr a) lda
 
-let strcon ~matrix_layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
-  lapacke_strcon matrix_layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
+let strcon ~layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
+  lapacke_strcon layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
 
-let dtrcon ~matrix_layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
-  lapacke_dtrcon matrix_layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
+let dtrcon ~layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
+  lapacke_dtrcon layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
 
-let ctrcon ~matrix_layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
-  lapacke_ctrcon matrix_layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
+let ctrcon ~layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
+  lapacke_ctrcon layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
 
-let ztrcon ~matrix_layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
-  lapacke_ztrcon matrix_layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
+let ztrcon ~layout ~norm ~uplo ~diag ~n ~a ~lda ~rcond =
+  lapacke_ztrcon layout norm uplo diag n (CI.cptr a) lda (CI.cptr rcond)
 
-let strevc ~matrix_layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_strevc matrix_layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let strevc ~layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_strevc layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let dtrevc ~matrix_layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_dtrevc matrix_layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let dtrevc ~layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_dtrevc layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let ctrevc ~matrix_layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_ctrevc matrix_layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let ctrevc ~layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_ctrevc layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let ztrevc ~matrix_layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
-  lapacke_ztrevc matrix_layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
+let ztrevc ~layout ~side ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~mm ~m =
+  lapacke_ztrevc layout side howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr mm (CI.cptr m)
 
-let strexc ~matrix_layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
-  lapacke_strexc matrix_layout compq n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr ifst) (CI.cptr ilst)
+let strexc ~layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
+  lapacke_strexc layout compq n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr ifst) (CI.cptr ilst)
 
-let dtrexc ~matrix_layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
-  lapacke_dtrexc matrix_layout compq n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr ifst) (CI.cptr ilst)
+let dtrexc ~layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
+  lapacke_dtrexc layout compq n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr ifst) (CI.cptr ilst)
 
-let ctrexc ~matrix_layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
-  lapacke_ctrexc matrix_layout compq n (CI.cptr t) ldt (CI.cptr q) ldq ifst ilst
+let ctrexc ~layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
+  lapacke_ctrexc layout compq n (CI.cptr t) ldt (CI.cptr q) ldq ifst ilst
 
-let ztrexc ~matrix_layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
-  lapacke_ztrexc matrix_layout compq n (CI.cptr t) ldt (CI.cptr q) ldq ifst ilst
+let ztrexc ~layout ~compq ~n ~t ~ldt ~q ~ldq ~ifst ~ilst =
+  lapacke_ztrexc layout compq n (CI.cptr t) ldt (CI.cptr q) ldq ifst ilst
 
-let strrfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_strrfs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let strrfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_strrfs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let dtrrfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_dtrrfs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let dtrrfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_dtrrfs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ctrrfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ctrrfs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ctrrfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ctrrfs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let ztrrfs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
-  lapacke_ztrrfs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
+let ztrrfs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb ~x ~ldx ~ferr ~berr =
+  lapacke_ztrrfs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr x) ldx (CI.cptr ferr) (CI.cptr berr)
 
-let strsen ~matrix_layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~wr ~wi ~m ~s ~sep =
-  lapacke_strsen matrix_layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr wr) (CI.cptr wi) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
+let strsen ~layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~wr ~wi ~m ~s ~sep =
+  lapacke_strsen layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr wr) (CI.cptr wi) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
 
-let dtrsen ~matrix_layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~wr ~wi ~m ~s ~sep =
-  lapacke_dtrsen matrix_layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr wr) (CI.cptr wi) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
+let dtrsen ~layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~wr ~wi ~m ~s ~sep =
+  lapacke_dtrsen layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr wr) (CI.cptr wi) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
 
-let ctrsen ~matrix_layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~w ~m ~s ~sep =
-  lapacke_ctrsen matrix_layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr w) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
+let ctrsen ~layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~w ~m ~s ~sep =
+  lapacke_ctrsen layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr w) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
 
-let ztrsen ~matrix_layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~w ~m ~s ~sep =
-  lapacke_ztrsen matrix_layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr w) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
+let ztrsen ~layout ~job ~compq ~select ~n ~t ~ldt ~q ~ldq ~w ~m ~s ~sep =
+  lapacke_ztrsen layout job compq (CI.cptr select) n (CI.cptr t) ldt (CI.cptr q) ldq (CI.cptr w) (CI.cptr m) (CI.cptr s) (CI.cptr sep)
 
-let strsna ~matrix_layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
-  lapacke_strsna matrix_layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
+let strsna ~layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
+  lapacke_strsna layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
 
-let dtrsna ~matrix_layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
-  lapacke_dtrsna matrix_layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
+let dtrsna ~layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
+  lapacke_dtrsna layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
 
-let ctrsna ~matrix_layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
-  lapacke_ctrsna matrix_layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
+let ctrsna ~layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
+  lapacke_ctrsna layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
 
-let ztrsna ~matrix_layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
-  lapacke_ztrsna matrix_layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
+let ztrsna ~layout ~job ~howmny ~select ~n ~t ~ldt ~vl ~ldvl ~vr ~ldvr ~s ~sep ~mm ~m =
+  lapacke_ztrsna layout job howmny (CI.cptr select) n (CI.cptr t) ldt (CI.cptr vl) ldvl (CI.cptr vr) ldvr (CI.cptr s) (CI.cptr sep) mm (CI.cptr m)
 
-let strsyl ~matrix_layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
-  lapacke_strsyl matrix_layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
+let strsyl ~layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
+  lapacke_strsyl layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
 
-let dtrsyl ~matrix_layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
-  lapacke_dtrsyl matrix_layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
+let dtrsyl ~layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
+  lapacke_dtrsyl layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
 
-let ctrsyl ~matrix_layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
-  lapacke_ctrsyl matrix_layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
+let ctrsyl ~layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
+  lapacke_ctrsyl layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
 
-let ztrsyl ~matrix_layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
-  lapacke_ztrsyl matrix_layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
+let ztrsyl ~layout ~trana ~tranb ~isgn ~m ~n ~a ~lda ~b ~ldb ~c ~ldc ~scale =
+  lapacke_ztrsyl layout trana tranb isgn m n (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr c) ldc (CI.cptr scale)
 
-let strtri ~matrix_layout ~uplo ~diag ~n ~a ~lda =
-  lapacke_strtri matrix_layout uplo diag n (CI.cptr a) lda
+let strtri ~layout ~uplo ~diag ~n ~a ~lda =
+  lapacke_strtri layout uplo diag n (CI.cptr a) lda
 
-let dtrtri ~matrix_layout ~uplo ~diag ~n ~a ~lda =
-  lapacke_dtrtri matrix_layout uplo diag n (CI.cptr a) lda
+let dtrtri ~layout ~uplo ~diag ~n ~a ~lda =
+  lapacke_dtrtri layout uplo diag n (CI.cptr a) lda
 
-let ctrtri ~matrix_layout ~uplo ~diag ~n ~a ~lda =
-  lapacke_ctrtri matrix_layout uplo diag n (CI.cptr a) lda
+let ctrtri ~layout ~uplo ~diag ~n ~a ~lda =
+  lapacke_ctrtri layout uplo diag n (CI.cptr a) lda
 
-let ztrtri ~matrix_layout ~uplo ~diag ~n ~a ~lda =
-  lapacke_ztrtri matrix_layout uplo diag n (CI.cptr a) lda
+let ztrtri ~layout ~uplo ~diag ~n ~a ~lda =
+  lapacke_ztrtri layout uplo diag n (CI.cptr a) lda
 
-let strtrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_strtrs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let strtrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_strtrs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let dtrtrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_dtrtrs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let dtrtrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_dtrtrs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let ctrtrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_ctrtrs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let ctrtrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_ctrtrs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let ztrtrs ~matrix_layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
-  lapacke_ztrtrs matrix_layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
+let ztrtrs ~layout ~uplo ~trans ~diag ~n ~nrhs ~a ~lda ~b ~ldb =
+  lapacke_ztrtrs layout uplo trans diag n nrhs (CI.cptr a) lda (CI.cptr b) ldb
 
-let strttf ~matrix_layout ~transr ~uplo ~n ~a ~lda ~arf =
-  lapacke_strttf matrix_layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
+let strttf ~layout ~transr ~uplo ~n ~a ~lda ~arf =
+  lapacke_strttf layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
 
-let dtrttf ~matrix_layout ~transr ~uplo ~n ~a ~lda ~arf =
-  lapacke_dtrttf matrix_layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
+let dtrttf ~layout ~transr ~uplo ~n ~a ~lda ~arf =
+  lapacke_dtrttf layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
 
-let ctrttf ~matrix_layout ~transr ~uplo ~n ~a ~lda ~arf =
-  lapacke_ctrttf matrix_layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
+let ctrttf ~layout ~transr ~uplo ~n ~a ~lda ~arf =
+  lapacke_ctrttf layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
 
-let ztrttf ~matrix_layout ~transr ~uplo ~n ~a ~lda ~arf =
-  lapacke_ztrttf matrix_layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
+let ztrttf ~layout ~transr ~uplo ~n ~a ~lda ~arf =
+  lapacke_ztrttf layout transr uplo n (CI.cptr a) lda (CI.cptr arf)
 
-let strttp ~matrix_layout ~uplo ~n ~a ~lda ~ap =
-  lapacke_strttp matrix_layout uplo n (CI.cptr a) lda (CI.cptr ap)
+let strttp ~layout ~uplo ~n ~a ~lda ~ap =
+  lapacke_strttp layout uplo n (CI.cptr a) lda (CI.cptr ap)
 
-let dtrttp ~matrix_layout ~uplo ~n ~a ~lda ~ap =
-  lapacke_dtrttp matrix_layout uplo n (CI.cptr a) lda (CI.cptr ap)
+let dtrttp ~layout ~uplo ~n ~a ~lda ~ap =
+  lapacke_dtrttp layout uplo n (CI.cptr a) lda (CI.cptr ap)
 
-let ctrttp ~matrix_layout ~uplo ~n ~a ~lda ~ap =
-  lapacke_ctrttp matrix_layout uplo n (CI.cptr a) lda (CI.cptr ap)
+let ctrttp ~layout ~uplo ~n ~a ~lda ~ap =
+  lapacke_ctrttp layout uplo n (CI.cptr a) lda (CI.cptr ap)
 
-let ztrttp ~matrix_layout ~uplo ~n ~a ~lda ~ap =
-  lapacke_ztrttp matrix_layout uplo n (CI.cptr a) lda (CI.cptr ap)
+let ztrttp ~layout ~uplo ~n ~a ~lda ~ap =
+  lapacke_ztrttp layout uplo n (CI.cptr a) lda (CI.cptr ap)
 
-let stzrzf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_stzrzf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let stzrzf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_stzrzf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let dtzrzf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_dtzrzf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let dtzrzf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_dtzrzf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let ctzrzf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_ctzrzf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let ctzrzf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_ctzrzf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let ztzrzf ~matrix_layout ~m ~n ~a ~lda ~tau =
-  lapacke_ztzrzf matrix_layout m n (CI.cptr a) lda (CI.cptr tau)
+let ztzrzf ~layout ~m ~n ~a ~lda ~tau =
+  lapacke_ztzrzf layout m n (CI.cptr a) lda (CI.cptr tau)
 
-let cungbr ~matrix_layout ~vect ~m ~n ~k ~a ~lda ~tau =
-  lapacke_cungbr matrix_layout vect m n k (CI.cptr a) lda (CI.cptr tau)
+let cungbr ~layout ~vect ~m ~n ~k ~a ~lda ~tau =
+  lapacke_cungbr layout vect m n k (CI.cptr a) lda (CI.cptr tau)
 
-let zungbr ~matrix_layout ~vect ~m ~n ~k ~a ~lda ~tau =
-  lapacke_zungbr matrix_layout vect m n k (CI.cptr a) lda (CI.cptr tau)
+let zungbr ~layout ~vect ~m ~n ~k ~a ~lda ~tau =
+  lapacke_zungbr layout vect m n k (CI.cptr a) lda (CI.cptr tau)
 
-let cunghr ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_cunghr matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let cunghr ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_cunghr layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let zunghr ~matrix_layout ~n ~ilo ~ihi ~a ~lda ~tau =
-  lapacke_zunghr matrix_layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
+let zunghr ~layout ~n ~ilo ~ihi ~a ~lda ~tau =
+  lapacke_zunghr layout n ilo ihi (CI.cptr a) lda (CI.cptr tau)
 
-let cunglq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_cunglq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let cunglq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_cunglq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let zunglq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_zunglq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let zunglq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_zunglq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let cungql ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_cungql matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let cungql ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_cungql layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let zungql ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_zungql matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let zungql ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_zungql layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let cungqr ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_cungqr matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let cungqr ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_cungqr layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let zungqr ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_zungqr matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let zungqr ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_zungqr layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let cungrq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_cungrq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let cungrq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_cungrq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let zungrq ~matrix_layout ~m ~n ~k ~a ~lda ~tau =
-  lapacke_zungrq matrix_layout m n k (CI.cptr a) lda (CI.cptr tau)
+let zungrq ~layout ~m ~n ~k ~a ~lda ~tau =
+  lapacke_zungrq layout m n k (CI.cptr a) lda (CI.cptr tau)
 
-let cungtr ~matrix_layout ~uplo ~n ~a ~lda ~tau =
-  lapacke_cungtr matrix_layout uplo n (CI.cptr a) lda (CI.cptr tau)
+let cungtr ~layout ~uplo ~n ~a ~lda ~tau =
+  lapacke_cungtr layout uplo n (CI.cptr a) lda (CI.cptr tau)
 
-let zungtr ~matrix_layout ~uplo ~n ~a ~lda ~tau =
-  lapacke_zungtr matrix_layout uplo n (CI.cptr a) lda (CI.cptr tau)
+let zungtr ~layout ~uplo ~n ~a ~lda ~tau =
+  lapacke_zungtr layout uplo n (CI.cptr a) lda (CI.cptr tau)
 
-let cunmbr ~matrix_layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmbr matrix_layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmbr ~layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmbr layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmbr ~matrix_layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmbr matrix_layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmbr ~layout ~vect ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmbr layout vect side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmhr ~matrix_layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmhr matrix_layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmhr ~layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmhr layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmhr ~matrix_layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmhr matrix_layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmhr ~layout ~side ~trans ~m ~n ~ilo ~ihi ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmhr layout side trans m n ilo ihi (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmlq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmlq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmlq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmlq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmlq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmlq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmlq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmlq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmql ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmql matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmql ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmql layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmql ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmql matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmql ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmql layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmqr ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmqr matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmqr ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmqr layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmqr ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmqr matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmqr ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmqr layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmrq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmrq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmrq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmrq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmrq ~matrix_layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmrq matrix_layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmrq ~layout ~side ~trans ~m ~n ~k ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmrq layout side trans m n k (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmrz ~matrix_layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmrz matrix_layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmrz ~layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmrz layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmrz ~matrix_layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmrz matrix_layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmrz ~layout ~side ~trans ~m ~n ~k ~l ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmrz layout side trans m n k l (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cunmtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
-  lapacke_cunmtr matrix_layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let cunmtr ~layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
+  lapacke_cunmtr layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let zunmtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
-  lapacke_zunmtr matrix_layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
+let zunmtr ~layout ~side ~uplo ~trans ~m ~n ~a ~lda ~tau ~c ~ldc =
+  lapacke_zunmtr layout side uplo trans m n (CI.cptr a) lda (CI.cptr tau) (CI.cptr c) ldc
 
-let cupgtr ~matrix_layout ~uplo ~n ~ap ~tau ~q ~ldq =
-  lapacke_cupgtr matrix_layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
+let cupgtr ~layout ~uplo ~n ~ap ~tau ~q ~ldq =
+  lapacke_cupgtr layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
 
-let zupgtr ~matrix_layout ~uplo ~n ~ap ~tau ~q ~ldq =
-  lapacke_zupgtr matrix_layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
+let zupgtr ~layout ~uplo ~n ~ap ~tau ~q ~ldq =
+  lapacke_zupgtr layout uplo n (CI.cptr ap) (CI.cptr tau) (CI.cptr q) ldq
 
-let cupmtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
-  lapacke_cupmtr matrix_layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
+let cupmtr ~layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
+  lapacke_cupmtr layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
 
-let zupmtr ~matrix_layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
-  lapacke_zupmtr matrix_layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
+let zupmtr ~layout ~side ~uplo ~trans ~m ~n ~ap ~tau ~c ~ldc =
+  lapacke_zupmtr layout side uplo trans m n (CI.cptr ap) (CI.cptr tau) (CI.cptr c) ldc
 
-let claghe ~matrix_layout ~n ~k ~d ~a ~lda ~iseed =
-  lapacke_claghe matrix_layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let claghe ~layout ~n ~k ~d ~a ~lda ~iseed =
+  lapacke_claghe layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let zlaghe ~matrix_layout ~n ~k ~d ~a ~lda ~iseed =
-  lapacke_zlaghe matrix_layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let zlaghe ~layout ~n ~k ~d ~a ~lda ~iseed =
+  lapacke_zlaghe layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let slagsy ~matrix_layout ~n ~k ~d ~a ~lda ~iseed =
-  lapacke_slagsy matrix_layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let slagsy ~layout ~n ~k ~d ~a ~lda ~iseed =
+  lapacke_slagsy layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let dlagsy ~matrix_layout ~n ~k ~d ~a ~lda ~iseed =
-  lapacke_dlagsy matrix_layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let dlagsy ~layout ~n ~k ~d ~a ~lda ~iseed =
+  lapacke_dlagsy layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let clagsy ~matrix_layout ~n ~k ~d ~a ~lda ~iseed =
-  lapacke_clagsy matrix_layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let clagsy ~layout ~n ~k ~d ~a ~lda ~iseed =
+  lapacke_clagsy layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let zlagsy ~matrix_layout ~n ~k ~d ~a ~lda ~iseed =
-  lapacke_zlagsy matrix_layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
+let zlagsy ~layout ~n ~k ~d ~a ~lda ~iseed =
+  lapacke_zlagsy layout n k (CI.cptr d) (CI.cptr a) lda (CI.cptr iseed)
 
-let slapmr ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_slapmr matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let slapmr ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_slapmr layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let dlapmr ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_dlapmr matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let dlapmr ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_dlapmr layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let clapmr ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_clapmr matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let clapmr ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_clapmr layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let zlapmr ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_zlapmr matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let zlapmr ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_zlapmr layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let slapmt ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_slapmt matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let slapmt ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_slapmt layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let dlapmt ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_dlapmt matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let dlapmt ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_dlapmt layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let clapmt ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_clapmt matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let clapmt ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_clapmt layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
-let zlapmt ~matrix_layout ~forwrd ~m ~n ~x ~ldx ~k =
-  lapacke_zlapmt matrix_layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
+let zlapmt ~layout ~forwrd ~m ~n ~x ~ldx ~k =
+  lapacke_zlapmt layout forwrd m n (CI.cptr x) ldx (CI.cptr k)
 
 let slartgp ~f ~g ~cs ~sn ~r =
   lapacke_slartgp f g (CI.cptr cs) (CI.cptr sn) (CI.cptr r)
@@ -7049,285 +7049,285 @@ let slartgs ~x ~y ~sigma ~cs ~sn =
 let dlartgs ~x ~y ~sigma ~cs ~sn =
   lapacke_dlartgs x y sigma (CI.cptr cs) (CI.cptr sn)
 
-let cbbcsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
-  lapacke_cbbcsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
+let cbbcsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
+  lapacke_cbbcsd layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
 
-let cheswapr ~matrix_layout ~uplo ~n ~a ~lda ~i1 ~i2 =
-  lapacke_cheswapr matrix_layout uplo n (CI.cptr a) lda i1 i2
+let cheswapr ~layout ~uplo ~n ~a ~lda ~i1 ~i2 =
+  lapacke_cheswapr layout uplo n (CI.cptr a) lda i1 i2
 
-let chetri2 ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_chetri2 matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let chetri2 ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_chetri2 layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let chetri2x ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~nb =
-  lapacke_chetri2x matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
+let chetri2x ~layout ~uplo ~n ~a ~lda ~ipiv ~nb =
+  lapacke_chetri2x layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
 
-let chetrs2 ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_chetrs2 matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let chetrs2 ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_chetrs2 layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csyconv ~matrix_layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
-  lapacke_csyconv matrix_layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
+let csyconv ~layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
+  lapacke_csyconv layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
 
-let csyswapr ~matrix_layout ~uplo ~n ~a ~lda ~i1 ~i2 =
-  lapacke_csyswapr matrix_layout uplo n (CI.cptr a) lda i1 i2
+let csyswapr ~layout ~uplo ~n ~a ~lda ~i1 ~i2 =
+  lapacke_csyswapr layout uplo n (CI.cptr a) lda i1 i2
 
-let csytri2 ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_csytri2 matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let csytri2 ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_csytri2 layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let csytri2x ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~nb =
-  lapacke_csytri2x matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
+let csytri2x ~layout ~uplo ~n ~a ~lda ~ipiv ~nb =
+  lapacke_csytri2x layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
 
-let csytrs2 ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_csytrs2 matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let csytrs2 ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_csytrs2 layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let cunbdb ~matrix_layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
-  lapacke_cunbdb matrix_layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
+let cunbdb ~layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
+  lapacke_cunbdb layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
 
-let cuncsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
-  lapacke_cuncsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
+let cuncsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
+  lapacke_cuncsd layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
 
-let cuncsd2by1 ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
-  lapacke_cuncsd2by1 matrix_layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
+let cuncsd2by1 ~layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
+  lapacke_cuncsd2by1 layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
 
-let dbbcsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
-  lapacke_dbbcsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
+let dbbcsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
+  lapacke_dbbcsd layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
 
-let dorbdb ~matrix_layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
-  lapacke_dorbdb matrix_layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
+let dorbdb ~layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
+  lapacke_dorbdb layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
 
-let dorcsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
-  lapacke_dorcsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
+let dorcsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
+  lapacke_dorcsd layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
 
-let dorcsd2by1 ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
-  lapacke_dorcsd2by1 matrix_layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
+let dorcsd2by1 ~layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
+  lapacke_dorcsd2by1 layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
 
-let dsyconv ~matrix_layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
-  lapacke_dsyconv matrix_layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
+let dsyconv ~layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
+  lapacke_dsyconv layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
 
-let dsyswapr ~matrix_layout ~uplo ~n ~a ~lda ~i1 ~i2 =
-  lapacke_dsyswapr matrix_layout uplo n (CI.cptr a) lda i1 i2
+let dsyswapr ~layout ~uplo ~n ~a ~lda ~i1 ~i2 =
+  lapacke_dsyswapr layout uplo n (CI.cptr a) lda i1 i2
 
-let dsytri2 ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_dsytri2 matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let dsytri2 ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_dsytri2 layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dsytri2x ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~nb =
-  lapacke_dsytri2x matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
+let dsytri2x ~layout ~uplo ~n ~a ~lda ~ipiv ~nb =
+  lapacke_dsytri2x layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
 
-let dsytrs2 ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dsytrs2 matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dsytrs2 ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dsytrs2 layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let sbbcsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
-  lapacke_sbbcsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
+let sbbcsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
+  lapacke_sbbcsd layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
 
-let sorbdb ~matrix_layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
-  lapacke_sorbdb matrix_layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
+let sorbdb ~layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
+  lapacke_sorbdb layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
 
-let sorcsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
-  lapacke_sorcsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
+let sorcsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
+  lapacke_sorcsd layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
 
-let sorcsd2by1 ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
-  lapacke_sorcsd2by1 matrix_layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
+let sorcsd2by1 ~layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
+  lapacke_sorcsd2by1 layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
 
-let ssyconv ~matrix_layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
-  lapacke_ssyconv matrix_layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
+let ssyconv ~layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
+  lapacke_ssyconv layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
 
-let ssyswapr ~matrix_layout ~uplo ~n ~a ~lda ~i1 ~i2 =
-  lapacke_ssyswapr matrix_layout uplo n (CI.cptr a) lda i1 i2
+let ssyswapr ~layout ~uplo ~n ~a ~lda ~i1 ~i2 =
+  lapacke_ssyswapr layout uplo n (CI.cptr a) lda i1 i2
 
-let ssytri2 ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_ssytri2 matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let ssytri2 ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_ssytri2 layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let ssytri2x ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~nb =
-  lapacke_ssytri2x matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
+let ssytri2x ~layout ~uplo ~n ~a ~lda ~ipiv ~nb =
+  lapacke_ssytri2x layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
 
-let ssytrs2 ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_ssytrs2 matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let ssytrs2 ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_ssytrs2 layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zbbcsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
-  lapacke_zbbcsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
+let zbbcsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~m ~p ~q ~theta ~phi ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t ~b11d ~b11e ~b12d ~b12e ~b21d ~b21e ~b22d ~b22e =
+  lapacke_zbbcsd layout jobu1 jobu2 jobv1t jobv2t trans m p q (CI.cptr theta) (CI.cptr phi) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t (CI.cptr b11d) (CI.cptr b11e) (CI.cptr b12d) (CI.cptr b12e) (CI.cptr b21d) (CI.cptr b21e) (CI.cptr b22d) (CI.cptr b22e)
 
-let zheswapr ~matrix_layout ~uplo ~n ~a ~lda ~i1 ~i2 =
-  lapacke_zheswapr matrix_layout uplo n (CI.cptr a) lda i1 i2
+let zheswapr ~layout ~uplo ~n ~a ~lda ~i1 ~i2 =
+  lapacke_zheswapr layout uplo n (CI.cptr a) lda i1 i2
 
-let zhetri2 ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zhetri2 matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zhetri2 ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zhetri2 layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zhetri2x ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~nb =
-  lapacke_zhetri2x matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
+let zhetri2x ~layout ~uplo ~n ~a ~lda ~ipiv ~nb =
+  lapacke_zhetri2x layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
 
-let zhetrs2 ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zhetrs2 matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zhetrs2 ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zhetrs2 layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zsyconv ~matrix_layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
-  lapacke_zsyconv matrix_layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
+let zsyconv ~layout ~uplo ~way ~n ~a ~lda ~ipiv ~e =
+  lapacke_zsyconv layout uplo way n (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr e)
 
-let zsyswapr ~matrix_layout ~uplo ~n ~a ~lda ~i1 ~i2 =
-  lapacke_zsyswapr matrix_layout uplo n (CI.cptr a) lda i1 i2
+let zsyswapr ~layout ~uplo ~n ~a ~lda ~i1 ~i2 =
+  lapacke_zsyswapr layout uplo n (CI.cptr a) lda i1 i2
 
-let zsytri2 ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zsytri2 matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zsytri2 ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zsytri2 layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zsytri2x ~matrix_layout ~uplo ~n ~a ~lda ~ipiv ~nb =
-  lapacke_zsytri2x matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
+let zsytri2x ~layout ~uplo ~n ~a ~lda ~ipiv ~nb =
+  lapacke_zsytri2x layout uplo n (CI.cptr a) lda (CI.cptr ipiv) nb
 
-let zsytrs2 ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zsytrs2 matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zsytrs2 ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zsytrs2 layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zunbdb ~matrix_layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
-  lapacke_zunbdb matrix_layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
+let zunbdb ~layout ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~phi ~taup1 ~taup2 ~tauq1 ~tauq2 =
+  lapacke_zunbdb layout trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr phi) (CI.cptr taup1) (CI.cptr taup2) (CI.cptr tauq1) (CI.cptr tauq2)
 
-let zuncsd ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
-  lapacke_zuncsd matrix_layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
+let zuncsd ~layout ~jobu1 ~jobu2 ~jobv1t ~jobv2t ~trans ~signs ~m ~p ~q ~x11 ~ldx11 ~x12 ~ldx12 ~x21 ~ldx21 ~x22 ~ldx22 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t ~v2t ~ldv2t =
+  lapacke_zuncsd layout jobu1 jobu2 jobv1t jobv2t trans signs m p q (CI.cptr x11) ldx11 (CI.cptr x12) ldx12 (CI.cptr x21) ldx21 (CI.cptr x22) ldx22 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t (CI.cptr v2t) ldv2t
 
-let zuncsd2by1 ~matrix_layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
-  lapacke_zuncsd2by1 matrix_layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
+let zuncsd2by1 ~layout ~jobu1 ~jobu2 ~jobv1t ~m ~p ~q ~x11 ~ldx11 ~x21 ~ldx21 ~theta ~u1 ~ldu1 ~u2 ~ldu2 ~v1t ~ldv1t =
+  lapacke_zuncsd2by1 layout jobu1 jobu2 jobv1t m p q (CI.cptr x11) ldx11 (CI.cptr x21) ldx21 (CI.cptr theta) (CI.cptr u1) ldu1 (CI.cptr u2) ldu2 (CI.cptr v1t) ldv1t
 
-let sgemqrt ~matrix_layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_sgemqrt matrix_layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let sgemqrt ~layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_sgemqrt layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let dgemqrt ~matrix_layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_dgemqrt matrix_layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let dgemqrt ~layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_dgemqrt layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let cgemqrt ~matrix_layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_cgemqrt matrix_layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let cgemqrt ~layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_cgemqrt layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let zgemqrt ~matrix_layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
-  lapacke_zgemqrt matrix_layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
+let zgemqrt ~layout ~side ~trans ~m ~n ~k ~nb ~v ~ldv ~t ~ldt ~c ~ldc =
+  lapacke_zgemqrt layout side trans m n k nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr c) ldc
 
-let sgeqrt ~matrix_layout ~m ~n ~nb ~a ~lda ~t ~ldt =
-  lapacke_sgeqrt matrix_layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
+let sgeqrt ~layout ~m ~n ~nb ~a ~lda ~t ~ldt =
+  lapacke_sgeqrt layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
 
-let dgeqrt ~matrix_layout ~m ~n ~nb ~a ~lda ~t ~ldt =
-  lapacke_dgeqrt matrix_layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
+let dgeqrt ~layout ~m ~n ~nb ~a ~lda ~t ~ldt =
+  lapacke_dgeqrt layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
 
-let cgeqrt ~matrix_layout ~m ~n ~nb ~a ~lda ~t ~ldt =
-  lapacke_cgeqrt matrix_layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
+let cgeqrt ~layout ~m ~n ~nb ~a ~lda ~t ~ldt =
+  lapacke_cgeqrt layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
 
-let zgeqrt ~matrix_layout ~m ~n ~nb ~a ~lda ~t ~ldt =
-  lapacke_zgeqrt matrix_layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
+let zgeqrt ~layout ~m ~n ~nb ~a ~lda ~t ~ldt =
+  lapacke_zgeqrt layout m n nb (CI.cptr a) lda (CI.cptr t) ldt
 
-let sgeqrt2 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_sgeqrt2 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let sgeqrt2 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_sgeqrt2 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let dgeqrt2 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_dgeqrt2 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let dgeqrt2 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_dgeqrt2 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let cgeqrt2 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_cgeqrt2 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let cgeqrt2 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_cgeqrt2 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let zgeqrt2 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_zgeqrt2 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let zgeqrt2 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_zgeqrt2 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let sgeqrt3 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_sgeqrt3 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let sgeqrt3 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_sgeqrt3 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let dgeqrt3 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_dgeqrt3 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let dgeqrt3 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_dgeqrt3 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let cgeqrt3 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_cgeqrt3 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let cgeqrt3 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_cgeqrt3 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let zgeqrt3 ~matrix_layout ~m ~n ~a ~lda ~t ~ldt =
-  lapacke_zgeqrt3 matrix_layout m n (CI.cptr a) lda (CI.cptr t) ldt
+let zgeqrt3 ~layout ~m ~n ~a ~lda ~t ~ldt =
+  lapacke_zgeqrt3 layout m n (CI.cptr a) lda (CI.cptr t) ldt
 
-let stpmqrt ~matrix_layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_stpmqrt matrix_layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let stpmqrt ~layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_stpmqrt layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let dtpmqrt ~matrix_layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_dtpmqrt matrix_layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let dtpmqrt ~layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_dtpmqrt layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let ctpmqrt ~matrix_layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_ctpmqrt matrix_layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let ctpmqrt ~layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_ctpmqrt layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let ztpmqrt ~matrix_layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_ztpmqrt matrix_layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let ztpmqrt ~layout ~side ~trans ~m ~n ~k ~l ~nb ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_ztpmqrt layout side trans m n k l nb (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let stpqrt ~matrix_layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_stpqrt matrix_layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let stpqrt ~layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_stpqrt layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let dtpqrt ~matrix_layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_dtpqrt matrix_layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let dtpqrt ~layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_dtpqrt layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let ctpqrt ~matrix_layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_ctpqrt matrix_layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let ctpqrt ~layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_ctpqrt layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let ztpqrt ~matrix_layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_ztpqrt matrix_layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let ztpqrt ~layout ~m ~n ~l ~nb ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_ztpqrt layout m n l nb (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let stpqrt2 ~matrix_layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_stpqrt2 matrix_layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let stpqrt2 ~layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_stpqrt2 layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let dtpqrt2 ~matrix_layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_dtpqrt2 matrix_layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let dtpqrt2 ~layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_dtpqrt2 layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let ctpqrt2 ~matrix_layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_ctpqrt2 matrix_layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let ctpqrt2 ~layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_ctpqrt2 layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let ztpqrt2 ~matrix_layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
-  lapacke_ztpqrt2 matrix_layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
+let ztpqrt2 ~layout ~m ~n ~l ~a ~lda ~b ~ldb ~t ~ldt =
+  lapacke_ztpqrt2 layout m n l (CI.cptr a) lda (CI.cptr b) ldb (CI.cptr t) ldt
 
-let stprfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_stprfb matrix_layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let stprfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_stprfb layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let dtprfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_dtprfb matrix_layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let dtprfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_dtprfb layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let ctprfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_ctprfb matrix_layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let ctprfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_ctprfb layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let ztprfb ~matrix_layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
-  lapacke_ztprfb matrix_layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
+let ztprfb ~layout ~side ~trans ~direct ~storev ~m ~n ~k ~l ~v ~ldv ~t ~ldt ~a ~lda ~b ~ldb =
+  lapacke_ztprfb layout side trans direct storev m n k l (CI.cptr v) ldv (CI.cptr t) ldt (CI.cptr a) lda (CI.cptr b) ldb
 
-let ssysv_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_ssysv_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let ssysv_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_ssysv_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dsysv_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dsysv_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dsysv_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dsysv_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csysv_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_csysv_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let csysv_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_csysv_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zsysv_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zsysv_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zsysv_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zsysv_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let ssytrf_rook ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_ssytrf_rook matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let ssytrf_rook ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_ssytrf_rook layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let dsytrf_rook ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_dsytrf_rook matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let dsytrf_rook ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_dsytrf_rook layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let csytrf_rook ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_csytrf_rook matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let csytrf_rook ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_csytrf_rook layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zsytrf_rook ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zsytrf_rook matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zsytrf_rook ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zsytrf_rook layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let ssytrs_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_ssytrs_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let ssytrs_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_ssytrs_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let dsytrs_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_dsytrs_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let dsytrs_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_dsytrs_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csytrs_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_csytrs_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let csytrs_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_csytrs_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zsytrs_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zsytrs_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zsytrs_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zsytrs_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let chetrf_rook ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_chetrf_rook matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let chetrf_rook ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_chetrf_rook layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let zhetrf_rook ~matrix_layout ~uplo ~n ~a ~lda ~ipiv =
-  lapacke_zhetrf_rook matrix_layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
+let zhetrf_rook ~layout ~uplo ~n ~a ~lda ~ipiv =
+  lapacke_zhetrf_rook layout uplo n (CI.cptr a) lda (CI.cptr ipiv)
 
-let chetrs_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_chetrs_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let chetrs_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_chetrs_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let zhetrs_rook ~matrix_layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
-  lapacke_zhetrs_rook matrix_layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
+let zhetrs_rook ~layout ~uplo ~n ~nrhs ~a ~lda ~ipiv ~b ~ldb =
+  lapacke_zhetrs_rook layout uplo n nrhs (CI.cptr a) lda (CI.cptr ipiv) (CI.cptr b) ldb
 
-let csyr ~matrix_layout ~uplo ~n ~alpha ~x ~incx ~a ~lda =
-  lapacke_csyr matrix_layout uplo n alpha (CI.cptr x) incx (CI.cptr a) lda
+let csyr ~layout ~uplo ~n ~alpha ~x ~incx ~a ~lda =
+  lapacke_csyr layout uplo n alpha (CI.cptr x) incx (CI.cptr a) lda
 
-let zsyr ~matrix_layout ~uplo ~n ~alpha ~x ~incx ~a ~lda =
-  lapacke_zsyr matrix_layout uplo n alpha (CI.cptr x) incx (CI.cptr a) lda
+let zsyr ~layout ~uplo ~n ~alpha ~x ~incx ~a ~lda =
+  lapacke_zsyr layout uplo n alpha (CI.cptr x) incx (CI.cptr a) lda
 
