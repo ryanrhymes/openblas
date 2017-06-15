@@ -19,12 +19,12 @@ Homepage:     https://github.com/ryanrhymes/openblas
 # +-------------------------------------------------------------------+
 
 PreBuildCommand:    echo "Start compiling OpenBlas ...";
-                    ${rm} ${libdir}/libopenblas.a;
-                    cd lib/OpenBLAS-0.2.19;
-                    make FC=gfortran;
-                    cp libopenblas.a ${libdir};
-                    make clean;
-                    cd -;
+                    #${rm} ${libdir}/libopenblas.a;
+                    #cd lib/OpenBLAS-0.2.19;
+                    #make FC=gfortran;
+                    #cp libopenblas.a ${libdir};
+                    #make clean;
+                    #cd -;
 
 PostBuildCommand:   echo "Phew ... it is done!"
 
@@ -46,8 +46,12 @@ Library openblas
                     openblas_cblas_stub.c,
                     openblas_lapacke_stub.c
   CCOpt:            -O3 -I$pkg_ctypes
-  CCLib:            -L${libdir} -lopenblas
-                    -L${libdir}/gcc/7/ -lgfortran
+  if system(linux) || system(linux_elf)
+    CCOpt+:         -g -Ofast
+    CCLib:          -lopenblas -llapacke -lgfortran
+  if system(macosx)
+    CCLib+:         -framework Accelerate
+                    -lopenblas -lgfortran
   BuildDepends:     str, ctypes, ctypes.stubs
 
 # +-------------------------------------------------------------------+
