@@ -1,2096 +1,2101 @@
-(* auto-generated lapacke interface file, timestamp:1497541479 *)
+(*
+ * OWL - an OCaml numerical library for scientific computing
+ * Copyright (c) 2016-2017 Liang Wang <liang.wang@cl.cam.ac.uk>
+ *)
+
+(* auto-generated lapacke interface file, timestamp:1497549494 *)
 
 open Ctypes
 
-val sbdsdc : int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
+val sbdsdc : matrix_layout:int -> uplo:char -> compq:char -> n:int -> d:(float ptr) -> e:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> q:(float ptr) -> iq:(int ptr) -> int 
 
-val dbdsdc : int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
+val dbdsdc : matrix_layout:int -> uplo:char -> compq:char -> n:int -> d:(float ptr) -> e:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> q:(float ptr) -> iq:(int ptr) -> int 
 
-val sbdsqr : int -> char -> int -> int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sbdsqr : matrix_layout:int -> uplo:char -> n:int -> ncvt:int -> nru:int -> ncc:int -> d:(float ptr) -> e:(float ptr) -> vt:(float ptr) -> ldvt:int -> u:(float ptr) -> ldu:int -> c:(float ptr) -> ldc:int -> int 
 
-val dbdsqr : int -> char -> int -> int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dbdsqr : matrix_layout:int -> uplo:char -> n:int -> ncvt:int -> nru:int -> ncc:int -> d:(float ptr) -> e:(float ptr) -> vt:(float ptr) -> ldvt:int -> u:(float ptr) -> ldu:int -> c:(float ptr) -> ldc:int -> int 
 
-val cbdsqr : int -> char -> int -> int -> int -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cbdsqr : matrix_layout:int -> uplo:char -> n:int -> ncvt:int -> nru:int -> ncc:int -> d:(float ptr) -> e:(float ptr) -> vt:(Complex.t ptr) -> ldvt:int -> u:(Complex.t ptr) -> ldu:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zbdsqr : int -> char -> int -> int -> int -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zbdsqr : matrix_layout:int -> uplo:char -> n:int -> ncvt:int -> nru:int -> ncc:int -> d:(float ptr) -> e:(float ptr) -> vt:(Complex.t ptr) -> ldvt:int -> u:(Complex.t ptr) -> ldu:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val sbdsvdx : int -> char -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val sbdsvdx : matrix_layout:int -> uplo:char -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> ns:(int ptr) -> s:(float ptr) -> z:(float ptr) -> ldz:int -> superb:(int ptr) -> int 
 
-val dbdsvdx : int -> char -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dbdsvdx : matrix_layout:int -> uplo:char -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> ns:(int ptr) -> s:(float ptr) -> z:(float ptr) -> ldz:int -> superb:(int ptr) -> int 
 
-val sdisna : char -> int -> int -> float ptr -> float ptr -> unit 
+val sdisna : job:char -> m:int -> n:int -> d:(float ptr) -> sep:(float ptr) -> int 
 
-val ddisna : char -> int -> int -> float ptr -> float ptr -> unit 
+val ddisna : job:char -> m:int -> n:int -> d:(float ptr) -> sep:(float ptr) -> int 
 
-val sgbbrd : int -> char -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgbbrd : matrix_layout:int -> vect:char -> m:int -> n:int -> ncc:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(float ptr) -> ldq:int -> pt:(float ptr) -> ldpt:int -> c:(float ptr) -> ldc:int -> int 
 
-val dgbbrd : int -> char -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgbbrd : matrix_layout:int -> vect:char -> m:int -> n:int -> ncc:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(float ptr) -> ldq:int -> pt:(float ptr) -> ldpt:int -> c:(float ptr) -> ldc:int -> int 
 
-val cgbbrd : int -> char -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgbbrd : matrix_layout:int -> vect:char -> m:int -> n:int -> ncc:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(Complex.t ptr) -> ldq:int -> pt:(Complex.t ptr) -> ldpt:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zgbbrd : int -> char -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgbbrd : matrix_layout:int -> vect:char -> m:int -> n:int -> ncc:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(Complex.t ptr) -> ldq:int -> pt:(Complex.t ptr) -> ldpt:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val sgbcon : int -> char -> int -> int -> int -> float ptr -> int -> int ptr -> float -> float ptr -> unit 
+val sgbcon : matrix_layout:int -> norm:char -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val dgbcon : int -> char -> int -> int -> int -> float ptr -> int -> int ptr -> float -> float ptr -> unit 
+val dgbcon : matrix_layout:int -> norm:char -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val cgbcon : int -> char -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> float -> float ptr -> unit 
+val cgbcon : matrix_layout:int -> norm:char -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zgbcon : int -> char -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> float -> float ptr -> unit 
+val zgbcon : matrix_layout:int -> norm:char -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val sgbequ : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgbequ : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val dgbequ : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgbequ : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val cgbequ : int -> int -> int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgbequ : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val zgbequ : int -> int -> int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgbequ : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val sgbequb : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgbequb : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val dgbequb : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgbequb : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val cgbequb : int -> int -> int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgbequb : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val zgbequb : int -> int -> int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgbequb : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val sgbrfs : int -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sgbrfs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dgbrfs : int -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dgbrfs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cgbrfs : int -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cgbrfs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zgbrfs : int -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zgbrfs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sgbsv : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val sgbsv : matrix_layout:int -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dgbsv : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dgbsv : matrix_layout:int -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cgbsv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val cgbsv : matrix_layout:int -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgbsv : int -> int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zgbsv : matrix_layout:int -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sgbsvx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgbsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val dgbsvx : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgbsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val cgbsvx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgbsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val zgbsvx : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgbsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val sgbtrf : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val sgbtrf : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> int 
 
-val dgbtrf : int -> int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val dgbtrf : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> int 
 
-val cgbtrf : int -> int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cgbtrf : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> int 
 
-val zgbtrf : int -> int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zgbtrf : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> int 
 
-val sgbtrs : int -> char -> int -> int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val sgbtrs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dgbtrs : int -> char -> int -> int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dgbtrs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cgbtrs : int -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val cgbtrs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgbtrs : int -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zgbtrs : matrix_layout:int -> trans:char -> n:int -> kl:int -> ku:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sgebak : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgebak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> scale:(float ptr) -> m:int -> v:(float ptr) -> ldv:int -> int 
 
-val dgebak : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgebak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> scale:(float ptr) -> m:int -> v:(float ptr) -> ldv:int -> int 
 
-val cgebak : int -> char -> char -> int -> int -> int -> float ptr -> int -> Complex.t ptr -> int -> unit 
+val cgebak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> scale:(float ptr) -> m:int -> v:(Complex.t ptr) -> ldv:int -> int 
 
-val zgebak : int -> char -> char -> int -> int -> int -> float ptr -> int -> Complex.t ptr -> int -> unit 
+val zgebak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> scale:(float ptr) -> m:int -> v:(Complex.t ptr) -> ldv:int -> int 
 
-val sgebal : int -> char -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> unit 
+val sgebal : matrix_layout:int -> job:char -> n:int -> a:(float ptr) -> lda:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> int 
 
-val dgebal : int -> char -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> unit 
+val dgebal : matrix_layout:int -> job:char -> n:int -> a:(float ptr) -> lda:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> int 
 
-val cgebal : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> unit 
+val cgebal : matrix_layout:int -> job:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> int 
 
-val zgebal : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> unit 
+val zgebal : matrix_layout:int -> job:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> int 
 
-val sgebrd : int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgebrd : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tauq:(float ptr) -> taup:(float ptr) -> int 
 
-val dgebrd : int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgebrd : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tauq:(float ptr) -> taup:(float ptr) -> int 
 
-val cgebrd : int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val cgebrd : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tauq:(Complex.t ptr) -> taup:(Complex.t ptr) -> int 
 
-val zgebrd : int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val zgebrd : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tauq:(Complex.t ptr) -> taup:(Complex.t ptr) -> int 
 
-val sgecon : int -> char -> int -> float ptr -> int -> float -> float ptr -> unit 
+val sgecon : matrix_layout:int -> norm:char -> n:int -> a:(float ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val dgecon : int -> char -> int -> float ptr -> int -> float -> float ptr -> unit 
+val dgecon : matrix_layout:int -> norm:char -> n:int -> a:(float ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val cgecon : int -> char -> int -> Complex.t ptr -> int -> float -> float ptr -> unit 
+val cgecon : matrix_layout:int -> norm:char -> n:int -> a:(Complex.t ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val zgecon : int -> char -> int -> Complex.t ptr -> int -> float -> float ptr -> unit 
+val zgecon : matrix_layout:int -> norm:char -> n:int -> a:(Complex.t ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val sgeequ : int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgeequ : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val dgeequ : int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgeequ : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val cgeequ : int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgeequ : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val zgeequ : int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgeequ : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val sgeequb : int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgeequb : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val dgeequb : int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgeequb : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val cgeequb : int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgeequb : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val zgeequb : int -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgeequb : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> r:(float ptr) -> c:(float ptr) -> rowcnd:(float ptr) -> colcnd:(float ptr) -> amax:(float ptr) -> int 
 
-val sgees : int -> char -> char -> unit ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sgees : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> n:int -> a:(float ptr) -> lda:int -> sdim:(int ptr) -> wr:(float ptr) -> wi:(float ptr) -> vs:(float ptr) -> ldvs:int -> int 
 
-val dgees : int -> char -> char -> unit ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dgees : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> n:int -> a:(float ptr) -> lda:int -> sdim:(int ptr) -> wr:(float ptr) -> wi:(float ptr) -> vs:(float ptr) -> ldvs:int -> int 
 
-val cgees : int -> char -> char -> unit ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cgees : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> sdim:(int ptr) -> w:(Complex.t ptr) -> vs:(Complex.t ptr) -> ldvs:int -> int 
 
-val zgees : int -> char -> char -> unit ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zgees : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> sdim:(int ptr) -> w:(Complex.t ptr) -> vs:(Complex.t ptr) -> ldvs:int -> int 
 
-val sgeesx : int -> char -> char -> unit ptr -> char -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sgeesx : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> sense:char -> n:int -> a:(float ptr) -> lda:int -> sdim:(int ptr) -> wr:(float ptr) -> wi:(float ptr) -> vs:(float ptr) -> ldvs:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val dgeesx : int -> char -> char -> unit ptr -> char -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dgeesx : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> sense:char -> n:int -> a:(float ptr) -> lda:int -> sdim:(int ptr) -> wr:(float ptr) -> wi:(float ptr) -> vs:(float ptr) -> ldvs:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val cgeesx : int -> char -> char -> unit ptr -> char -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cgeesx : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> sdim:(int ptr) -> w:(Complex.t ptr) -> vs:(Complex.t ptr) -> ldvs:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val zgeesx : int -> char -> char -> unit ptr -> char -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zgeesx : matrix_layout:int -> jobvs:char -> sort:char -> select:(void ptr) -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> sdim:(int ptr) -> w:(Complex.t ptr) -> vs:(Complex.t ptr) -> ldvs:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val sgeev : int -> char -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sgeev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(float ptr) -> lda:int -> wr:(float ptr) -> wi:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> int 
 
-val dgeev : int -> char -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dgeev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(float ptr) -> lda:int -> wr:(float ptr) -> wi:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> int 
 
-val cgeev : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgeev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> int 
 
-val zgeev : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgeev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> int 
 
-val sgeevx : int -> char -> char -> char -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgeevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(float ptr) -> lda:int -> wr:(float ptr) -> wi:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> abnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val dgeevx : int -> char -> char -> char -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgeevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(float ptr) -> lda:int -> wr:(float ptr) -> wi:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> abnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val cgeevx : int -> char -> char -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgeevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> abnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val zgeevx : int -> char -> char -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgeevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> scale:(float ptr) -> abnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val sgehrd : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgehrd : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgehrd : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgehrd : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgehrd : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgehrd : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgehrd : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgehrd : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgejsv : int -> char -> char -> char -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
+val sgejsv : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> jobr:char -> jobt:char -> jobp:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> sva:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> stat:(float ptr) -> istat:(int ptr) -> int 
 
-val dgejsv : int -> char -> char -> char -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int ptr -> unit 
+val dgejsv : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> jobr:char -> jobt:char -> jobp:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> sva:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> stat:(float ptr) -> istat:(int ptr) -> int 
 
-val cgejsv : int -> char -> char -> char -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> int ptr -> unit 
+val cgejsv : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> jobr:char -> jobt:char -> jobp:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> sva:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> stat:(float ptr) -> istat:(int ptr) -> int 
 
-val zgejsv : int -> char -> char -> char -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> int ptr -> unit 
+val zgejsv : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> jobr:char -> jobt:char -> jobp:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> sva:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> stat:(float ptr) -> istat:(int ptr) -> int 
 
-val sgelq2 : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgelq2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgelq2 : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgelq2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgelq2 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgelq2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgelq2 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgelq2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgelqf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgelqf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgelqf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgelqf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgelqf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgelqf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgelqf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgelqf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgels : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgels : matrix_layout:int -> trans:char -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dgels : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgels : matrix_layout:int -> trans:char -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val cgels : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgels : matrix_layout:int -> trans:char -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgels : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgels : matrix_layout:int -> trans:char -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sgelsd : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float -> int ptr -> unit 
+val sgelsd : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val dgelsd : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float -> int ptr -> unit 
+val dgelsd : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val cgelsd : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float -> int ptr -> unit 
+val cgelsd : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val zgelsd : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float -> int ptr -> unit 
+val zgelsd : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val sgelss : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float -> int ptr -> unit 
+val sgelss : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val dgelss : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float -> int ptr -> unit 
+val dgelss : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val cgelss : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float -> int ptr -> unit 
+val cgelss : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val zgelss : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float -> int ptr -> unit 
+val zgelss : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> s:(float ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val sgelsy : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float -> int ptr -> unit 
+val sgelsy : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> jpvt:(int ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val dgelsy : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float -> int ptr -> unit 
+val dgelsy : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> jpvt:(int ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val cgelsy : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float -> int ptr -> unit 
+val cgelsy : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> jpvt:(int ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val zgelsy : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float -> int ptr -> unit 
+val zgelsy : matrix_layout:int -> m:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> jpvt:(int ptr) -> rcond:float -> rank:(int ptr) -> int 
 
-val sgeqlf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgeqlf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgeqlf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgeqlf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgeqlf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgeqlf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgeqlf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgeqlf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgeqp3 : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> unit 
+val sgeqp3 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> jpvt:(int ptr) -> tau:(float ptr) -> int 
 
-val dgeqp3 : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> unit 
+val dgeqp3 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> jpvt:(int ptr) -> tau:(float ptr) -> int 
 
-val cgeqp3 : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> unit 
+val cgeqp3 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> jpvt:(int ptr) -> tau:(Complex.t ptr) -> int 
 
-val zgeqp3 : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> unit 
+val zgeqp3 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> jpvt:(int ptr) -> tau:(Complex.t ptr) -> int 
 
-val sgeqpf : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> unit 
+val sgeqpf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> jpvt:(int ptr) -> tau:(float ptr) -> int 
 
-val dgeqpf : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> unit 
+val dgeqpf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> jpvt:(int ptr) -> tau:(float ptr) -> int 
 
-val cgeqpf : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> unit 
+val cgeqpf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> jpvt:(int ptr) -> tau:(Complex.t ptr) -> int 
 
-val zgeqpf : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> unit 
+val zgeqpf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> jpvt:(int ptr) -> tau:(Complex.t ptr) -> int 
 
-val sgeqr2 : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgeqr2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgeqr2 : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgeqr2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgeqr2 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgeqr2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgeqr2 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgeqr2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgeqrf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgeqrf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgeqrf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgeqrf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgeqrf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgeqrf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgeqrf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgeqrf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgeqrfp : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgeqrfp : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgeqrfp : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgeqrfp : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgeqrfp : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgeqrfp : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgeqrfp : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgeqrfp : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgerfs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sgerfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dgerfs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dgerfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cgerfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cgerfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zgerfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zgerfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sgerqf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sgerqf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dgerqf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dgerqf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val cgerqf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cgerqf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zgerqf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zgerqf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val sgesdd : int -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sgesdd : matrix_layout:int -> jobz:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> int 
 
-val dgesdd : int -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dgesdd : matrix_layout:int -> jobz:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> int 
 
-val cgesdd : int -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgesdd : matrix_layout:int -> jobz:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> vt:(Complex.t ptr) -> ldvt:int -> int 
 
-val zgesdd : int -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgesdd : matrix_layout:int -> jobz:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> vt:(Complex.t ptr) -> ldvt:int -> int 
 
-val sgesv : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val sgesv : matrix_layout:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dgesv : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dgesv : matrix_layout:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cgesv : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val cgesv : matrix_layout:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgesv : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zgesv : matrix_layout:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val dsgesv : int -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val dsgesv : matrix_layout:int -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> iter:(int ptr) -> int 
 
-val zcgesv : int -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zcgesv : matrix_layout:int -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> iter:(int ptr) -> int 
 
-val sgesvd : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val sgesvd : matrix_layout:int -> jobu:char -> jobvt:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> superb:(float ptr) -> int 
 
-val dgesvd : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val dgesvd : matrix_layout:int -> jobu:char -> jobvt:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> superb:(float ptr) -> int 
 
-val cgesvd : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val cgesvd : matrix_layout:int -> jobu:char -> jobvt:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> vt:(Complex.t ptr) -> ldvt:int -> superb:(float ptr) -> int 
 
-val zgesvd : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val zgesvd : matrix_layout:int -> jobu:char -> jobvt:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> vt:(Complex.t ptr) -> ldvt:int -> superb:(float ptr) -> int 
 
-val sgesvdx : int -> char -> char -> char -> int -> int -> float ptr -> int -> float -> float -> int -> int -> int ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val sgesvdx : matrix_layout:int -> jobu:char -> jobvt:char -> range:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> ns:(int ptr) -> s:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> superb:(int ptr) -> int 
 
-val dgesvdx : int -> char -> char -> char -> int -> int -> float ptr -> int -> float -> float -> int -> int -> int ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val dgesvdx : matrix_layout:int -> jobu:char -> jobvt:char -> range:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> ns:(int ptr) -> s:(float ptr) -> u:(float ptr) -> ldu:int -> vt:(float ptr) -> ldvt:int -> superb:(int ptr) -> int 
 
-val cgesvdx : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cgesvdx : matrix_layout:int -> jobu:char -> jobvt:char -> range:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> ns:(int ptr) -> s:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> vt:(Complex.t ptr) -> ldvt:int -> superb:(int ptr) -> int 
 
-val zgesvdx : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zgesvdx : matrix_layout:int -> jobu:char -> jobvt:char -> range:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> ns:(int ptr) -> s:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> vt:(Complex.t ptr) -> ldvt:int -> superb:(int ptr) -> int 
 
-val sgesvj : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val sgesvj : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> sva:(float ptr) -> mv:int -> v:(float ptr) -> ldv:int -> stat:(float ptr) -> int 
 
-val dgesvj : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val dgesvj : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> sva:(float ptr) -> mv:int -> v:(float ptr) -> ldv:int -> stat:(float ptr) -> int 
 
-val cgesvj : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val cgesvj : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> sva:(float ptr) -> mv:int -> v:(Complex.t ptr) -> ldv:int -> stat:(float ptr) -> int 
 
-val zgesvj : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val zgesvj : matrix_layout:int -> joba:char -> jobu:char -> jobv:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> sva:(float ptr) -> mv:int -> v:(Complex.t ptr) -> ldv:int -> stat:(float ptr) -> int 
 
-val sgesvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sgesvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val dgesvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dgesvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val cgesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cgesvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val zgesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> char ptr -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zgesvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> equed:(char ptr) -> r:(float ptr) -> c:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> rpivot:(float ptr) -> int 
 
-val sgetf2 : int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val sgetf2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dgetf2 : int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val dgetf2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val cgetf2 : int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cgetf2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zgetf2 : int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zgetf2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val sgetrf : int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val sgetrf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dgetrf : int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val dgetrf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val cgetrf : int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cgetrf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zgetrf : int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zgetrf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val sgetrf2 : int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val sgetrf2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dgetrf2 : int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val dgetrf2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val cgetrf2 : int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cgetrf2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zgetrf2 : int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zgetrf2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val sgetri : int -> int -> float ptr -> int -> int ptr -> unit 
+val sgetri : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dgetri : int -> int -> float ptr -> int -> int ptr -> unit 
+val dgetri : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val cgetri : int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cgetri : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zgetri : int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zgetri : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val sgetrs : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val sgetrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dgetrs : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dgetrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cgetrs : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val cgetrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgetrs : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zgetrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sggbak : int -> char -> char -> int -> int -> int -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sggbak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> lscale:(float ptr) -> rscale:(float ptr) -> m:int -> v:(float ptr) -> ldv:int -> int 
 
-val dggbak : int -> char -> char -> int -> int -> int -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dggbak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> lscale:(float ptr) -> rscale:(float ptr) -> m:int -> v:(float ptr) -> ldv:int -> int 
 
-val cggbak : int -> char -> char -> int -> int -> int -> float ptr -> float ptr -> int -> Complex.t ptr -> int -> unit 
+val cggbak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> lscale:(float ptr) -> rscale:(float ptr) -> m:int -> v:(Complex.t ptr) -> ldv:int -> int 
 
-val zggbak : int -> char -> char -> int -> int -> int -> float ptr -> float ptr -> int -> Complex.t ptr -> int -> unit 
+val zggbak : matrix_layout:int -> job:char -> side:char -> n:int -> ilo:int -> ihi:int -> lscale:(float ptr) -> rscale:(float ptr) -> m:int -> v:(Complex.t ptr) -> ldv:int -> int 
 
-val sggbal : int -> char -> int -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> unit 
+val sggbal : matrix_layout:int -> job:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> int 
 
-val dggbal : int -> char -> int -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> unit 
+val dggbal : matrix_layout:int -> job:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> int 
 
-val cggbal : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> unit 
+val cggbal : matrix_layout:int -> job:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> int 
 
-val zggbal : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> unit 
+val zggbal : matrix_layout:int -> job:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> int 
 
-val sgges : int -> char -> char -> char -> unit ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sgges : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> sdim:(int ptr) -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vsl:(float ptr) -> ldvsl:int -> vsr:(float ptr) -> ldvsr:int -> int 
 
-val dgges : int -> char -> char -> char -> unit ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dgges : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> sdim:(int ptr) -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vsl:(float ptr) -> ldvsl:int -> vsr:(float ptr) -> ldvsr:int -> int 
 
-val cgges : int -> char -> char -> char -> unit ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgges : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> sdim:(int ptr) -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vsl:(Complex.t ptr) -> ldvsl:int -> vsr:(Complex.t ptr) -> ldvsr:int -> int 
 
-val zgges : int -> char -> char -> char -> unit ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgges : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> sdim:(int ptr) -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vsl:(Complex.t ptr) -> ldvsl:int -> vsr:(Complex.t ptr) -> ldvsr:int -> int 
 
-val sgges3 : int -> char -> char -> char -> unit ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sgges3 : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> sdim:(int ptr) -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vsl:(float ptr) -> ldvsl:int -> vsr:(float ptr) -> ldvsr:int -> int 
 
-val dgges3 : int -> char -> char -> char -> unit ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dgges3 : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> sdim:(int ptr) -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vsl:(float ptr) -> ldvsl:int -> vsr:(float ptr) -> ldvsr:int -> int 
 
-val cgges3 : int -> char -> char -> char -> unit ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgges3 : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> sdim:(int ptr) -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vsl:(Complex.t ptr) -> ldvsl:int -> vsr:(Complex.t ptr) -> ldvsr:int -> int 
 
-val zgges3 : int -> char -> char -> char -> unit ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgges3 : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> sdim:(int ptr) -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vsl:(Complex.t ptr) -> ldvsl:int -> vsr:(Complex.t ptr) -> ldvsr:int -> int 
 
-val sggesx : int -> char -> char -> char -> unit ptr -> char -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sggesx : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> sense:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> sdim:(int ptr) -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vsl:(float ptr) -> ldvsl:int -> vsr:(float ptr) -> ldvsr:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val dggesx : int -> char -> char -> char -> unit ptr -> char -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dggesx : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> sense:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> sdim:(int ptr) -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vsl:(float ptr) -> ldvsl:int -> vsr:(float ptr) -> ldvsr:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val cggesx : int -> char -> char -> char -> unit ptr -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cggesx : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> sdim:(int ptr) -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vsl:(Complex.t ptr) -> ldvsl:int -> vsr:(Complex.t ptr) -> ldvsr:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val zggesx : int -> char -> char -> char -> unit ptr -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zggesx : matrix_layout:int -> jobvsl:char -> jobvsr:char -> sort:char -> selctg:(void ptr) -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> sdim:(int ptr) -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vsl:(Complex.t ptr) -> ldvsl:int -> vsr:(Complex.t ptr) -> ldvsr:int -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val sggev : int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sggev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> int 
 
-val dggev : int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dggev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> int 
 
-val cggev : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cggev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> int 
 
-val zggev : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zggev : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> int 
 
-val sggev3 : int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val sggev3 : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> int 
 
-val dggev3 : int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dggev3 : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> int 
 
-val cggev3 : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cggev3 : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> int 
 
-val zggev3 : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zggev3 : matrix_layout:int -> jobvl:char -> jobvr:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> int 
 
-val sggevx : int -> char -> char -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sggevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> abnrm:(float ptr) -> bbnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val dggevx : int -> char -> char -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dggevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> abnrm:(float ptr) -> bbnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val cggevx : int -> char -> char -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cggevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> abnrm:(float ptr) -> bbnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val zggevx : int -> char -> char -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zggevx : matrix_layout:int -> balanc:char -> jobvl:char -> jobvr:char -> sense:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> ilo:(int ptr) -> ihi:(int ptr) -> lscale:(float ptr) -> rscale:(float ptr) -> abnrm:(float ptr) -> bbnrm:(float ptr) -> rconde:(float ptr) -> rcondv:(float ptr) -> int 
 
-val sggglm : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sggglm : matrix_layout:int -> n:int -> m:int -> p:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> d:(float ptr) -> x:(float ptr) -> y:(float ptr) -> int 
 
-val dggglm : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dggglm : matrix_layout:int -> n:int -> m:int -> p:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> d:(float ptr) -> x:(float ptr) -> y:(float ptr) -> int 
 
-val cggglm : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val cggglm : matrix_layout:int -> n:int -> m:int -> p:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> d:(Complex.t ptr) -> x:(Complex.t ptr) -> y:(Complex.t ptr) -> int 
 
-val zggglm : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val zggglm : matrix_layout:int -> n:int -> m:int -> p:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> d:(Complex.t ptr) -> x:(Complex.t ptr) -> y:(Complex.t ptr) -> int 
 
-val sgghrd : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgghrd : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> int 
 
-val dgghrd : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgghrd : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> int 
 
-val cgghrd : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgghrd : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zgghrd : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgghrd : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val sgghd3 : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgghd3 : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> int 
 
-val dgghd3 : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgghd3 : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> int 
 
-val cgghd3 : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgghd3 : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zgghd3 : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgghd3 : matrix_layout:int -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val sgglse : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sgglse : matrix_layout:int -> m:int -> n:int -> p:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> c:(float ptr) -> d:(float ptr) -> x:(float ptr) -> int 
 
-val dgglse : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dgglse : matrix_layout:int -> m:int -> n:int -> p:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> c:(float ptr) -> d:(float ptr) -> x:(float ptr) -> int 
 
-val cgglse : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val cgglse : matrix_layout:int -> m:int -> n:int -> p:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> c:(Complex.t ptr) -> d:(Complex.t ptr) -> x:(Complex.t ptr) -> int 
 
-val zgglse : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val zgglse : matrix_layout:int -> m:int -> n:int -> p:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> c:(Complex.t ptr) -> d:(Complex.t ptr) -> x:(Complex.t ptr) -> int 
 
-val sggqrf : int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
+val sggqrf : matrix_layout:int -> n:int -> m:int -> p:int -> a:(float ptr) -> lda:int -> taua:(float ptr) -> b:(float ptr) -> ldb:int -> taub:(float ptr) -> int 
 
-val dggqrf : int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
+val dggqrf : matrix_layout:int -> n:int -> m:int -> p:int -> a:(float ptr) -> lda:int -> taua:(float ptr) -> b:(float ptr) -> ldb:int -> taub:(float ptr) -> int 
 
-val cggqrf : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cggqrf : matrix_layout:int -> n:int -> m:int -> p:int -> a:(Complex.t ptr) -> lda:int -> taua:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> taub:(Complex.t ptr) -> int 
 
-val zggqrf : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zggqrf : matrix_layout:int -> n:int -> m:int -> p:int -> a:(Complex.t ptr) -> lda:int -> taua:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> taub:(Complex.t ptr) -> int 
 
-val sggrqf : int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
+val sggrqf : matrix_layout:int -> m:int -> p:int -> n:int -> a:(float ptr) -> lda:int -> taua:(float ptr) -> b:(float ptr) -> ldb:int -> taub:(float ptr) -> int 
 
-val dggrqf : int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> unit 
+val dggrqf : matrix_layout:int -> m:int -> p:int -> n:int -> a:(float ptr) -> lda:int -> taua:(float ptr) -> b:(float ptr) -> ldb:int -> taub:(float ptr) -> int 
 
-val cggrqf : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cggrqf : matrix_layout:int -> m:int -> p:int -> n:int -> a:(Complex.t ptr) -> lda:int -> taua:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> taub:(Complex.t ptr) -> int 
 
-val zggrqf : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zggrqf : matrix_layout:int -> m:int -> p:int -> n:int -> a:(Complex.t ptr) -> lda:int -> taua:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> taub:(Complex.t ptr) -> int 
 
-val sggsvd : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val sggsvd : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val dggsvd : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val dggsvd : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val cggsvd : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cggsvd : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val zggsvd : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zggsvd : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val sggsvd3 : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val sggsvd3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val dggsvd3 : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val dggsvd3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val cggsvd3 : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val cggsvd3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val zggsvd3 : int -> char -> char -> char -> int -> int -> int -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zggsvd3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> n:int -> p:int -> k:(int ptr) -> l:(int ptr) -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(float ptr) -> beta:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> iwork:(int ptr) -> int 
 
-val sggsvp : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sggsvp : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> int 
 
-val dggsvp : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dggsvp : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> int 
 
-val cggsvp : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cggsvp : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val zggsvp : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zggsvp : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val sggsvp3 : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sggsvp3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> int 
 
-val dggsvp3 : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dggsvp3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> int 
 
-val cggsvp3 : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cggsvp3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val zggsvp3 : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zggsvp3 : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> tola:float -> tolb:float -> k:(int ptr) -> l:(int ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val sgtcon : char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float -> float ptr -> unit 
+val sgtcon : norm:char -> n:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val dgtcon : char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float -> float ptr -> unit 
+val dgtcon : norm:char -> n:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val cgtcon : char -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
+val cgtcon : norm:char -> n:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zgtcon : char -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
+val zgtcon : norm:char -> n:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val sgtrfs : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sgtrfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> dlf:(float ptr) -> df:(float ptr) -> duf:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dgtrfs : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dgtrfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> dlf:(float ptr) -> df:(float ptr) -> duf:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cgtrfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cgtrfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> dlf:(Complex.t ptr) -> df:(Complex.t ptr) -> duf:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zgtrfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zgtrfs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> dlf:(Complex.t ptr) -> df:(Complex.t ptr) -> duf:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sgtsv : int -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sgtsv : matrix_layout:int -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dgtsv : int -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dgtsv : matrix_layout:int -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cgtsv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cgtsv : matrix_layout:int -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgtsv : int -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zgtsv : matrix_layout:int -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sgtsvx : int -> char -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sgtsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> dlf:(float ptr) -> df:(float ptr) -> duf:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dgtsvx : int -> char -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dgtsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> dlf:(float ptr) -> df:(float ptr) -> duf:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cgtsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cgtsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> dlf:(Complex.t ptr) -> df:(Complex.t ptr) -> duf:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zgtsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zgtsvx : matrix_layout:int -> fact:char -> trans:char -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> dlf:(Complex.t ptr) -> df:(Complex.t ptr) -> duf:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sgttrf : int -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> unit 
+val sgttrf : n:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> int 
 
-val dgttrf : int -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> unit 
+val dgttrf : n:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> int 
 
-val cgttrf : int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> unit 
+val cgttrf : n:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val zgttrf : int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> unit 
+val zgttrf : n:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val sgttrs : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float ptr -> int -> unit 
+val sgttrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dgttrs : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int ptr -> float ptr -> int -> unit 
+val dgttrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(float ptr) -> d:(float ptr) -> du:(float ptr) -> du2:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cgttrs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val cgttrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zgttrs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val zgttrs : matrix_layout:int -> trans:char -> n:int -> nrhs:int -> dl:(Complex.t ptr) -> d:(Complex.t ptr) -> du:(Complex.t ptr) -> du2:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val chbev : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val chbev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhbev : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val zhbev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chbevd : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val chbevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhbevd : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val zhbevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chbevx : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val chbevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> q:(Complex.t ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val zhbevx : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zhbevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> q:(Complex.t ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val chbgst : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val chbgst : matrix_layout:int -> vect:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> x:(Complex.t ptr) -> ldx:int -> int 
 
-val zhbgst : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zhbgst : matrix_layout:int -> vect:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> x:(Complex.t ptr) -> ldx:int -> int 
 
-val chbgv : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val chbgv : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhbgv : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val zhbgv : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chbgvd : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val chbgvd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhbgvd : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> unit 
+val zhbgvd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chbgvx : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val chbgvx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> q:(Complex.t ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val zhbgvx : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zhbgvx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(Complex.t ptr) -> ldab:int -> bb:(Complex.t ptr) -> ldbb:int -> q:(Complex.t ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val chbtrd : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val chbtrd : matrix_layout:int -> vect:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val zhbtrd : int -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zhbtrd : matrix_layout:int -> vect:char -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val checon : int -> char -> int -> Complex.t ptr -> int -> int ptr -> float -> float ptr -> unit 
+val checon : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zhecon : int -> char -> int -> Complex.t ptr -> int -> int ptr -> float -> float ptr -> unit 
+val zhecon : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val cheequb : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cheequb : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val zheequb : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zheequb : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val cheev : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val cheev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(float ptr) -> int 
 
-val zheev : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val zheev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(float ptr) -> int 
 
-val cheevd : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val cheevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(float ptr) -> int 
 
-val zheevd : int -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val zheevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> w:(float ptr) -> int 
 
-val cheevr : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val cheevr : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val zheevr : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zheevr : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val cheevx : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val cheevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val zheevx : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zheevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val chegst : int -> int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val chegst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zhegst : int -> int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zhegst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val chegv : int -> int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val chegv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val zhegv : int -> int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val zhegv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val chegvd : int -> int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val chegvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val zhegvd : int -> int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val zhegvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val chegvx : int -> int -> char -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val chegvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val zhegvx : int -> int -> char -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zhegvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val cherfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cherfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zherfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zherfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val chesv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val chesv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zhesv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zhesv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val chesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val chesvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zhesvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zhesvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val chetrd : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> unit 
+val chetrd : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tau:(Complex.t ptr) -> int 
 
-val zhetrd : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> unit 
+val zhetrd : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tau:(Complex.t ptr) -> int 
 
-val chetrf : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val chetrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zhetrf : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zhetrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val chetri : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val chetri : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zhetri : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zhetri : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val chetrs : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val chetrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zhetrs : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zhetrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val chfrk : int -> char -> char -> char -> int -> int -> float -> Complex.t ptr -> int -> float -> Complex.t ptr -> unit 
+val chfrk : matrix_layout:int -> transr:char -> uplo:char -> trans:char -> n:int -> k:int -> alpha:float -> a:(Complex.t ptr) -> lda:int -> beta:float -> c:(Complex.t ptr) -> int 
 
-val zhfrk : int -> char -> char -> char -> int -> int -> float -> Complex.t ptr -> int -> float -> Complex.t ptr -> unit 
+val zhfrk : matrix_layout:int -> transr:char -> uplo:char -> trans:char -> n:int -> k:int -> alpha:float -> a:(Complex.t ptr) -> lda:int -> beta:float -> c:(Complex.t ptr) -> int 
 
-val shgeqz : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val shgeqz : matrix_layout:int -> job:char -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(float ptr) -> ldh:int -> t:(float ptr) -> ldt:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> int 
 
-val dhgeqz : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> unit 
+val dhgeqz : matrix_layout:int -> job:char -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(float ptr) -> ldh:int -> t:(float ptr) -> ldt:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> int 
 
-val chgeqz : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val chgeqz : matrix_layout:int -> job:char -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(Complex.t ptr) -> ldh:int -> t:(Complex.t ptr) -> ldt:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhgeqz : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zhgeqz : matrix_layout:int -> job:char -> compq:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(Complex.t ptr) -> ldh:int -> t:(Complex.t ptr) -> ldt:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chpcon : int -> char -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
+val chpcon : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zhpcon : int -> char -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
+val zhpcon : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val chpev : int -> char -> char -> int -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val chpev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhpev : int -> char -> char -> int -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zhpev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chpevd : int -> char -> char -> int -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val chpevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhpevd : int -> char -> char -> int -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zhpevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chpevx : int -> char -> char -> char -> int -> Complex.t ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val chpevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val zhpevx : int -> char -> char -> char -> int -> Complex.t ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zhpevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val chpgst : int -> int -> char -> int -> Complex.t ptr -> Complex.t ptr -> unit 
+val chpgst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> int 
 
-val zhpgst : int -> int -> char -> int -> Complex.t ptr -> Complex.t ptr -> unit 
+val zhpgst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> int 
 
-val chpgv : int -> int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val chpgv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhpgv : int -> int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zhpgv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chpgvd : int -> int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val chpgvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhpgvd : int -> int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zhpgvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val chpgvx : int -> int -> char -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val chpgvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val zhpgvx : int -> int -> char -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zhpgvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> bp:(Complex.t ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val chprfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val chprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zhprfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zhprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val chpsv : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val chpsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zhpsv : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val zhpsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val chpsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val chpsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zhpsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zhpsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val chptrd : int -> char -> int -> Complex.t ptr -> float ptr -> float ptr -> Complex.t ptr -> unit 
+val chptrd : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> d:(float ptr) -> e:(float ptr) -> tau:(Complex.t ptr) -> int 
 
-val zhptrd : int -> char -> int -> Complex.t ptr -> float ptr -> float ptr -> Complex.t ptr -> unit 
+val zhptrd : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> d:(float ptr) -> e:(float ptr) -> tau:(Complex.t ptr) -> int 
 
-val chptrf : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val chptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val zhptrf : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val zhptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val chptri : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val chptri : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val zhptri : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val zhptri : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val chptrs : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val chptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zhptrs : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val zhptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val shsein : int -> char -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int -> int ptr -> int ptr -> int ptr -> unit 
+val shsein : matrix_layout:int -> job:char -> eigsrc:char -> initv:char -> select:(int ptr) -> n:int -> h:(float ptr) -> ldh:int -> wr:(float ptr) -> wi:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> ifaill:(int ptr) -> ifailr:(int ptr) -> int 
 
-val dhsein : int -> char -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int -> int ptr -> int ptr -> int ptr -> unit 
+val dhsein : matrix_layout:int -> job:char -> eigsrc:char -> initv:char -> select:(int ptr) -> n:int -> h:(float ptr) -> ldh:int -> wr:(float ptr) -> wi:(float ptr) -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> ifaill:(int ptr) -> ifailr:(int ptr) -> int 
 
-val chsein : int -> char -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int ptr -> int ptr -> int ptr -> unit 
+val chsein : matrix_layout:int -> job:char -> eigsrc:char -> initv:char -> select:(int ptr) -> n:int -> h:(Complex.t ptr) -> ldh:int -> w:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> ifaill:(int ptr) -> ifailr:(int ptr) -> int 
 
-val zhsein : int -> char -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int ptr -> int ptr -> int ptr -> unit 
+val zhsein : matrix_layout:int -> job:char -> eigsrc:char -> initv:char -> select:(int ptr) -> n:int -> h:(Complex.t ptr) -> ldh:int -> w:(Complex.t ptr) -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> ifaill:(int ptr) -> ifailr:(int ptr) -> int 
 
-val shseqr : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val shseqr : matrix_layout:int -> job:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(float ptr) -> ldh:int -> wr:(float ptr) -> wi:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dhseqr : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dhseqr : matrix_layout:int -> job:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(float ptr) -> ldh:int -> wr:(float ptr) -> wi:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val chseqr : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val chseqr : matrix_layout:int -> job:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(Complex.t ptr) -> ldh:int -> w:(Complex.t ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zhseqr : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zhseqr : matrix_layout:int -> job:char -> compz:char -> n:int -> ilo:int -> ihi:int -> h:(Complex.t ptr) -> ldh:int -> w:(Complex.t ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val clacgv : int -> Complex.t ptr -> int -> unit 
+val clacgv : n:int -> x:(Complex.t ptr) -> incx:int -> int 
 
-val zlacgv : int -> Complex.t ptr -> int -> unit 
+val zlacgv : n:int -> x:(Complex.t ptr) -> incx:int -> int 
 
-val slacn2 : int -> float ptr -> float ptr -> int ptr -> float ptr -> int ptr -> int ptr -> unit 
+val slacn2 : n:int -> v:(float ptr) -> x:(float ptr) -> isgn:(int ptr) -> est:(float ptr) -> kase:(int ptr) -> isave:(int ptr) -> int 
 
-val dlacn2 : int -> float ptr -> float ptr -> int ptr -> float ptr -> int ptr -> int ptr -> unit 
+val dlacn2 : n:int -> v:(float ptr) -> x:(float ptr) -> isgn:(int ptr) -> est:(float ptr) -> kase:(int ptr) -> isave:(int ptr) -> int 
 
-val clacn2 : int -> Complex.t ptr -> Complex.t ptr -> float ptr -> int ptr -> int ptr -> unit 
+val clacn2 : n:int -> v:(Complex.t ptr) -> x:(Complex.t ptr) -> est:(float ptr) -> kase:(int ptr) -> isave:(int ptr) -> int 
 
-val zlacn2 : int -> Complex.t ptr -> Complex.t ptr -> float ptr -> int ptr -> int ptr -> unit 
+val zlacn2 : n:int -> v:(Complex.t ptr) -> x:(Complex.t ptr) -> est:(float ptr) -> kase:(int ptr) -> isave:(int ptr) -> int 
 
-val slacpy : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val slacpy : matrix_layout:int -> uplo:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dlacpy : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dlacpy : matrix_layout:int -> uplo:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val clacpy : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val clacpy : matrix_layout:int -> uplo:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zlacpy : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zlacpy : matrix_layout:int -> uplo:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val clacp2 : int -> char -> int -> int -> float ptr -> int -> Complex.t ptr -> int -> unit 
+val clacp2 : matrix_layout:int -> uplo:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zlacp2 : int -> char -> int -> int -> float ptr -> int -> Complex.t ptr -> int -> unit 
+val zlacp2 : matrix_layout:int -> uplo:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zlag2c : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zlag2c : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> sa:(Complex.t ptr) -> ldsa:int -> int 
 
-val slag2d : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val slag2d : matrix_layout:int -> m:int -> n:int -> sa:(float ptr) -> ldsa:int -> a:(float ptr) -> lda:int -> int 
 
-val dlag2s : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dlag2s : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> sa:(float ptr) -> ldsa:int -> int 
 
-val clag2z : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val clag2z : matrix_layout:int -> m:int -> n:int -> sa:(Complex.t ptr) -> ldsa:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val slagge : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val slagge : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> d:(float ptr) -> a:(float ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val dlagge : int -> int -> int -> int -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dlagge : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> d:(float ptr) -> a:(float ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val clagge : int -> int -> int -> int -> int -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val clagge : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> d:(float ptr) -> a:(Complex.t ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val zlagge : int -> int -> int -> int -> int -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zlagge : matrix_layout:int -> m:int -> n:int -> kl:int -> ku:int -> d:(float ptr) -> a:(Complex.t ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val slarfb : int -> char -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val slarfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> c:(float ptr) -> ldc:int -> int 
 
-val dlarfb : int -> char -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dlarfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> c:(float ptr) -> ldc:int -> int 
 
-val clarfb : int -> char -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val clarfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zlarfb : int -> char -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zlarfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val slarfg : int -> float ptr -> float ptr -> int -> float ptr -> unit 
+val slarfg : n:int -> alpha:(float ptr) -> x:(float ptr) -> incx:int -> tau:(float ptr) -> int 
 
-val dlarfg : int -> float ptr -> float ptr -> int -> float ptr -> unit 
+val dlarfg : n:int -> alpha:(float ptr) -> x:(float ptr) -> incx:int -> tau:(float ptr) -> int 
 
-val clarfg : int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val clarfg : n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> tau:(Complex.t ptr) -> int 
 
-val zlarfg : int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zlarfg : n:int -> alpha:(Complex.t ptr) -> x:(Complex.t ptr) -> incx:int -> tau:(Complex.t ptr) -> int 
 
-val slarft : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val slarft : matrix_layout:int -> direct:char -> storev:char -> n:int -> k:int -> v:(float ptr) -> ldv:int -> tau:(float ptr) -> t:(float ptr) -> ldt:int -> int 
 
-val dlarft : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dlarft : matrix_layout:int -> direct:char -> storev:char -> n:int -> k:int -> v:(float ptr) -> ldv:int -> tau:(float ptr) -> t:(float ptr) -> ldt:int -> int 
 
-val clarft : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val clarft : matrix_layout:int -> direct:char -> storev:char -> n:int -> k:int -> v:(Complex.t ptr) -> ldv:int -> tau:(Complex.t ptr) -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val zlarft : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zlarft : matrix_layout:int -> direct:char -> storev:char -> n:int -> k:int -> v:(Complex.t ptr) -> ldv:int -> tau:(Complex.t ptr) -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val slarfx : int -> char -> int -> int -> float ptr -> float -> float ptr -> int -> float ptr -> unit 
+val slarfx : matrix_layout:int -> side:char -> m:int -> n:int -> v:(float ptr) -> tau:float -> c:(float ptr) -> ldc:int -> work:(float ptr) -> int 
 
-val dlarfx : int -> char -> int -> int -> float ptr -> float -> float ptr -> int -> float ptr -> unit 
+val dlarfx : matrix_layout:int -> side:char -> m:int -> n:int -> v:(float ptr) -> tau:float -> c:(float ptr) -> ldc:int -> work:(float ptr) -> int 
 
-val clarfx : int -> char -> int -> int -> Complex.t ptr -> Complex.t -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val clarfx : matrix_layout:int -> side:char -> m:int -> n:int -> v:(Complex.t ptr) -> tau:Complex.t -> c:(Complex.t ptr) -> ldc:int -> work:(Complex.t ptr) -> int 
 
-val zlarfx : int -> char -> int -> int -> Complex.t ptr -> Complex.t -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zlarfx : matrix_layout:int -> side:char -> m:int -> n:int -> v:(Complex.t ptr) -> tau:Complex.t -> c:(Complex.t ptr) -> ldc:int -> work:(Complex.t ptr) -> int 
 
-val slarnv : int -> int ptr -> int -> float ptr -> unit 
+val slarnv : idist:int -> iseed:(int ptr) -> n:int -> x:(float ptr) -> int 
 
-val dlarnv : int -> int ptr -> int -> float ptr -> unit 
+val dlarnv : idist:int -> iseed:(int ptr) -> n:int -> x:(float ptr) -> int 
 
-val clarnv : int -> int ptr -> int -> Complex.t ptr -> unit 
+val clarnv : idist:int -> iseed:(int ptr) -> n:int -> x:(Complex.t ptr) -> int 
 
-val zlarnv : int -> int ptr -> int -> Complex.t ptr -> unit 
+val zlarnv : idist:int -> iseed:(int ptr) -> n:int -> x:(Complex.t ptr) -> int 
 
-val slascl : int -> char -> int -> int -> float -> float -> int -> int -> float ptr -> int -> unit 
+val slascl : matrix_layout:int -> type:char -> kl:int -> ku:int -> cfrom:float -> cto:float -> m:int -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val dlascl : int -> char -> int -> int -> float -> float -> int -> int -> float ptr -> int -> unit 
+val dlascl : matrix_layout:int -> type:char -> kl:int -> ku:int -> cfrom:float -> cto:float -> m:int -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val clascl : int -> char -> int -> int -> float -> float -> int -> int -> Complex.t ptr -> int -> unit 
+val clascl : matrix_layout:int -> type:char -> kl:int -> ku:int -> cfrom:float -> cto:float -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zlascl : int -> char -> int -> int -> float -> float -> int -> int -> Complex.t ptr -> int -> unit 
+val zlascl : matrix_layout:int -> type:char -> kl:int -> ku:int -> cfrom:float -> cto:float -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val slaset : int -> char -> int -> int -> float -> float -> float ptr -> int -> unit 
+val slaset : matrix_layout:int -> uplo:char -> m:int -> n:int -> alpha:float -> beta:float -> a:(float ptr) -> lda:int -> int 
 
-val dlaset : int -> char -> int -> int -> float -> float -> float ptr -> int -> unit 
+val dlaset : matrix_layout:int -> uplo:char -> m:int -> n:int -> alpha:float -> beta:float -> a:(float ptr) -> lda:int -> int 
 
-val claset : int -> char -> int -> int -> Complex.t -> Complex.t -> Complex.t ptr -> int -> unit 
+val claset : matrix_layout:int -> uplo:char -> m:int -> n:int -> alpha:Complex.t -> beta:Complex.t -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zlaset : int -> char -> int -> int -> Complex.t -> Complex.t -> Complex.t ptr -> int -> unit 
+val zlaset : matrix_layout:int -> uplo:char -> m:int -> n:int -> alpha:Complex.t -> beta:Complex.t -> a:(Complex.t ptr) -> lda:int -> int 
 
-val slasrt : char -> int -> float ptr -> unit 
+val slasrt : id:char -> n:int -> d:(float ptr) -> int 
 
-val dlasrt : char -> int -> float ptr -> unit 
+val dlasrt : id:char -> n:int -> d:(float ptr) -> int 
 
-val slaswp : int -> int -> float ptr -> int -> int -> int -> int ptr -> int -> unit 
+val slaswp : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> k1:int -> k2:int -> ipiv:(int ptr) -> incx:int -> int 
 
-val dlaswp : int -> int -> float ptr -> int -> int -> int -> int ptr -> int -> unit 
+val dlaswp : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> k1:int -> k2:int -> ipiv:(int ptr) -> incx:int -> int 
 
-val claswp : int -> int -> Complex.t ptr -> int -> int -> int -> int ptr -> int -> unit 
+val claswp : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> k1:int -> k2:int -> ipiv:(int ptr) -> incx:int -> int 
 
-val zlaswp : int -> int -> Complex.t ptr -> int -> int -> int -> int ptr -> int -> unit 
+val zlaswp : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> k1:int -> k2:int -> ipiv:(int ptr) -> incx:int -> int 
 
-val slatms : int -> int -> int -> char -> int ptr -> char -> float ptr -> int -> float -> float -> int -> int -> char -> float ptr -> int -> unit 
+val slatms : matrix_layout:int -> m:int -> n:int -> dist:char -> iseed:(int ptr) -> sym:char -> d:(float ptr) -> mode:int -> cond:float -> dmax:float -> kl:int -> ku:int -> pack:char -> a:(float ptr) -> lda:int -> int 
 
-val dlatms : int -> int -> int -> char -> int ptr -> char -> float ptr -> int -> float -> float -> int -> int -> char -> float ptr -> int -> unit 
+val dlatms : matrix_layout:int -> m:int -> n:int -> dist:char -> iseed:(int ptr) -> sym:char -> d:(float ptr) -> mode:int -> cond:float -> dmax:float -> kl:int -> ku:int -> pack:char -> a:(float ptr) -> lda:int -> int 
 
-val clatms : int -> int -> int -> char -> int ptr -> char -> float ptr -> int -> float -> float -> int -> int -> char -> Complex.t ptr -> int -> unit 
+val clatms : matrix_layout:int -> m:int -> n:int -> dist:char -> iseed:(int ptr) -> sym:char -> d:(float ptr) -> mode:int -> cond:float -> dmax:float -> kl:int -> ku:int -> pack:char -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zlatms : int -> int -> int -> char -> int ptr -> char -> float ptr -> int -> float -> float -> int -> int -> char -> Complex.t ptr -> int -> unit 
+val zlatms : matrix_layout:int -> m:int -> n:int -> dist:char -> iseed:(int ptr) -> sym:char -> d:(float ptr) -> mode:int -> cond:float -> dmax:float -> kl:int -> ku:int -> pack:char -> a:(Complex.t ptr) -> lda:int -> int 
 
-val slauum : int -> char -> int -> float ptr -> int -> unit 
+val slauum : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val dlauum : int -> char -> int -> float ptr -> int -> unit 
+val dlauum : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val clauum : int -> char -> int -> Complex.t ptr -> int -> unit 
+val clauum : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zlauum : int -> char -> int -> Complex.t ptr -> int -> unit 
+val zlauum : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val sopgtr : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sopgtr : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> tau:(float ptr) -> q:(float ptr) -> ldq:int -> int 
 
-val dopgtr : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dopgtr : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> tau:(float ptr) -> q:(float ptr) -> ldq:int -> int 
 
-val sopmtr : int -> char -> char -> char -> int -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sopmtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> ap:(float ptr) -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dopmtr : int -> char -> char -> char -> int -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dopmtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> ap:(float ptr) -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sorgbr : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sorgbr : matrix_layout:int -> vect:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorgbr : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dorgbr : matrix_layout:int -> vect:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sorghr : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sorghr : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorghr : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dorghr : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sorglq : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sorglq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorglq : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dorglq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sorgql : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sorgql : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorgql : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dorgql : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sorgqr : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sorgqr : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorgqr : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dorgqr : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sorgrq : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val sorgrq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorgrq : int -> int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dorgrq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sorgtr : int -> char -> int -> float ptr -> int -> float ptr -> unit 
+val sorgtr : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dorgtr : int -> char -> int -> float ptr -> int -> float ptr -> unit 
+val dorgtr : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val sormbr : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormbr : matrix_layout:int -> vect:char -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormbr : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormbr : matrix_layout:int -> vect:char -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormhr : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormhr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormhr : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormhr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> ilo:int -> ihi:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormlq : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormlq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormlq : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormlq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormql : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormql : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormql : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormql : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormqr : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormqr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormqr : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormqr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormrq : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormrq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormrq : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormrq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormrz : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormrz : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormrz : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormrz : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val sormtr : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val sormtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val dormtr : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dormtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> c:(float ptr) -> ldc:int -> int 
 
-val spbcon : int -> char -> int -> int -> float ptr -> int -> float -> float ptr -> unit 
+val spbcon : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val dpbcon : int -> char -> int -> int -> float ptr -> int -> float -> float ptr -> unit 
+val dpbcon : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val cpbcon : int -> char -> int -> int -> Complex.t ptr -> int -> float -> float ptr -> unit 
+val cpbcon : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val zpbcon : int -> char -> int -> int -> Complex.t ptr -> int -> float -> float ptr -> unit 
+val zpbcon : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val spbequ : int -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val spbequ : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val dpbequ : int -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dpbequ : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val cpbequ : int -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cpbequ : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val zpbequ : int -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zpbequ : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val spbrfs : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val spbrfs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dpbrfs : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dpbrfs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cpbrfs : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cpbrfs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zpbrfs : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zpbrfs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val spbstf : int -> char -> int -> int -> float ptr -> int -> unit 
+val spbstf : matrix_layout:int -> uplo:char -> n:int -> kb:int -> bb:(float ptr) -> ldbb:int -> int 
 
-val dpbstf : int -> char -> int -> int -> float ptr -> int -> unit 
+val dpbstf : matrix_layout:int -> uplo:char -> n:int -> kb:int -> bb:(float ptr) -> ldbb:int -> int 
 
-val cpbstf : int -> char -> int -> int -> Complex.t ptr -> int -> unit 
+val cpbstf : matrix_layout:int -> uplo:char -> n:int -> kb:int -> bb:(Complex.t ptr) -> ldbb:int -> int 
 
-val zpbstf : int -> char -> int -> int -> Complex.t ptr -> int -> unit 
+val zpbstf : matrix_layout:int -> uplo:char -> n:int -> kb:int -> bb:(Complex.t ptr) -> ldbb:int -> int 
 
-val spbsv : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val spbsv : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> int 
 
-val dpbsv : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dpbsv : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> int 
 
-val cpbsv : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cpbsv : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zpbsv : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zpbsv : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val spbsvx : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val spbsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> equed:(char ptr) -> s:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dpbsvx : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dpbsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> afb:(float ptr) -> ldafb:int -> equed:(char ptr) -> s:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cpbsvx : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cpbsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> equed:(char ptr) -> s:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zpbsvx : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zpbsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> afb:(Complex.t ptr) -> ldafb:int -> equed:(char ptr) -> s:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val spbtrf : int -> char -> int -> int -> float ptr -> int -> unit 
+val spbtrf : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> int 
 
-val dpbtrf : int -> char -> int -> int -> float ptr -> int -> unit 
+val dpbtrf : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> int 
 
-val cpbtrf : int -> char -> int -> int -> Complex.t ptr -> int -> unit 
+val cpbtrf : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> int 
 
-val zpbtrf : int -> char -> int -> int -> Complex.t ptr -> int -> unit 
+val zpbtrf : matrix_layout:int -> uplo:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> int 
 
-val spbtrs : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val spbtrs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> int 
 
-val dpbtrs : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dpbtrs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> int 
 
-val cpbtrs : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cpbtrs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zpbtrs : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zpbtrs : matrix_layout:int -> uplo:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val spftrf : int -> char -> char -> int -> float ptr -> unit 
+val spftrf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(float ptr) -> int 
 
-val dpftrf : int -> char -> char -> int -> float ptr -> unit 
+val dpftrf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(float ptr) -> int 
 
-val cpftrf : int -> char -> char -> int -> Complex.t ptr -> unit 
+val cpftrf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> int 
 
-val zpftrf : int -> char -> char -> int -> Complex.t ptr -> unit 
+val zpftrf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> int 
 
-val spftri : int -> char -> char -> int -> float ptr -> unit 
+val spftri : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(float ptr) -> int 
 
-val dpftri : int -> char -> char -> int -> float ptr -> unit 
+val dpftri : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(float ptr) -> int 
 
-val cpftri : int -> char -> char -> int -> Complex.t ptr -> unit 
+val cpftri : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> int 
 
-val zpftri : int -> char -> char -> int -> Complex.t ptr -> unit 
+val zpftri : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> int 
 
-val spftrs : int -> char -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val spftrs : matrix_layout:int -> transr:char -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dpftrs : int -> char -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val dpftrs : matrix_layout:int -> transr:char -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cpftrs : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cpftrs : matrix_layout:int -> transr:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zpftrs : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zpftrs : matrix_layout:int -> transr:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val spocon : int -> char -> int -> float ptr -> int -> float -> float ptr -> unit 
+val spocon : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val dpocon : int -> char -> int -> float ptr -> int -> float -> float ptr -> unit 
+val dpocon : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val cpocon : int -> char -> int -> Complex.t ptr -> int -> float -> float ptr -> unit 
+val cpocon : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val zpocon : int -> char -> int -> Complex.t ptr -> int -> float -> float ptr -> unit 
+val zpocon : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> anorm:float -> rcond:(float ptr) -> int 
 
-val spoequ : int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val spoequ : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val dpoequ : int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dpoequ : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val cpoequ : int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cpoequ : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val zpoequ : int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zpoequ : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val spoequb : int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val spoequb : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val dpoequb : int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dpoequb : matrix_layout:int -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val cpoequb : int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cpoequb : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val zpoequb : int -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zpoequb : matrix_layout:int -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val sporfs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sporfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dporfs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dporfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cporfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cporfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zporfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zporfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sposv : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sposv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dposv : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dposv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val cposv : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cposv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zposv : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zposv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val dsposv : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val dsposv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> iter:(int ptr) -> int 
 
-val zcposv : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zcposv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> iter:(int ptr) -> int 
 
-val sposvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sposvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> equed:(char ptr) -> s:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dposvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dposvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> equed:(char ptr) -> s:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cposvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cposvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> equed:(char ptr) -> s:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zposvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zposvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> equed:(char ptr) -> s:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val spotrf2 : int -> char -> int -> float ptr -> int -> unit 
+val spotrf2 : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val dpotrf2 : int -> char -> int -> float ptr -> int -> unit 
+val dpotrf2 : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val cpotrf2 : int -> char -> int -> Complex.t ptr -> int -> unit 
+val cpotrf2 : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zpotrf2 : int -> char -> int -> Complex.t ptr -> int -> unit 
+val zpotrf2 : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val spotrf : int -> char -> int -> float ptr -> int -> unit 
+val spotrf : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val dpotrf : int -> char -> int -> float ptr -> int -> unit 
+val dpotrf : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val cpotrf : int -> char -> int -> Complex.t ptr -> int -> unit 
+val cpotrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zpotrf : int -> char -> int -> Complex.t ptr -> int -> unit 
+val zpotrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val spotri : int -> char -> int -> float ptr -> int -> unit 
+val spotri : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val dpotri : int -> char -> int -> float ptr -> int -> unit 
+val dpotri : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val cpotri : int -> char -> int -> Complex.t ptr -> int -> unit 
+val cpotri : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zpotri : int -> char -> int -> Complex.t ptr -> int -> unit 
+val zpotri : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val spotrs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val spotrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dpotrs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dpotrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val cpotrs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cpotrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zpotrs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zpotrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sppcon : int -> char -> int -> float ptr -> float -> float ptr -> unit 
+val sppcon : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val dppcon : int -> char -> int -> float ptr -> float -> float ptr -> unit 
+val dppcon : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val cppcon : int -> char -> int -> Complex.t ptr -> float -> float ptr -> unit 
+val cppcon : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zppcon : int -> char -> int -> Complex.t ptr -> float -> float ptr -> unit 
+val zppcon : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val sppequ : int -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sppequ : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val dppequ : int -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dppequ : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val cppequ : int -> char -> int -> Complex.t ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cppequ : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val zppequ : int -> char -> int -> Complex.t ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zppequ : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val spprfs : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val spprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dpprfs : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dpprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cpprfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cpprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zpprfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zpprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sppsv : int -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val sppsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dppsv : int -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val dppsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cppsv : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cppsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zppsv : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zppsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sppsvx : int -> char -> char -> int -> int -> float ptr -> float ptr -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sppsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> equed:(char ptr) -> s:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dppsvx : int -> char -> char -> int -> int -> float ptr -> float ptr -> char ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dppsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> equed:(char ptr) -> s:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cppsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cppsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> equed:(char ptr) -> s:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zppsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> char ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zppsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> equed:(char ptr) -> s:(float ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val spptrf : int -> char -> int -> float ptr -> unit 
+val spptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> int 
 
-val dpptrf : int -> char -> int -> float ptr -> unit 
+val dpptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> int 
 
-val cpptrf : int -> char -> int -> Complex.t ptr -> unit 
+val cpptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> int 
 
-val zpptrf : int -> char -> int -> Complex.t ptr -> unit 
+val zpptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> int 
 
-val spptri : int -> char -> int -> float ptr -> unit 
+val spptri : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> int 
 
-val dpptri : int -> char -> int -> float ptr -> unit 
+val dpptri : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> int 
 
-val cpptri : int -> char -> int -> Complex.t ptr -> unit 
+val cpptri : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> int 
 
-val zpptri : int -> char -> int -> Complex.t ptr -> unit 
+val zpptri : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> int 
 
-val spptrs : int -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val spptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dpptrs : int -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val dpptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cpptrs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cpptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zpptrs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zpptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val spstrf : int -> char -> int -> float ptr -> int -> int ptr -> int ptr -> float -> unit 
+val spstrf : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> piv:(int ptr) -> rank:(int ptr) -> tol:float -> int 
 
-val dpstrf : int -> char -> int -> float ptr -> int -> int ptr -> int ptr -> float -> unit 
+val dpstrf : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> piv:(int ptr) -> rank:(int ptr) -> tol:float -> int 
 
-val cpstrf : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float -> unit 
+val cpstrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> piv:(int ptr) -> rank:(int ptr) -> tol:float -> int 
 
-val zpstrf : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int ptr -> float -> unit 
+val zpstrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> piv:(int ptr) -> rank:(int ptr) -> tol:float -> int 
 
-val sptcon : int -> float ptr -> float ptr -> float -> float ptr -> unit 
+val sptcon : n:int -> d:(float ptr) -> e:(float ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val dptcon : int -> float ptr -> float ptr -> float -> float ptr -> unit 
+val dptcon : n:int -> d:(float ptr) -> e:(float ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val cptcon : int -> float ptr -> Complex.t ptr -> float -> float ptr -> unit 
+val cptcon : n:int -> d:(float ptr) -> e:(Complex.t ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zptcon : int -> float ptr -> Complex.t ptr -> float -> float ptr -> unit 
+val zptcon : n:int -> d:(float ptr) -> e:(Complex.t ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val spteqr : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val spteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dpteqr : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dpteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val cpteqr : int -> char -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val cpteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zpteqr : int -> char -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zpteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val sptrfs : int -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val sptrfs : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> df:(float ptr) -> ef:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dptrfs : int -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dptrfs : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> df:(float ptr) -> ef:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cptrfs : int -> char -> int -> int -> float ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val cptrfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> df:(float ptr) -> ef:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zptrfs : int -> char -> int -> int -> float ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zptrfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> df:(float ptr) -> ef:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sptsv : int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sptsv : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dptsv : int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dptsv : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cptsv : int -> int -> int -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cptsv : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zptsv : int -> int -> int -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zptsv : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sptsvx : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sptsvx : matrix_layout:int -> fact:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> df:(float ptr) -> ef:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dptsvx : int -> char -> int -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dptsvx : matrix_layout:int -> fact:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> df:(float ptr) -> ef:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cptsvx : int -> char -> int -> int -> float ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cptsvx : matrix_layout:int -> fact:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> df:(float ptr) -> ef:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zptsvx : int -> char -> int -> int -> float ptr -> Complex.t ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zptsvx : matrix_layout:int -> fact:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> df:(float ptr) -> ef:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val spttrf : int -> float ptr -> float ptr -> unit 
+val spttrf : n:int -> d:(float ptr) -> e:(float ptr) -> int 
 
-val dpttrf : int -> float ptr -> float ptr -> unit 
+val dpttrf : n:int -> d:(float ptr) -> e:(float ptr) -> int 
 
-val cpttrf : int -> float ptr -> Complex.t ptr -> unit 
+val cpttrf : n:int -> d:(float ptr) -> e:(Complex.t ptr) -> int 
 
-val zpttrf : int -> float ptr -> Complex.t ptr -> unit 
+val zpttrf : n:int -> d:(float ptr) -> e:(Complex.t ptr) -> int 
 
-val spttrs : int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val spttrs : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dpttrs : int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dpttrs : matrix_layout:int -> n:int -> nrhs:int -> d:(float ptr) -> e:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cpttrs : int -> char -> int -> int -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cpttrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zpttrs : int -> char -> int -> int -> float ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zpttrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> d:(float ptr) -> e:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ssbev : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val ssbev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dsbev : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dsbev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val ssbevd : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val ssbevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dsbevd : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dsbevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val ssbevx : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ssbevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> q:(float ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dsbevx : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dsbevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> q:(float ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val ssbgst : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val ssbgst : matrix_layout:int -> vect:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> x:(float ptr) -> ldx:int -> int 
 
-val dsbgst : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dsbgst : matrix_layout:int -> vect:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> x:(float ptr) -> ldx:int -> int 
 
-val ssbgv : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val ssbgv : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dsbgv : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dsbgv : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val ssbgvd : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val ssbgvd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dsbgvd : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> unit 
+val dsbgvd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val ssbgvx : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ssbgvx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> q:(float ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dsbgvx : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dsbgvx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ka:int -> kb:int -> ab:(float ptr) -> ldab:int -> bb:(float ptr) -> ldbb:int -> q:(float ptr) -> ldq:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val ssbtrd : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val ssbtrd : matrix_layout:int -> vect:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(float ptr) -> ldq:int -> int 
 
-val dsbtrd : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dsbtrd : matrix_layout:int -> vect:char -> uplo:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> d:(float ptr) -> e:(float ptr) -> q:(float ptr) -> ldq:int -> int 
 
-val ssfrk : int -> char -> char -> char -> int -> int -> float -> float ptr -> int -> float -> float ptr -> unit 
+val ssfrk : matrix_layout:int -> transr:char -> uplo:char -> trans:char -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> beta:float -> c:(float ptr) -> int 
 
-val dsfrk : int -> char -> char -> char -> int -> int -> float -> float ptr -> int -> float -> float ptr -> unit 
+val dsfrk : matrix_layout:int -> transr:char -> uplo:char -> trans:char -> n:int -> k:int -> alpha:float -> a:(float ptr) -> lda:int -> beta:float -> c:(float ptr) -> int 
 
-val sspcon : int -> char -> int -> float ptr -> int ptr -> float -> float ptr -> unit 
+val sspcon : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val dspcon : int -> char -> int -> float ptr -> int ptr -> float -> float ptr -> unit 
+val dspcon : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val cspcon : int -> char -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
+val cspcon : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zspcon : int -> char -> int -> Complex.t ptr -> int ptr -> float -> float ptr -> unit 
+val zspcon : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val sspev : int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sspev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dspev : int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dspev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val sspevd : int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sspevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dspevd : int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dspevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val sspevx : int -> char -> char -> char -> int -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val sspevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dspevx : int -> char -> char -> char -> int -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dspevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val sspgst : int -> int -> char -> int -> float ptr -> float ptr -> unit 
+val sspgst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> int 
 
-val dspgst : int -> int -> char -> int -> float ptr -> float ptr -> unit 
+val dspgst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> int 
 
-val sspgv : int -> int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sspgv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dspgv : int -> int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dspgv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val sspgvd : int -> int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sspgvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dspgvd : int -> int -> char -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dspgvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val sspgvx : int -> int -> char -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val sspgvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dspgvx : int -> int -> char -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dspgvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> ap:(float ptr) -> bp:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val ssprfs : int -> char -> int -> int -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val ssprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dsprfs : int -> char -> int -> int -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dsprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val csprfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val csprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zsprfs : int -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zsprfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val sspsv : int -> char -> int -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
+val sspsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dspsv : int -> char -> int -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
+val dspsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val cspsv : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val cspsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zspsv : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val zspsv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sspsvx : int -> char -> char -> int -> int -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val sspsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dspsvx : int -> char -> char -> int -> int -> float ptr -> float ptr -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dspsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> afp:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val cspsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val cspsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zspsvx : int -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zspsvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> afp:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ssptrd : int -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val ssptrd : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> d:(float ptr) -> e:(float ptr) -> tau:(float ptr) -> int 
 
-val dsptrd : int -> char -> int -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dsptrd : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> d:(float ptr) -> e:(float ptr) -> tau:(float ptr) -> int 
 
-val ssptrf : int -> char -> int -> float ptr -> int ptr -> unit 
+val ssptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> ipiv:(int ptr) -> int 
 
-val dsptrf : int -> char -> int -> float ptr -> int ptr -> unit 
+val dsptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> ipiv:(int ptr) -> int 
 
-val csptrf : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val csptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val zsptrf : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val zsptrf : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val ssptri : int -> char -> int -> float ptr -> int ptr -> unit 
+val ssptri : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> ipiv:(int ptr) -> int 
 
-val dsptri : int -> char -> int -> float ptr -> int ptr -> unit 
+val dsptri : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> ipiv:(int ptr) -> int 
 
-val csptri : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val csptri : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val zsptri : int -> char -> int -> Complex.t ptr -> int ptr -> unit 
+val zsptri : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> int 
 
-val ssptrs : int -> char -> int -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
+val ssptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dsptrs : int -> char -> int -> int -> float ptr -> int ptr -> float ptr -> int -> unit 
+val dsptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(float ptr) -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val csptrs : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val csptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zsptrs : int -> char -> int -> int -> Complex.t ptr -> int ptr -> Complex.t ptr -> int -> unit 
+val zsptrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val sstebz : char -> char -> int -> float -> float -> int -> int -> float -> float ptr -> float ptr -> int ptr -> int ptr -> float ptr -> int ptr -> int ptr -> unit 
+val sstebz : range:char -> order:char -> n:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> d:(float ptr) -> e:(float ptr) -> m:(int ptr) -> nsplit:(int ptr) -> w:(float ptr) -> iblock:(int ptr) -> isplit:(int ptr) -> int 
 
-val dstebz : char -> char -> int -> float -> float -> int -> int -> float -> float ptr -> float ptr -> int ptr -> int ptr -> float ptr -> int ptr -> int ptr -> unit 
+val dstebz : range:char -> order:char -> n:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> d:(float ptr) -> e:(float ptr) -> m:(int ptr) -> nsplit:(int ptr) -> w:(float ptr) -> iblock:(int ptr) -> isplit:(int ptr) -> int 
 
-val sstedc : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sstedc : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dstedc : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dstedc : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val cstedc : int -> char -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val cstedc : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zstedc : int -> char -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zstedc : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val sstegr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val sstegr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val dstegr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dstegr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val cstegr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val cstegr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val zstegr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zstegr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val sstein : int -> int -> float ptr -> float ptr -> int -> float ptr -> int ptr -> int ptr -> float ptr -> int -> int ptr -> unit 
+val sstein : matrix_layout:int -> n:int -> d:(float ptr) -> e:(float ptr) -> m:int -> w:(float ptr) -> iblock:(int ptr) -> isplit:(int ptr) -> z:(float ptr) -> ldz:int -> ifailv:(int ptr) -> int 
 
-val dstein : int -> int -> float ptr -> float ptr -> int -> float ptr -> int ptr -> int ptr -> float ptr -> int -> int ptr -> unit 
+val dstein : matrix_layout:int -> n:int -> d:(float ptr) -> e:(float ptr) -> m:int -> w:(float ptr) -> iblock:(int ptr) -> isplit:(int ptr) -> z:(float ptr) -> ldz:int -> ifailv:(int ptr) -> int 
 
-val cstein : int -> int -> float ptr -> float ptr -> int -> float ptr -> int ptr -> int ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val cstein : matrix_layout:int -> n:int -> d:(float ptr) -> e:(float ptr) -> m:int -> w:(float ptr) -> iblock:(int ptr) -> isplit:(int ptr) -> z:(Complex.t ptr) -> ldz:int -> ifailv:(int ptr) -> int 
 
-val zstein : int -> int -> float ptr -> float ptr -> int -> float ptr -> int ptr -> int ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zstein : matrix_layout:int -> n:int -> d:(float ptr) -> e:(float ptr) -> m:int -> w:(float ptr) -> iblock:(int ptr) -> isplit:(int ptr) -> z:(Complex.t ptr) -> ldz:int -> ifailv:(int ptr) -> int 
 
-val sstemr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> int ptr -> float ptr -> float ptr -> int -> int -> int ptr -> int ptr -> unit 
+val sstemr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> nzc:int -> isuppz:(int ptr) -> tryrac:(int ptr) -> int 
 
-val dstemr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> int ptr -> float ptr -> float ptr -> int -> int -> int ptr -> int ptr -> unit 
+val dstemr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> nzc:int -> isuppz:(int ptr) -> tryrac:(int ptr) -> int 
 
-val cstemr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> int -> int ptr -> int ptr -> unit 
+val cstemr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> nzc:int -> isuppz:(int ptr) -> tryrac:(int ptr) -> int 
 
-val zstemr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> int ptr -> float ptr -> Complex.t ptr -> int -> int -> int ptr -> int ptr -> unit 
+val zstemr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> m:(int ptr) -> w:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> nzc:int -> isuppz:(int ptr) -> tryrac:(int ptr) -> int 
 
-val ssteqr : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val ssteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dsteqr : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dsteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val csteqr : int -> char -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val csteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val zsteqr : int -> char -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> unit 
+val zsteqr : matrix_layout:int -> compz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(Complex.t ptr) -> ldz:int -> int 
 
-val ssterf : int -> float ptr -> float ptr -> unit 
+val ssterf : n:int -> d:(float ptr) -> e:(float ptr) -> int 
 
-val dsterf : int -> float ptr -> float ptr -> unit 
+val dsterf : n:int -> d:(float ptr) -> e:(float ptr) -> int 
 
-val sstev : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sstev : matrix_layout:int -> jobz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dstev : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dstev : matrix_layout:int -> jobz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val sstevd : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val sstevd : matrix_layout:int -> jobz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val dstevd : int -> char -> int -> float ptr -> float ptr -> float ptr -> int -> unit 
+val dstevd : matrix_layout:int -> jobz:char -> n:int -> d:(float ptr) -> e:(float ptr) -> z:(float ptr) -> ldz:int -> int 
 
-val sstevr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val sstevr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val dstevr : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dstevr : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val sstevx : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val sstevx : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dstevx : int -> char -> char -> int -> float ptr -> float ptr -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dstevx : matrix_layout:int -> jobz:char -> range:char -> n:int -> d:(float ptr) -> e:(float ptr) -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val ssycon : int -> char -> int -> float ptr -> int -> int ptr -> float -> float ptr -> unit 
+val ssycon : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val dsycon : int -> char -> int -> float ptr -> int -> int ptr -> float -> float ptr -> unit 
+val dsycon : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val csycon : int -> char -> int -> Complex.t ptr -> int -> int ptr -> float -> float ptr -> unit 
+val csycon : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val zsycon : int -> char -> int -> Complex.t ptr -> int -> int ptr -> float -> float ptr -> unit 
+val zsycon : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> anorm:float -> rcond:(float ptr) -> int 
 
-val ssyequb : int -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val ssyequb : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val dsyequb : int -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dsyequb : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val csyequb : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val csyequb : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val zsyequb : int -> char -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zsyequb : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> s:(float ptr) -> scond:(float ptr) -> amax:(float ptr) -> int 
 
-val ssyev : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val ssyev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> w:(float ptr) -> int 
 
-val dsyev : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val dsyev : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> w:(float ptr) -> int 
 
-val ssyevd : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val ssyevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> w:(float ptr) -> int 
 
-val dsyevd : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val dsyevd : matrix_layout:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> w:(float ptr) -> int 
 
-val ssyevr : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ssyevr : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val dsyevr : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dsyevr : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> isuppz:(int ptr) -> int 
 
-val ssyevx : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ssyevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dsyevx : int -> char -> char -> char -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dsyevx : matrix_layout:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val ssygst : int -> int -> char -> int -> float ptr -> int -> float ptr -> int -> unit 
+val ssygst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dsygst : int -> int -> char -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dsygst : matrix_layout:int -> itype:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val ssygv : int -> int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val ssygv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val dsygv : int -> int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val dsygv : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val ssygvd : int -> int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val ssygvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val dsygvd : int -> int -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val dsygvd : matrix_layout:int -> itype:int -> jobz:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> w:(float ptr) -> int 
 
-val ssygvx : int -> int -> char -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ssygvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val dsygvx : int -> int -> char -> char -> char -> int -> float ptr -> int -> float ptr -> int -> float -> float -> int -> int -> float -> int ptr -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dsygvx : matrix_layout:int -> itype:int -> jobz:char -> range:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> vl:float -> vu:float -> il:int -> iu:int -> abstol:float -> m:(int ptr) -> w:(float ptr) -> z:(float ptr) -> ldz:int -> ifail:(int ptr) -> int 
 
-val ssyrfs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val ssyrfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dsyrfs : int -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dsyrfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val csyrfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val csyrfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zsyrfs : int -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val zsyrfs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ssysv : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val ssysv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dsysv : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dsysv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val csysv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val csysv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zsysv : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zsysv : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ssysvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val ssysvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dsysvx : int -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dsysvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> af:(float ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val csysvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val csysvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val zsysvx : int -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val zsysvx : matrix_layout:int -> fact:char -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> af:(Complex.t ptr) -> ldaf:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> rcond:(float ptr) -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ssytrd : int -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val ssytrd : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tau:(float ptr) -> int 
 
-val dsytrd : int -> char -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> unit 
+val dsytrd : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> d:(float ptr) -> e:(float ptr) -> tau:(float ptr) -> int 
 
-val ssytrf : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val ssytrf : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dsytrf : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val dsytrf : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val csytrf : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val csytrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zsytrf : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zsytrf : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val ssytri : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val ssytri : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dsytri : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val dsytri : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val csytri : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val csytri : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zsytri : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zsytri : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val ssytrs : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val ssytrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dsytrs : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dsytrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val csytrs : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val csytrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zsytrs : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zsytrs : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val stbcon : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> unit 
+val stbcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> rcond:(float ptr) -> int 
 
-val dtbcon : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dtbcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> kd:int -> ab:(float ptr) -> ldab:int -> rcond:(float ptr) -> int 
 
-val ctbcon : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val ctbcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> rcond:(float ptr) -> int 
 
-val ztbcon : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val ztbcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> kd:int -> ab:(Complex.t ptr) -> ldab:int -> rcond:(float ptr) -> int 
 
-val stbrfs : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val stbrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dtbrfs : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dtbrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ctbrfs : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ctbrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ztbrfs : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ztbrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val stbtrs : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val stbtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> int 
 
-val dtbtrs : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dtbtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(float ptr) -> ldab:int -> b:(float ptr) -> ldb:int -> int 
 
-val ctbtrs : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ctbtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ztbtrs : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ztbtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> kd:int -> nrhs:int -> ab:(Complex.t ptr) -> ldab:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val stfsm : int -> char -> char -> char -> char -> char -> int -> int -> float -> float ptr -> float ptr -> int -> unit 
+val stfsm : matrix_layout:int -> transr:char -> side:char -> uplo:char -> trans:char -> diag:char -> m:int -> n:int -> alpha:float -> a:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dtfsm : int -> char -> char -> char -> char -> char -> int -> int -> float -> float ptr -> float ptr -> int -> unit 
+val dtfsm : matrix_layout:int -> transr:char -> side:char -> uplo:char -> trans:char -> diag:char -> m:int -> n:int -> alpha:float -> a:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val ctfsm : int -> char -> char -> char -> char -> char -> int -> int -> Complex.t -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ctfsm : matrix_layout:int -> transr:char -> side:char -> uplo:char -> trans:char -> diag:char -> m:int -> n:int -> alpha:Complex.t -> a:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ztfsm : int -> char -> char -> char -> char -> char -> int -> int -> Complex.t -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ztfsm : matrix_layout:int -> transr:char -> side:char -> uplo:char -> trans:char -> diag:char -> m:int -> n:int -> alpha:Complex.t -> a:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val stftri : int -> char -> char -> char -> int -> float ptr -> unit 
+val stftri : matrix_layout:int -> transr:char -> uplo:char -> diag:char -> n:int -> a:(float ptr) -> int 
 
-val dtftri : int -> char -> char -> char -> int -> float ptr -> unit 
+val dtftri : matrix_layout:int -> transr:char -> uplo:char -> diag:char -> n:int -> a:(float ptr) -> int 
 
-val ctftri : int -> char -> char -> char -> int -> Complex.t ptr -> unit 
+val ctftri : matrix_layout:int -> transr:char -> uplo:char -> diag:char -> n:int -> a:(Complex.t ptr) -> int 
 
-val ztftri : int -> char -> char -> char -> int -> Complex.t ptr -> unit 
+val ztftri : matrix_layout:int -> transr:char -> uplo:char -> diag:char -> n:int -> a:(Complex.t ptr) -> int 
 
-val stfttp : int -> char -> char -> int -> float ptr -> float ptr -> unit 
+val stfttp : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(float ptr) -> ap:(float ptr) -> int 
 
-val dtfttp : int -> char -> char -> int -> float ptr -> float ptr -> unit 
+val dtfttp : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(float ptr) -> ap:(float ptr) -> int 
 
-val ctfttp : int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> unit 
+val ctfttp : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(Complex.t ptr) -> ap:(Complex.t ptr) -> int 
 
-val ztfttp : int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> unit 
+val ztfttp : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(Complex.t ptr) -> ap:(Complex.t ptr) -> int 
 
-val stfttr : int -> char -> char -> int -> float ptr -> float ptr -> int -> unit 
+val stfttr : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(float ptr) -> a:(float ptr) -> lda:int -> int 
 
-val dtfttr : int -> char -> char -> int -> float ptr -> float ptr -> int -> unit 
+val dtfttr : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(float ptr) -> a:(float ptr) -> lda:int -> int 
 
-val ctfttr : int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ctfttr : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> int 
 
-val ztfttr : int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ztfttr : matrix_layout:int -> transr:char -> uplo:char -> n:int -> arf:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> int 
 
-val stgevc : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int -> int ptr -> unit 
+val stgevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> s:(float ptr) -> lds:int -> p:(float ptr) -> ldp:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val dtgevc : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int -> int ptr -> unit 
+val dtgevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> s:(float ptr) -> lds:int -> p:(float ptr) -> ldp:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val ctgevc : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int ptr -> unit 
+val ctgevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> s:(Complex.t ptr) -> lds:int -> p:(Complex.t ptr) -> ldp:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val ztgevc : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int ptr -> unit 
+val ztgevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> s:(Complex.t ptr) -> lds:int -> p:(Complex.t ptr) -> ldp:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val stgexc : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> unit 
+val stgexc : matrix_layout:int -> wantq:int -> wantz:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> ifst:(int ptr) -> ilst:(int ptr) -> int 
 
-val dtgexc : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> unit 
+val dtgexc : matrix_layout:int -> wantq:int -> wantz:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> ifst:(int ptr) -> ilst:(int ptr) -> int 
 
-val ctgexc : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val ctgexc : matrix_layout:int -> wantq:int -> wantz:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> ifst:int -> ilst:int -> int 
 
-val ztgexc : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val ztgexc : matrix_layout:int -> wantq:int -> wantz:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> ifst:int -> ilst:int -> int 
 
-val stgsen : int -> int -> int -> int -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> unit 
+val stgsen : matrix_layout:int -> ijob:int -> wantq:int -> wantz:int -> select:(int ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> m:(int ptr) -> pl:(float ptr) -> pr:(float ptr) -> dif:(float ptr) -> int 
 
-val dtgsen : int -> int -> int -> int -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dtgsen : matrix_layout:int -> ijob:int -> wantq:int -> wantz:int -> select:(int ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> alphar:(float ptr) -> alphai:(float ptr) -> beta:(float ptr) -> q:(float ptr) -> ldq:int -> z:(float ptr) -> ldz:int -> m:(int ptr) -> pl:(float ptr) -> pr:(float ptr) -> dif:(float ptr) -> int 
 
-val ctgsen : int -> int -> int -> int -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> unit 
+val ctgsen : matrix_layout:int -> ijob:int -> wantq:int -> wantz:int -> select:(int ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> m:(int ptr) -> pl:(float ptr) -> pr:(float ptr) -> dif:(float ptr) -> int 
 
-val ztgsen : int -> int -> int -> int -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> float ptr -> float ptr -> float ptr -> unit 
+val ztgsen : matrix_layout:int -> ijob:int -> wantq:int -> wantz:int -> select:(int ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> alpha:(Complex.t ptr) -> beta:(Complex.t ptr) -> q:(Complex.t ptr) -> ldq:int -> z:(Complex.t ptr) -> ldz:int -> m:(int ptr) -> pl:(float ptr) -> pr:(float ptr) -> dif:(float ptr) -> int 
 
-val stgsja : int -> char -> char -> char -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val stgsja : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> k:int -> l:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> tola:float -> tolb:float -> alpha:(float ptr) -> beta:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> ncycle:(int ptr) -> int 
 
-val dtgsja : int -> char -> char -> char -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float -> float -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int ptr -> unit 
+val dtgsja : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> k:int -> l:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> tola:float -> tolb:float -> alpha:(float ptr) -> beta:(float ptr) -> u:(float ptr) -> ldu:int -> v:(float ptr) -> ldv:int -> q:(float ptr) -> ldq:int -> ncycle:(int ptr) -> int 
 
-val ctgsja : int -> char -> char -> char -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val ctgsja : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> k:int -> l:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> tola:float -> tolb:float -> alpha:(float ptr) -> beta:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> ncycle:(int ptr) -> int 
 
-val ztgsja : int -> char -> char -> char -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float -> float -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val ztgsja : matrix_layout:int -> jobu:char -> jobv:char -> jobq:char -> m:int -> p:int -> n:int -> k:int -> l:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> tola:float -> tolb:float -> alpha:(float ptr) -> beta:(float ptr) -> u:(Complex.t ptr) -> ldu:int -> v:(Complex.t ptr) -> ldv:int -> q:(Complex.t ptr) -> ldq:int -> ncycle:(int ptr) -> int 
 
-val stgsna : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val stgsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> s:(float ptr) -> dif:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val dtgsna : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dtgsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> s:(float ptr) -> dif:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val ctgsna : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ctgsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> s:(float ptr) -> dif:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val ztgsna : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ztgsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> s:(float ptr) -> dif:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val stgsyl : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val stgsyl : matrix_layout:int -> trans:char -> ijob:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> c:(float ptr) -> ldc:int -> d:(float ptr) -> ldd:int -> e:(float ptr) -> lde:int -> f:(float ptr) -> ldf:int -> scale:(float ptr) -> dif:(float ptr) -> int 
 
-val dtgsyl : int -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dtgsyl : matrix_layout:int -> trans:char -> ijob:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> c:(float ptr) -> ldc:int -> d:(float ptr) -> ldd:int -> e:(float ptr) -> lde:int -> f:(float ptr) -> ldf:int -> scale:(float ptr) -> dif:(float ptr) -> int 
 
-val ctgsyl : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ctgsyl : matrix_layout:int -> trans:char -> ijob:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> c:(Complex.t ptr) -> ldc:int -> d:(Complex.t ptr) -> ldd:int -> e:(Complex.t ptr) -> lde:int -> f:(Complex.t ptr) -> ldf:int -> scale:(float ptr) -> dif:(float ptr) -> int 
 
-val ztgsyl : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ztgsyl : matrix_layout:int -> trans:char -> ijob:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> c:(Complex.t ptr) -> ldc:int -> d:(Complex.t ptr) -> ldd:int -> e:(Complex.t ptr) -> lde:int -> f:(Complex.t ptr) -> ldf:int -> scale:(float ptr) -> dif:(float ptr) -> int 
 
-val stpcon : int -> char -> char -> char -> int -> float ptr -> float ptr -> unit 
+val stpcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> ap:(float ptr) -> rcond:(float ptr) -> int 
 
-val dtpcon : int -> char -> char -> char -> int -> float ptr -> float ptr -> unit 
+val dtpcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> ap:(float ptr) -> rcond:(float ptr) -> int 
 
-val ctpcon : int -> char -> char -> char -> int -> Complex.t ptr -> float ptr -> unit 
+val ctpcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> ap:(Complex.t ptr) -> rcond:(float ptr) -> int 
 
-val ztpcon : int -> char -> char -> char -> int -> Complex.t ptr -> float ptr -> unit 
+val ztpcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> ap:(Complex.t ptr) -> rcond:(float ptr) -> int 
 
-val stprfs : int -> char -> char -> char -> int -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val stprfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dtprfs : int -> char -> char -> char -> int -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dtprfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ctprfs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ctprfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ztprfs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ztprfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val stptri : int -> char -> char -> int -> float ptr -> unit 
+val stptri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> ap:(float ptr) -> int 
 
-val dtptri : int -> char -> char -> int -> float ptr -> unit 
+val dtptri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> ap:(float ptr) -> int 
 
-val ctptri : int -> char -> char -> int -> Complex.t ptr -> unit 
+val ctptri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> ap:(Complex.t ptr) -> int 
 
-val ztptri : int -> char -> char -> int -> Complex.t ptr -> unit 
+val ztptri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> ap:(Complex.t ptr) -> int 
 
-val stptrs : int -> char -> char -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val stptrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dtptrs : int -> char -> char -> char -> int -> int -> float ptr -> float ptr -> int -> unit 
+val dtptrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(float ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val ctptrs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ctptrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ztptrs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ztptrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> ap:(Complex.t ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val stpttf : int -> char -> char -> int -> float ptr -> float ptr -> unit 
+val stpttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> ap:(float ptr) -> arf:(float ptr) -> int 
 
-val dtpttf : int -> char -> char -> int -> float ptr -> float ptr -> unit 
+val dtpttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> ap:(float ptr) -> arf:(float ptr) -> int 
 
-val ctpttf : int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> unit 
+val ctpttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> arf:(Complex.t ptr) -> int 
 
-val ztpttf : int -> char -> char -> int -> Complex.t ptr -> Complex.t ptr -> unit 
+val ztpttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> ap:(Complex.t ptr) -> arf:(Complex.t ptr) -> int 
 
-val stpttr : int -> char -> int -> float ptr -> float ptr -> int -> unit 
+val stpttr : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> a:(float ptr) -> lda:int -> int 
 
-val dtpttr : int -> char -> int -> float ptr -> float ptr -> int -> unit 
+val dtpttr : matrix_layout:int -> uplo:char -> n:int -> ap:(float ptr) -> a:(float ptr) -> lda:int -> int 
 
-val ctpttr : int -> char -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ctpttr : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> int 
 
-val ztpttr : int -> char -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val ztpttr : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> a:(Complex.t ptr) -> lda:int -> int 
 
-val strcon : int -> char -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val strcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> a:(float ptr) -> lda:int -> rcond:(float ptr) -> int 
 
-val dtrcon : int -> char -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val dtrcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> a:(float ptr) -> lda:int -> rcond:(float ptr) -> int 
 
-val ctrcon : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val ctrcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> a:(Complex.t ptr) -> lda:int -> rcond:(float ptr) -> int 
 
-val ztrcon : int -> char -> char -> char -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val ztrcon : matrix_layout:int -> norm:char -> uplo:char -> diag:char -> n:int -> a:(Complex.t ptr) -> lda:int -> rcond:(float ptr) -> int 
 
-val strevc : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int -> int ptr -> unit 
+val strevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> t:(float ptr) -> ldt:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val dtrevc : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> int -> int ptr -> unit 
+val dtrevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> t:(float ptr) -> ldt:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val ctrevc : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int ptr -> unit 
+val ctrevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> t:(Complex.t ptr) -> ldt:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val ztrevc : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int ptr -> unit 
+val ztrevc : matrix_layout:int -> side:char -> howmny:char -> select:(int ptr) -> n:int -> t:(Complex.t ptr) -> ldt:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> mm:int -> m:(int ptr) -> int 
 
-val strexc : int -> char -> int -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> unit 
+val strexc : matrix_layout:int -> compq:char -> n:int -> t:(float ptr) -> ldt:int -> q:(float ptr) -> ldq:int -> ifst:(int ptr) -> ilst:(int ptr) -> int 
 
-val dtrexc : int -> char -> int -> float ptr -> int -> float ptr -> int -> int ptr -> int ptr -> unit 
+val dtrexc : matrix_layout:int -> compq:char -> n:int -> t:(float ptr) -> ldt:int -> q:(float ptr) -> ldq:int -> ifst:(int ptr) -> ilst:(int ptr) -> int 
 
-val ctrexc : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val ctrexc : matrix_layout:int -> compq:char -> n:int -> t:(Complex.t ptr) -> ldt:int -> q:(Complex.t ptr) -> ldq:int -> ifst:int -> ilst:int -> int 
 
-val ztrexc : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val ztrexc : matrix_layout:int -> compq:char -> n:int -> t:(Complex.t ptr) -> ldt:int -> q:(Complex.t ptr) -> ldq:int -> ifst:int -> ilst:int -> int 
 
-val strrfs : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val strrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val dtrrfs : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> unit 
+val dtrrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> x:(float ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ctrrfs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ctrrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val ztrrfs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> unit 
+val ztrrfs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> x:(Complex.t ptr) -> ldx:int -> ferr:(float ptr) -> berr:(float ptr) -> int 
 
-val strsen : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int ptr -> float ptr -> float ptr -> unit 
+val strsen : matrix_layout:int -> job:char -> compq:char -> select:(int ptr) -> n:int -> t:(float ptr) -> ldt:int -> q:(float ptr) -> ldq:int -> wr:(float ptr) -> wi:(float ptr) -> m:(int ptr) -> s:(float ptr) -> sep:(float ptr) -> int 
 
-val dtrsen : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int ptr -> float ptr -> float ptr -> unit 
+val dtrsen : matrix_layout:int -> job:char -> compq:char -> select:(int ptr) -> n:int -> t:(float ptr) -> ldt:int -> q:(float ptr) -> ldq:int -> wr:(float ptr) -> wi:(float ptr) -> m:(int ptr) -> s:(float ptr) -> sep:(float ptr) -> int 
 
-val ctrsen : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> float ptr -> float ptr -> unit 
+val ctrsen : matrix_layout:int -> job:char -> compq:char -> select:(int ptr) -> n:int -> t:(Complex.t ptr) -> ldt:int -> q:(Complex.t ptr) -> ldq:int -> w:(Complex.t ptr) -> m:(int ptr) -> s:(float ptr) -> sep:(float ptr) -> int 
 
-val ztrsen : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int ptr -> float ptr -> float ptr -> unit 
+val ztrsen : matrix_layout:int -> job:char -> compq:char -> select:(int ptr) -> n:int -> t:(Complex.t ptr) -> ldt:int -> q:(Complex.t ptr) -> ldq:int -> w:(Complex.t ptr) -> m:(int ptr) -> s:(float ptr) -> sep:(float ptr) -> int 
 
-val strsna : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val strsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> t:(float ptr) -> ldt:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> s:(float ptr) -> sep:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val dtrsna : int -> char -> char -> int ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dtrsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> t:(float ptr) -> ldt:int -> vl:(float ptr) -> ldvl:int -> vr:(float ptr) -> ldvr:int -> s:(float ptr) -> sep:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val ctrsna : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ctrsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> t:(Complex.t ptr) -> ldt:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> s:(float ptr) -> sep:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val ztrsna : int -> char -> char -> int ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val ztrsna : matrix_layout:int -> job:char -> howmny:char -> select:(int ptr) -> n:int -> t:(Complex.t ptr) -> ldt:int -> vl:(Complex.t ptr) -> ldvl:int -> vr:(Complex.t ptr) -> ldvr:int -> s:(float ptr) -> sep:(float ptr) -> mm:int -> m:(int ptr) -> int 
 
-val strsyl : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val strsyl : matrix_layout:int -> trana:char -> tranb:char -> isgn:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> c:(float ptr) -> ldc:int -> scale:(float ptr) -> int 
 
-val dtrsyl : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> unit 
+val dtrsyl : matrix_layout:int -> trana:char -> tranb:char -> isgn:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> c:(float ptr) -> ldc:int -> scale:(float ptr) -> int 
 
-val ctrsyl : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val ctrsyl : matrix_layout:int -> trana:char -> tranb:char -> isgn:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> c:(Complex.t ptr) -> ldc:int -> scale:(float ptr) -> int 
 
-val ztrsyl : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> unit 
+val ztrsyl : matrix_layout:int -> trana:char -> tranb:char -> isgn:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> c:(Complex.t ptr) -> ldc:int -> scale:(float ptr) -> int 
 
-val strtri : int -> char -> char -> int -> float ptr -> int -> unit 
+val strtri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val dtrtri : int -> char -> char -> int -> float ptr -> int -> unit 
+val dtrtri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> a:(float ptr) -> lda:int -> int 
 
-val ctrtri : int -> char -> char -> int -> Complex.t ptr -> int -> unit 
+val ctrtri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val ztrtri : int -> char -> char -> int -> Complex.t ptr -> int -> unit 
+val ztrtri : matrix_layout:int -> uplo:char -> diag:char -> n:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val strtrs : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val strtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dtrtrs : int -> char -> char -> char -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dtrtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val ctrtrs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ctrtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ztrtrs : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ztrtrs : matrix_layout:int -> uplo:char -> trans:char -> diag:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val strttf : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val strttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> arf:(float ptr) -> int 
 
-val dtrttf : int -> char -> char -> int -> float ptr -> int -> float ptr -> unit 
+val dtrttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> arf:(float ptr) -> int 
 
-val ctrttf : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val ctrttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> arf:(Complex.t ptr) -> int 
 
-val ztrttf : int -> char -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val ztrttf : matrix_layout:int -> transr:char -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> arf:(Complex.t ptr) -> int 
 
-val strttp : int -> char -> int -> float ptr -> int -> float ptr -> unit 
+val strttp : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ap:(float ptr) -> int 
 
-val dtrttp : int -> char -> int -> float ptr -> int -> float ptr -> unit 
+val dtrttp : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ap:(float ptr) -> int 
 
-val ctrttp : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val ctrttp : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ap:(Complex.t ptr) -> int 
 
-val ztrttp : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val ztrttp : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ap:(Complex.t ptr) -> int 
 
-val stzrzf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val stzrzf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val dtzrzf : int -> int -> int -> float ptr -> int -> float ptr -> unit 
+val dtzrzf : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> tau:(float ptr) -> int 
 
-val ctzrzf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val ctzrzf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val ztzrzf : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val ztzrzf : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cungbr : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cungbr : matrix_layout:int -> vect:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zungbr : int -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zungbr : matrix_layout:int -> vect:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cunghr : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cunghr : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zunghr : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zunghr : matrix_layout:int -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cunglq : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cunglq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zunglq : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zunglq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cungql : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cungql : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zungql : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zungql : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cungqr : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cungqr : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zungqr : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zungqr : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cungrq : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cungrq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zungrq : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zungrq : matrix_layout:int -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cungtr : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val cungtr : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val zungtr : int -> char -> int -> Complex.t ptr -> int -> Complex.t ptr -> unit 
+val zungtr : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> int 
 
-val cunmbr : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmbr : matrix_layout:int -> vect:char -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmbr : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmbr : matrix_layout:int -> vect:char -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmhr : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmhr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmhr : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmhr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> ilo:int -> ihi:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmlq : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmlq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmlq : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmlq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmql : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmql : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmql : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmql : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmqr : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmqr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmqr : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmqr : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmrq : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmrq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmrq : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmrq : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmrz : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmrz : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmrz : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmrz : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cunmtr : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cunmtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zunmtr : int -> char -> char -> char -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zunmtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val cupgtr : int -> char -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cupgtr : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> tau:(Complex.t ptr) -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val zupgtr : int -> char -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zupgtr : matrix_layout:int -> uplo:char -> n:int -> ap:(Complex.t ptr) -> tau:(Complex.t ptr) -> q:(Complex.t ptr) -> ldq:int -> int 
 
-val cupmtr : int -> char -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val cupmtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> ap:(Complex.t ptr) -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zupmtr : int -> char -> char -> char -> int -> int -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> int -> unit 
+val zupmtr : matrix_layout:int -> side:char -> uplo:char -> trans:char -> m:int -> n:int -> ap:(Complex.t ptr) -> tau:(Complex.t ptr) -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val claghe : int -> int -> int -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val claghe : matrix_layout:int -> n:int -> k:int -> d:(float ptr) -> a:(Complex.t ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val zlaghe : int -> int -> int -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zlaghe : matrix_layout:int -> n:int -> k:int -> d:(float ptr) -> a:(Complex.t ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val slagsy : int -> int -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val slagsy : matrix_layout:int -> n:int -> k:int -> d:(float ptr) -> a:(float ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val dlagsy : int -> int -> int -> float ptr -> float ptr -> int -> int ptr -> unit 
+val dlagsy : matrix_layout:int -> n:int -> k:int -> d:(float ptr) -> a:(float ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val clagsy : int -> int -> int -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val clagsy : matrix_layout:int -> n:int -> k:int -> d:(float ptr) -> a:(Complex.t ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val zlagsy : int -> int -> int -> float ptr -> Complex.t ptr -> int -> int ptr -> unit 
+val zlagsy : matrix_layout:int -> n:int -> k:int -> d:(float ptr) -> a:(Complex.t ptr) -> lda:int -> iseed:(int ptr) -> int 
 
-val slapmr : int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val slapmr : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(float ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val dlapmr : int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val dlapmr : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(float ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val clapmr : int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val clapmr : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(Complex.t ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val zlapmr : int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zlapmr : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(Complex.t ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val slapmt : int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val slapmt : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(float ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val dlapmt : int -> int -> int -> int -> float ptr -> int -> int ptr -> unit 
+val dlapmt : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(float ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val clapmt : int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val clapmt : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(Complex.t ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val zlapmt : int -> int -> int -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zlapmt : matrix_layout:int -> forwrd:int -> m:int -> n:int -> x:(Complex.t ptr) -> ldx:int -> k:(int ptr) -> int 
 
-val slartgp : float -> float -> float ptr -> float ptr -> float ptr -> unit 
+val slartgp : f:float -> g:float -> cs:(float ptr) -> sn:(float ptr) -> r:(float ptr) -> int 
 
-val dlartgp : float -> float -> float ptr -> float ptr -> float ptr -> unit 
+val dlartgp : f:float -> g:float -> cs:(float ptr) -> sn:(float ptr) -> r:(float ptr) -> int 
 
-val slartgs : float -> float -> float -> float ptr -> float ptr -> unit 
+val slartgs : x:float -> y:float -> sigma:float -> cs:(float ptr) -> sn:(float ptr) -> int 
 
-val dlartgs : float -> float -> float -> float ptr -> float ptr -> unit 
+val dlartgs : x:float -> y:float -> sigma:float -> cs:(float ptr) -> sn:(float ptr) -> int 
 
-val cbbcsd : int -> char -> char -> char -> char -> char -> int -> int -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val cbbcsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> m:int -> p:int -> q:int -> theta:(float ptr) -> phi:(float ptr) -> u1:(Complex.t ptr) -> ldu1:int -> u2:(Complex.t ptr) -> ldu2:int -> v1t:(Complex.t ptr) -> ldv1t:int -> v2t:(Complex.t ptr) -> ldv2t:int -> b11d:(float ptr) -> b11e:(float ptr) -> b12d:(float ptr) -> b12e:(float ptr) -> b21d:(float ptr) -> b21e:(float ptr) -> b22d:(float ptr) -> b22e:(float ptr) -> int 
 
-val cheswapr : int -> char -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val cheswapr : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> i1:int -> i2:int -> int 
 
-val chetri2 : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val chetri2 : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val chetri2x : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int -> unit 
+val chetri2x : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> nb:int -> int 
 
-val chetrs2 : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val chetrs2 : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val csyconv : int -> char -> char -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> unit 
+val csyconv : matrix_layout:int -> uplo:char -> way:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> e:(Complex.t ptr) -> int 
 
-val csyswapr : int -> char -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val csyswapr : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> i1:int -> i2:int -> int 
 
-val csytri2 : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val csytri2 : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val csytri2x : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int -> unit 
+val csytri2x : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> nb:int -> int 
 
-val csytrs2 : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val csytrs2 : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val cunbdb : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val cunbdb : matrix_layout:int -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(Complex.t ptr) -> ldx11:int -> x12:(Complex.t ptr) -> ldx12:int -> x21:(Complex.t ptr) -> ldx21:int -> x22:(Complex.t ptr) -> ldx22:int -> theta:(float ptr) -> phi:(float ptr) -> taup1:(Complex.t ptr) -> taup2:(Complex.t ptr) -> tauq1:(Complex.t ptr) -> tauq2:(Complex.t ptr) -> int 
 
-val cuncsd : int -> char -> char -> char -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cuncsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(Complex.t ptr) -> ldx11:int -> x12:(Complex.t ptr) -> ldx12:int -> x21:(Complex.t ptr) -> ldx21:int -> x22:(Complex.t ptr) -> ldx22:int -> theta:(float ptr) -> u1:(Complex.t ptr) -> ldu1:int -> u2:(Complex.t ptr) -> ldu2:int -> v1t:(Complex.t ptr) -> ldv1t:int -> v2t:(Complex.t ptr) -> ldv2t:int -> int 
 
-val cuncsd2by1 : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cuncsd2by1 : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> m:int -> p:int -> q:int -> x11:(Complex.t ptr) -> ldx11:int -> x21:(Complex.t ptr) -> ldx21:int -> theta:(float ptr) -> u1:(Complex.t ptr) -> ldu1:int -> u2:(Complex.t ptr) -> ldu2:int -> v1t:(Complex.t ptr) -> ldv1t:int -> int 
 
-val dbbcsd : int -> char -> char -> char -> char -> char -> int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dbbcsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> m:int -> p:int -> q:int -> theta:(float ptr) -> phi:(float ptr) -> u1:(float ptr) -> ldu1:int -> u2:(float ptr) -> ldu2:int -> v1t:(float ptr) -> ldv1t:int -> v2t:(float ptr) -> ldv2t:int -> b11d:(float ptr) -> b11e:(float ptr) -> b12d:(float ptr) -> b12e:(float ptr) -> b21d:(float ptr) -> b21e:(float ptr) -> b22d:(float ptr) -> b22e:(float ptr) -> int 
 
-val dorbdb : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val dorbdb : matrix_layout:int -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(float ptr) -> ldx11:int -> x12:(float ptr) -> ldx12:int -> x21:(float ptr) -> ldx21:int -> x22:(float ptr) -> ldx22:int -> theta:(float ptr) -> phi:(float ptr) -> taup1:(float ptr) -> taup2:(float ptr) -> tauq1:(float ptr) -> tauq2:(float ptr) -> int 
 
-val dorcsd : int -> char -> char -> char -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dorcsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(float ptr) -> ldx11:int -> x12:(float ptr) -> ldx12:int -> x21:(float ptr) -> ldx21:int -> x22:(float ptr) -> ldx22:int -> theta:(float ptr) -> u1:(float ptr) -> ldu1:int -> u2:(float ptr) -> ldu2:int -> v1t:(float ptr) -> ldv1t:int -> v2t:(float ptr) -> ldv2t:int -> int 
 
-val dorcsd2by1 : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dorcsd2by1 : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> m:int -> p:int -> q:int -> x11:(float ptr) -> ldx11:int -> x21:(float ptr) -> ldx21:int -> theta:(float ptr) -> u1:(float ptr) -> ldu1:int -> u2:(float ptr) -> ldu2:int -> v1t:(float ptr) -> ldv1t:int -> int 
 
-val dsyconv : int -> char -> char -> int -> float ptr -> int -> int ptr -> float ptr -> unit 
+val dsyconv : matrix_layout:int -> uplo:char -> way:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> e:(float ptr) -> int 
 
-val dsyswapr : int -> char -> int -> float ptr -> int -> int -> int -> unit 
+val dsyswapr : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> i1:int -> i2:int -> int 
 
-val dsytri2 : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val dsytri2 : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dsytri2x : int -> char -> int -> float ptr -> int -> int ptr -> int -> unit 
+val dsytri2x : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> nb:int -> int 
 
-val dsytrs2 : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dsytrs2 : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val sbbcsd : int -> char -> char -> char -> char -> char -> int -> int -> int -> float ptr -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sbbcsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> m:int -> p:int -> q:int -> theta:(float ptr) -> phi:(float ptr) -> u1:(float ptr) -> ldu1:int -> u2:(float ptr) -> ldu2:int -> v1t:(float ptr) -> ldv1t:int -> v2t:(float ptr) -> ldv2t:int -> b11d:(float ptr) -> b11e:(float ptr) -> b12d:(float ptr) -> b12e:(float ptr) -> b21d:(float ptr) -> b21e:(float ptr) -> b22d:(float ptr) -> b22e:(float ptr) -> int 
 
-val sorbdb : int -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val sorbdb : matrix_layout:int -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(float ptr) -> ldx11:int -> x12:(float ptr) -> ldx12:int -> x21:(float ptr) -> ldx21:int -> x22:(float ptr) -> ldx22:int -> theta:(float ptr) -> phi:(float ptr) -> taup1:(float ptr) -> taup2:(float ptr) -> tauq1:(float ptr) -> tauq2:(float ptr) -> int 
 
-val sorcsd : int -> char -> char -> char -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sorcsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(float ptr) -> ldx11:int -> x12:(float ptr) -> ldx12:int -> x21:(float ptr) -> ldx21:int -> x22:(float ptr) -> ldx22:int -> theta:(float ptr) -> u1:(float ptr) -> ldu1:int -> u2:(float ptr) -> ldu2:int -> v1t:(float ptr) -> ldv1t:int -> v2t:(float ptr) -> ldv2t:int -> int 
 
-val sorcsd2by1 : int -> char -> char -> char -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sorcsd2by1 : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> m:int -> p:int -> q:int -> x11:(float ptr) -> ldx11:int -> x21:(float ptr) -> ldx21:int -> theta:(float ptr) -> u1:(float ptr) -> ldu1:int -> u2:(float ptr) -> ldu2:int -> v1t:(float ptr) -> ldv1t:int -> int 
 
-val ssyconv : int -> char -> char -> int -> float ptr -> int -> int ptr -> float ptr -> unit 
+val ssyconv : matrix_layout:int -> uplo:char -> way:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> e:(float ptr) -> int 
 
-val ssyswapr : int -> char -> int -> float ptr -> int -> int -> int -> unit 
+val ssyswapr : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> i1:int -> i2:int -> int 
 
-val ssytri2 : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val ssytri2 : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val ssytri2x : int -> char -> int -> float ptr -> int -> int ptr -> int -> unit 
+val ssytri2x : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> nb:int -> int 
 
-val ssytrs2 : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val ssytrs2 : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val zbbcsd : int -> char -> char -> char -> char -> char -> int -> int -> int -> float ptr -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> float ptr -> unit 
+val zbbcsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> m:int -> p:int -> q:int -> theta:(float ptr) -> phi:(float ptr) -> u1:(Complex.t ptr) -> ldu1:int -> u2:(Complex.t ptr) -> ldu2:int -> v1t:(Complex.t ptr) -> ldv1t:int -> v2t:(Complex.t ptr) -> ldv2t:int -> b11d:(float ptr) -> b11e:(float ptr) -> b12d:(float ptr) -> b12e:(float ptr) -> b21d:(float ptr) -> b21e:(float ptr) -> b22d:(float ptr) -> b22e:(float ptr) -> int 
 
-val zheswapr : int -> char -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val zheswapr : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> i1:int -> i2:int -> int 
 
-val zhetri2 : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zhetri2 : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zhetri2x : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int -> unit 
+val zhetri2x : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> nb:int -> int 
 
-val zhetrs2 : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zhetrs2 : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zsyconv : int -> char -> char -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> unit 
+val zsyconv : matrix_layout:int -> uplo:char -> way:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> e:(Complex.t ptr) -> int 
 
-val zsyswapr : int -> char -> int -> Complex.t ptr -> int -> int -> int -> unit 
+val zsyswapr : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> i1:int -> i2:int -> int 
 
-val zsytri2 : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zsytri2 : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zsytri2x : int -> char -> int -> Complex.t ptr -> int -> int ptr -> int -> unit 
+val zsytri2x : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> nb:int -> int 
 
-val zsytrs2 : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zsytrs2 : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zunbdb : int -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> float ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> Complex.t ptr -> unit 
+val zunbdb : matrix_layout:int -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(Complex.t ptr) -> ldx11:int -> x12:(Complex.t ptr) -> ldx12:int -> x21:(Complex.t ptr) -> ldx21:int -> x22:(Complex.t ptr) -> ldx22:int -> theta:(float ptr) -> phi:(float ptr) -> taup1:(Complex.t ptr) -> taup2:(Complex.t ptr) -> tauq1:(Complex.t ptr) -> tauq2:(Complex.t ptr) -> int 
 
-val zuncsd : int -> char -> char -> char -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zuncsd : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> jobv2t:char -> trans:char -> signs:char -> m:int -> p:int -> q:int -> x11:(Complex.t ptr) -> ldx11:int -> x12:(Complex.t ptr) -> ldx12:int -> x21:(Complex.t ptr) -> ldx21:int -> x22:(Complex.t ptr) -> ldx22:int -> theta:(float ptr) -> u1:(Complex.t ptr) -> ldu1:int -> u2:(Complex.t ptr) -> ldu2:int -> v1t:(Complex.t ptr) -> ldv1t:int -> v2t:(Complex.t ptr) -> ldv2t:int -> int 
 
-val zuncsd2by1 : int -> char -> char -> char -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> float ptr -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zuncsd2by1 : matrix_layout:int -> jobu1:char -> jobu2:char -> jobv1t:char -> m:int -> p:int -> q:int -> x11:(Complex.t ptr) -> ldx11:int -> x21:(Complex.t ptr) -> ldx21:int -> theta:(float ptr) -> u1:(Complex.t ptr) -> ldu1:int -> u2:(Complex.t ptr) -> ldu2:int -> v1t:(Complex.t ptr) -> ldv1t:int -> int 
 
-val sgemqrt : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgemqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> nb:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> c:(float ptr) -> ldc:int -> int 
 
-val dgemqrt : int -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgemqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> nb:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> c:(float ptr) -> ldc:int -> int 
 
-val cgemqrt : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgemqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> nb:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val zgemqrt : int -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgemqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> nb:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> c:(Complex.t ptr) -> ldc:int -> int 
 
-val sgeqrt : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgeqrt : matrix_layout:int -> m:int -> n:int -> nb:int -> a:(float ptr) -> lda:int -> t:(float ptr) -> ldt:int -> int 
 
-val dgeqrt : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgeqrt : matrix_layout:int -> m:int -> n:int -> nb:int -> a:(float ptr) -> lda:int -> t:(float ptr) -> ldt:int -> int 
 
-val cgeqrt : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgeqrt : matrix_layout:int -> m:int -> n:int -> nb:int -> a:(Complex.t ptr) -> lda:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val zgeqrt : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgeqrt : matrix_layout:int -> m:int -> n:int -> nb:int -> a:(Complex.t ptr) -> lda:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val sgeqrt2 : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgeqrt2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> t:(float ptr) -> ldt:int -> int 
 
-val dgeqrt2 : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgeqrt2 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> t:(float ptr) -> ldt:int -> int 
 
-val cgeqrt2 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgeqrt2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val zgeqrt2 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgeqrt2 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val sgeqrt3 : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val sgeqrt3 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> t:(float ptr) -> ldt:int -> int 
 
-val dgeqrt3 : int -> int -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dgeqrt3 : matrix_layout:int -> m:int -> n:int -> a:(float ptr) -> lda:int -> t:(float ptr) -> ldt:int -> int 
 
-val cgeqrt3 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val cgeqrt3 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val zgeqrt3 : int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zgeqrt3 : matrix_layout:int -> m:int -> n:int -> a:(Complex.t ptr) -> lda:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val stpmqrt : int -> char -> char -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val stpmqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> nb:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dtpmqrt : int -> char -> char -> int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dtpmqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> nb:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val ctpmqrt : int -> char -> char -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ctpmqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> nb:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ztpmqrt : int -> char -> char -> int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ztpmqrt : matrix_layout:int -> side:char -> trans:char -> m:int -> n:int -> k:int -> l:int -> nb:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val stpqrt : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val stpqrt : matrix_layout:int -> m:int -> n:int -> l:int -> nb:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> t:(float ptr) -> ldt:int -> int 
 
-val dtpqrt : int -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dtpqrt : matrix_layout:int -> m:int -> n:int -> l:int -> nb:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> t:(float ptr) -> ldt:int -> int 
 
-val ctpqrt : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ctpqrt : matrix_layout:int -> m:int -> n:int -> l:int -> nb:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val ztpqrt : int -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ztpqrt : matrix_layout:int -> m:int -> n:int -> l:int -> nb:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val stpqrt2 : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val stpqrt2 : matrix_layout:int -> m:int -> n:int -> l:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> t:(float ptr) -> ldt:int -> int 
 
-val dtpqrt2 : int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dtpqrt2 : matrix_layout:int -> m:int -> n:int -> l:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> t:(float ptr) -> ldt:int -> int 
 
-val ctpqrt2 : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ctpqrt2 : matrix_layout:int -> m:int -> n:int -> l:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val ztpqrt2 : int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ztpqrt2 : matrix_layout:int -> m:int -> n:int -> l:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> t:(Complex.t ptr) -> ldt:int -> int 
 
-val stprfb : int -> char -> char -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val stprfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> l:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val dtprfb : int -> char -> char -> char -> char -> int -> int -> int -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> float ptr -> int -> unit 
+val dtprfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> l:int -> v:(float ptr) -> ldv:int -> t:(float ptr) -> ldt:int -> a:(float ptr) -> lda:int -> b:(float ptr) -> ldb:int -> int 
 
-val ctprfb : int -> char -> char -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ctprfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> l:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ztprfb : int -> char -> char -> char -> char -> int -> int -> int -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val ztprfb : matrix_layout:int -> side:char -> trans:char -> direct:char -> storev:char -> m:int -> n:int -> k:int -> l:int -> v:(Complex.t ptr) -> ldv:int -> t:(Complex.t ptr) -> ldt:int -> a:(Complex.t ptr) -> lda:int -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ssysv_rook : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val ssysv_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dsysv_rook : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dsysv_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val csysv_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val csysv_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zsysv_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zsysv_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val ssytrf_rook : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val ssytrf_rook : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val dsytrf_rook : int -> char -> int -> float ptr -> int -> int ptr -> unit 
+val dsytrf_rook : matrix_layout:int -> uplo:char -> n:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val csytrf_rook : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val csytrf_rook : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zsytrf_rook : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zsytrf_rook : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val ssytrs_rook : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val ssytrs_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val dsytrs_rook : int -> char -> int -> int -> float ptr -> int -> int ptr -> float ptr -> int -> unit 
+val dsytrs_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(float ptr) -> lda:int -> ipiv:(int ptr) -> b:(float ptr) -> ldb:int -> int 
 
-val csytrs_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val csytrs_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zsytrs_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zsytrs_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val chetrf_rook : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val chetrf_rook : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val zhetrf_rook : int -> char -> int -> Complex.t ptr -> int -> int ptr -> unit 
+val zhetrf_rook : matrix_layout:int -> uplo:char -> n:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> int 
 
-val chetrs_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val chetrs_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val zhetrs_rook : int -> char -> int -> int -> Complex.t ptr -> int -> int ptr -> Complex.t ptr -> int -> unit 
+val zhetrs_rook : matrix_layout:int -> uplo:char -> n:int -> nrhs:int -> a:(Complex.t ptr) -> lda:int -> ipiv:(int ptr) -> b:(Complex.t ptr) -> ldb:int -> int 
 
-val csyr : int -> char -> int -> Complex.t -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val csyr : matrix_layout:int -> uplo:char -> n:int -> alpha:Complex.t -> x:(Complex.t ptr) -> incx:int -> a:(Complex.t ptr) -> lda:int -> int 
 
-val zsyr : int -> char -> int -> Complex.t -> Complex.t ptr -> int -> Complex.t ptr -> int -> unit 
+val zsyr : matrix_layout:int -> uplo:char -> n:int -> alpha:Complex.t -> x:(Complex.t ptr) -> incx:int -> a:(Complex.t ptr) -> lda:int -> int 
 

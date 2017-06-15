@@ -7,11 +7,13 @@ all:
 	ocamlfind ocamlc -linkpkg -package str,unix openblas_lapacke_parser.ml -o openblas_lapacke_parser.native
 	./openblas_lapacke_parser.native ../lapacke.h openblas_lapacke_bindings.ml openblas_lapacke.ml
 
-	# generate interface using ctypes
+	# compile interface generation application
 	ocamlfind ocamlc -c -linkpkg -package ctypes.stubs openblas_cblas_bindings.ml
 	ocamlfind ocamlc -linkpkg -package ctypes.stubs openblas_cblas_bindings.cmo openblas_cblas_stubgen.ml -o openblas_cblas_stubgen.native
 	ocamlfind ocamlc -c -linkpkg -package ctypes.stubs openblas_lapacke_bindings.ml
 	ocamlfind ocamlc -linkpkg -package ctypes.stubs openblas_lapacke_bindings.cmo openblas_lapacke_stubgen.ml -o openblas_lapacke_stubgen.native
+
+	# generate interface using ctypes
 	./openblas_cblas_stubgen.native -ml > openblas_cblas_generated.ml
 	./openblas_cblas_stubgen.native -c > openblas_cblas_generated_stub.c
 	./openblas_lapacke_stubgen.native -ml > openblas_lapacke_generated.ml

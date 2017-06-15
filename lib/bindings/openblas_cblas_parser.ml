@@ -81,18 +81,18 @@ let convert_typ_to_extern = function
 
 
 let convert_typ_to_caml = function
-  | "int"     -> "int"
-  | "float"   -> "float"
-  | "double"  -> "float"
-  | "float*"  -> "(float ptr)"
-  | "double*" -> "(float ptr)"
-  | "void*"   -> "(Complex.t ptr)"
-  | "CBLAS_ORDER"            -> "int"
-  | "CBLAS_TRANSPOSE"        -> "int"
-  | "CBLAS_UPLO"             -> "int"
-  | "CBLAS_DIAG"             -> "int"
-  | "CBLAS_SIDE"             -> "int"
-  | _         -> failwith "convert_typ_to_caml"
+  | "int"             -> "int"
+  | "float"           -> "float"
+  | "double"          -> "float"
+  | "float*"          -> "(float ptr)"
+  | "double*"         -> "(float ptr)"
+  | "void*"           -> "(Complex.t ptr)"
+  | "CBLAS_ORDER"     -> "int"
+  | "CBLAS_TRANSPOSE" -> "int"
+  | "CBLAS_UPLO"      -> "int"
+  | "CBLAS_DIAG"      -> "int"
+  | "CBLAS_SIDE"      -> "int"
+  | _                 -> failwith "convert_typ_to_caml"
 
 
 let _get_content h =
@@ -265,6 +265,7 @@ let convert_cblas_header_to_extern fname funs =
   Printf.fprintf h_ml "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_ml "open Ctypes\n\n";
   Printf.fprintf h_ml "module CI = Cstubs_internals\n\n";
+
   Array.iter (fun (fun_caml, fun_stub_s, args, fun_rval) ->
     Printf.fprintf h_ml "%s\n" fun_stub_s;
   ) (convert_to_extern_fun funs);
@@ -279,6 +280,7 @@ let convert_cblas_header_to_extern fname funs =
   Printf.fprintf h_mli "%s\n" copyright;
   Printf.fprintf h_mli "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_mli "open Ctypes\n\n";
+  
   Array.iter (fun (fun_caml, fun_stub_s, args, fun_rval) ->
     Printf.fprintf h_mli "%s\n" (convert_argrec_to_vals fun_caml args fun_rval);
   ) (convert_to_extern_fun funs);

@@ -1,7 +1,9 @@
-(*
+let copyright =
+"(*
  * OWL - an OCaml numerical library for scientific computing
  * Copyright (c) 2016-2017 Liang Wang <liang.wang@cl.cam.ac.uk>
  *)
+"
 
 (* This app parses lapacke.h file *)
 
@@ -55,23 +57,50 @@ let convert_typ_to_extern = function
   | "lapack_logical"         -> "int"
   | "lapack_complex_float"   -> "Complex.t"
   | "lapack_complex_double"  -> "Complex.t"
-  | "char*"                  -> "char ptr"
-  | "float*"                 -> "float ptr"
-  | "double*"                -> "float ptr"
-  | "lapack_int*"            -> "int ptr"
-  | "lapack_logical*"        -> "int ptr"
-  | "lapack_complex_float*"  -> "Complex.t ptr"
-  | "lapack_complex_double*" -> "Complex.t ptr"
+  | "char*"                  -> "_ CI.fatptr"
+  | "float*"                 -> "_ CI.fatptr"
+  | "double*"                -> "_ CI.fatptr"
+  | "lapack_int*"            -> "_ CI.fatptr"
+  | "lapack_logical*"        -> "_ CI.fatptr"
+  | "lapack_complex_float*"  -> "_ CI.fatptr"
+  | "lapack_complex_double*" -> "_ CI.fatptr"
   (* FIXME ? *)
-  | "LAPACK_C_SELECT1"       -> "unit ptr"
-  | "LAPACK_Z_SELECT1"       -> "unit ptr"
-  | "LAPACK_S_SELECT2"       -> "unit ptr"
-  | "LAPACK_D_SELECT2"       -> "unit ptr"
-  | "LAPACK_C_SELECT2"       -> "unit ptr"
-  | "LAPACK_Z_SELECT2"       -> "unit ptr"
-  | "LAPACK_S_SELECT3"       -> "unit ptr"
-  | "LAPACK_D_SELECT3"       -> "unit ptr"
+  | "LAPACK_C_SELECT1"       -> "_ CI.fatptr"
+  | "LAPACK_Z_SELECT1"       -> "_ CI.fatptr"
+  | "LAPACK_S_SELECT2"       -> "_ CI.fatptr"
+  | "LAPACK_D_SELECT2"       -> "_ CI.fatptr"
+  | "LAPACK_C_SELECT2"       -> "_ CI.fatptr"
+  | "LAPACK_Z_SELECT2"       -> "_ CI.fatptr"
+  | "LAPACK_S_SELECT3"       -> "_ CI.fatptr"
+  | "LAPACK_D_SELECT3"       -> "_ CI.fatptr"
   | _                        -> failwith "convert_typ_to_extern"
+
+
+let convert_typ_to_caml = function
+  | "int"                    -> "int"
+  | "char"                   -> "char"
+  | "float"                  -> "float"
+  | "double"                 -> "float"
+  | "lapack_complex_float"   -> "Complex.t"
+  | "lapack_complex_double"  -> "Complex.t"
+  | "lapack_int"             -> "int"
+  | "lapack_logical"         -> "int"
+  | "char*"                  -> "(char ptr)"
+  | "float*"                 -> "(float ptr)"
+  | "double*"                -> "(float ptr)"
+  | "lapack_complex_float*"  -> "(Complex.t ptr)"
+  | "lapack_complex_double*" -> "(Complex.t ptr)"
+  | "lapack_int*"            -> "(int ptr)"
+  | "lapack_logical*"        -> "(int ptr)"
+  | "LAPACK_C_SELECT1"       -> "(void ptr)"
+  | "LAPACK_Z_SELECT1"       -> "(void ptr)"
+  | "LAPACK_S_SELECT2"       -> "(void ptr)"
+  | "LAPACK_D_SELECT2"       -> "(void ptr)"
+  | "LAPACK_C_SELECT2"       -> "(void ptr)"
+  | "LAPACK_Z_SELECT2"       -> "(void ptr)"
+  | "LAPACK_S_SELECT3"       -> "(void ptr)"
+  | "LAPACK_D_SELECT3"       -> "(void ptr)"
+  | _                        -> failwith "convert_typ_to_caml"
 
 
 let _get_content h =
@@ -231,7 +260,39 @@ let convert_argrec_to_extern args =
   let s = Array.fold_left (fun a arg ->
     let ctyp = convert_typ_to_extern arg.typ in
     a ^ ctyp ^ " -> ") "" args in
-    s ^ "unit "
+    s ^ "int "
+
+
+let convert_argrec_to_caml fun_caml args =
+  let arg_names = Array.fold_left (fun a arg ->
+    let s = String.trim arg.name |> String.lowercase_ascii in
+    Printf.sprintf "%s ~%s" a s
+  ) "" args
+  in
+  let fun_param = Array.fold_left (fun a arg ->
+    let s = String.trim arg.name |> String.lowercase_ascii in
+    let t = String.trim arg.typ in
+    let s =
+      if String.get t (String.length t - 1) = '*' then
+        Printf.sprintf "(CI.cptr %s)" s
+      else s
+    in
+    Printf.sprintf "%s %s" a s
+  ) "" args
+  in
+  Printf.sprintf "let %s%s =\n  lapacke_%s%s\n" fun_caml arg_names fun_caml fun_param
+
+
+let convert_argrec_to_vals fun_caml args =
+  let fun_param = Array.fold_left (fun a arg ->
+    let s = String.trim arg.name |> String.lowercase_ascii in
+    let t = String.trim arg.typ in
+    let t = convert_typ_to_caml t in
+    Printf.sprintf "%s %s:%s ->" a s t
+  ) "" args
+  in
+  let fun_param = Printf.sprintf "%s int" fun_param in
+  Printf.sprintf "val %s :%s \n" fun_caml fun_param
 
 
 let convert_to_extern_fun funs =
@@ -239,44 +300,54 @@ let convert_to_extern_fun funs =
 
   Array.mapi (fun i s ->
     let _ = Str.search_forward regex s 0 in
-    let _fun_name = Str.matched_group 1 s in
+    let _fun_caml = Str.matched_group 1 s in
     let _fun_args = Str.matched_group 2 s in
     let args = process_args_to_argrec _fun_args in
     let args_s = convert_argrec_to_extern args in
 
     (* NOTE: naming needs to be consistent with Ctypes *)
-    let fun_native_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s" (i + 1) _fun_name in
-    let fun_byte_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s_byte%i" (i + 1) _fun_name (Array.length args) in
+    let fun_native_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s" (i + 1) _fun_caml in
+    let fun_byte_s = Printf.sprintf "openblas_stub_%i_LAPACKE_%s_byte%i" (i + 1) _fun_caml (Array.length args) in
     let fun_extern_s =
       match Array.length args < 6 with
       | true  -> Printf.sprintf "\"%s\"" fun_native_s
       | false -> Printf.sprintf "\"%s\" \"%s\"" fun_byte_s fun_native_s
     in
     (* assemble the function string *)
-    let fun_s = Printf.sprintf
-      "external %s\n  : %s\n = %s\n" _fun_name args_s fun_extern_s
+    let fun_stub_s = Printf.sprintf
+      "external lapacke_%s\n  : %s\n  = %s\n" _fun_caml args_s fun_extern_s
     in
-    let val_s = Printf.sprintf
-      "val %s : %s\n" _fun_name args_s
-    in
-    fun_s, val_s
+    _fun_caml, fun_stub_s, args
   ) funs
 
 
 let convert_lapacke_header_to_extern fname funs =
   let h_ml = open_out fname in
-  let h_mli = open_out (fname ^ "i") in
+  Printf.fprintf h_ml "%s\n" copyright;
   Printf.fprintf h_ml "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_ml "open Ctypes\n\n";
-  Printf.fprintf h_mli "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
-  Printf.fprintf h_mli "open Ctypes\n\n";
+  Printf.fprintf h_ml "module CI = Cstubs_internals\n\n";
 
-  Array.iter (fun (fun_s, val_s) ->
-    Printf.fprintf h_ml "%s\n" fun_s;
-    Printf.fprintf h_mli "%s\n" val_s;
+  Array.iter (fun (fun_caml, fun_stub_s, args) ->
+    Printf.fprintf h_ml "%s\n" fun_stub_s;
+  ) (convert_to_extern_fun funs);
+
+  Array.iter (fun (fun_caml, fun_stub_s, args) ->
+    Printf.fprintf h_ml "%s\n" (convert_argrec_to_caml fun_caml args);
   ) (convert_to_extern_fun funs);
 
   close_out h_ml;
+
+  let h_mli = open_out (fname ^ "i") in
+  Printf.fprintf h_mli "%s\n" copyright;
+  Printf.fprintf h_mli "(* auto-generated lapacke interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
+  Printf.fprintf h_mli "open Ctypes\n\n";
+
+  Array.iter (fun (fun_caml, fun_stub_s, args) ->
+    let val_s = convert_argrec_to_vals fun_caml args in
+    Printf.fprintf h_mli "%s\n" val_s;
+  ) (convert_to_extern_fun funs);
+
   close_out h_mli
 
 

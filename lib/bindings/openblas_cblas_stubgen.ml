@@ -18,5 +18,4 @@ let _ =
     Cstubs.write_ml Format.std_formatter ~prefix (module Openblas_cblas_bindings.Bindings)
   | false, true ->
     print_endline "#include \"cblas.h\"";
-
     Cstubs.write_c Format.std_formatter ~prefix (module Openblas_cblas_bindings.Bindings)
