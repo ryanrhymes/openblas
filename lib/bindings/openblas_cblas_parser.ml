@@ -18,7 +18,7 @@ let print_help () = print_endline "Usage: EXE cblas.h ctypes_output_file binding
 
 let convert_rval_to_ctypes = function
   | "float"       -> "returning float"
-  | "double"      -> "returning float"
+  | "double"      -> "returning double"
   | "void"        -> "returning void"
   | "CBLAS_INDEX" -> "returning size_t"
   |  _            -> failwith "convert_typ_to_ctypes"
@@ -159,7 +159,7 @@ let convert_to_ctypes_fun funs =
     in
     (* assemble the function string *)
     let fun_s = Printf.sprintf
-      "let %s = foreign \"%s\" (%s)\n" _fun_caml _fun_blas args_s
+      "let cblas_%s = foreign \"%s\" (%s)\n" _fun_caml _fun_blas args_s
     in
     let val_s = Printf.sprintf
       "val %s : %s\n" _fun_caml args_s
