@@ -15,6 +15,14 @@ let make_arg typ name = { typ; name }
 
 let print_help () = print_endline "Usage: EXE cblas.h ctypes_output_file binding_output_file"
 
+
+let convert_rval_to_ctypes = function
+  | "float"       -> "returning float"
+  | "double"      -> "returning float"
+  | "void"        -> "returning void"
+  | "CBLAS_INDEX" -> "returning size_t"
+  |  _            -> failwith "convert_typ_to_ctypes"
+
 let convert_typ_to_ctypes fun_blas typ_name =
   match typ_name with
   | "int"                    -> "int"
@@ -127,18 +135,18 @@ let process_args_to_argrec s =
 
 (* FOR CTYPES INTERFACE FILE *)
 
-let convert_argrec_to_ctypes fun_blas args =
+let convert_argrec_to_ctypes fun_blas fun_rval args =
   let s = Array.fold_left (fun a arg ->
     let ctyp = convert_typ_to_ctypes fun_blas arg.typ in
     a ^ ctyp ^ " @-> ") "" args in
-    s
+    s ^ (convert_rval_to_ctypes fun_rval)
 
 
 let convert_to_ctypes_fun funs =
   Array.mapi (fun i (_fun_caml, _fun_blas, _typ_s, _fun_rval) ->
 
     let args = process_args_to_argrec _typ_s in
-    let args_s = convert_argrec_to_ctypes _fun_blas args in
+    let args_s = convert_argrec_to_ctypes _fun_blas _fun_rval args in
     (* NOTE: - 1 to exlucde "returning ..." term *)
     let args_l = Array.length args - 1 in
 
@@ -151,7 +159,7 @@ let convert_to_ctypes_fun funs =
     in
     (* assemble the function string *)
     let fun_s = Printf.sprintf
-      "let %s = foreign \"%s\" %s%s\n" _fun_caml _fun_blas args_s _fun_rval
+      "let %s = foreign \"%s\" (%s)\n" _fun_caml _fun_blas args_s
     in
     let val_s = Printf.sprintf
       "val %s : %s\n" _fun_caml args_s
@@ -164,12 +172,13 @@ let convert_cblas_header_to_ctypes fname funs =
   let h_ml = open_out fname in
   Printf.fprintf h_ml "(* auto-generated cblas interface file, timestamp:%.0f *)\n\n" (Unix.gettimeofday ());
   Printf.fprintf h_ml "open Ctypes\n\n";
-  Printf.fprintf h_ml "module CI = Cstubs_internals\n\n";
+  Printf.fprintf h_ml "module Bindings (F : Cstubs.FOREIGN) = struct\n\n  open F\n\n";
 
   Array.iter (fun (fun_s, val_s) ->
-    Printf.fprintf h_ml "%s\n" fun_s;
+    Printf.fprintf h_ml "  %s\n" fun_s;
   ) (convert_to_ctypes_fun funs);
 
+  Printf.fprintf h_ml "end\n\n";
   close_out h_ml
 
 
