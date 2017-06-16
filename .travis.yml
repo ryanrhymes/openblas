@@ -3,6 +3,7 @@ sudo: required
 install:
   - brew install eigen
   - brew install gcc
+  - brew install openblas
   - wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
 script: bash -ex .travis-opam.sh
 env:
