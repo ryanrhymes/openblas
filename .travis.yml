@@ -1,11 +1,23 @@
 language: c
 sudo: required
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode8.2
+      env: - OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
+
+    - os: linux
+      env: - OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
+
 install:
-  - if [ $TRAVIS_OS_NAME = linux ]; then sudo apt-get install liblapacke-dev libopenblas-dev; else brew install homebrew/science/openblas; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      sudo apt-get update;
+      sudo apt-get install liblapacke-dev libopenblas-dev;
+    elif [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
+      brew update;
+      brew install homebrew/science/openblas;
+    fi
   - wget https://raw.githubusercontent.com/ocaml/ocaml-ci-scripts/master/.travis-opam.sh
+
 script: bash -ex .travis-opam.sh
-env:
-  - OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
-os:
-  - osx
-  - linux
