@@ -7,6 +7,7 @@ matrix:
       osx_image: xcode8.2
       env: OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
     - os: linux
+      dist: trusty
       env: OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
       addons:
         apt:
