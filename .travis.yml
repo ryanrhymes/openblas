@@ -5,9 +5,9 @@ matrix:
   include:
     - os: osx
       osx_image: xcode8.2
-      env: - OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
+      env: OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
     - os: linux
-      env: - OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
+      env: OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
