@@ -23,13 +23,8 @@ build-test: [
 build-doc: [ "ocaml" "setup.ml" "-doc" ]
 depends: [
   "ctypes"
-  "dolog"
-  "gsl"
-  "conf-gsl"
   "oasis" {build & >= "0.4"}
   "ocamlbuild" {build}
   "ocamlfind" {build}
-  "plplot"
-  "eigen"
 ]
 available: [ ocaml-version >= "4.04.0" ]
