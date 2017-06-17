@@ -48,11 +48,14 @@ Library openblas
   CCOpt:            -O3 -I$pkg_ctypes
   if system(linux) || system(linux_elf)
     CCOpt+:         -g -Ofast
-    CCLib:          -lopenblas
+    CCLib+:         -lopenblas
                     -llapacke
                     -lgfortran
   if system(macosx)
-    CCLib+:         -lopenblas
+    CCLib+:         -L/usr/local/opt/openblas/lib
+                    -L/usr/local/opt/gcc/lib/gcc/7
+                    -L/usr/local/lib/gcc/7
+                    -lopenblas
                     -lgfortran
   BuildDepends:     str, ctypes, ctypes.stubs
 
