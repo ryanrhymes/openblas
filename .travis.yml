@@ -8,6 +8,9 @@ matrix:
       env:
         - OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
         - LIBRARY_PATH="$LIBRARY_PATH:/usr/local/opt/openblas/lib"
+      apt:
+        packages:
+          - gfortran
     - os: linux
       dist: trusty
       env: OCAML_VERSION=4.04 EXTRA_DEPS="oasis" INSTALL=false
